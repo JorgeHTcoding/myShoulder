@@ -1,0 +1,56 @@
+@import '../../styles/colors.scss';
+@import '../../styles/functions.scss';
+
+.header{
+    
+    height: 10vh;
+    width: 100%;
+    @include flexCenter(row);
+    font-family: 'montserrat';
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+    .img{
+        height: 50px;
+        width: auto;
+        img{
+            height: 50px;
+            width: auto;
+        }
+    }
+    ul{
+        .active{
+            color:$secondaryColor;
+        }
+        width: 40%;
+        @include flexCenter(row);
+        list-style: none;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+            color:$primaryText;    
+        }
+        a:after{
+            content: '';
+            display:block;
+            background-color: $secondaryColor;
+            height: 1px;
+            width: 0;
+              color: $secondaryColor;         
+            transition:0.3s;
+        }
+        a:hover:after,  {
+            width:100%;
+           
+        }
+        a:hover:active{
+            border-bottom: 1px solid $secondaryColor;
+        }
+        a:hover{
+            color: $secondaryColor;
+            transition: 0.3s;
+        }
+
+    }
+}
+
