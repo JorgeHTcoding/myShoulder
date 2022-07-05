@@ -42,6 +42,12 @@ import { EdicionPerfilProComponent } from './pages/edicion-perfil-pro/edicion-pe
 import { AdministrarEventosProComponent } from './pages/administrar-eventos-pro/administrar-eventos-pro.component';
 import { SolicitudPacientesComponent } from './pages/solicitud-pacientes/solicitud-pacientes.component';
 import { AdministracionPacientesComponent } from './pages/administracion-pacientes/administracion-pacientes.component';
+import { TarjetaEventosCancelarComponent } from './component/tarjeta-eventos-cancelar/tarjeta-eventos-cancelar.component';
+import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-administrar/tarjeta-eventos-administrar.component';
+import { FormsModule } from '@angular/forms';
+
+
+
 
 
 @NgModule({
@@ -86,11 +92,14 @@ import { AdministracionPacientesComponent } from './pages/administracion-pacient
     AdministrarEventosProComponent,
     SolicitudPacientesComponent,
     AdministracionPacientesComponent,
+    TarjetaEventosCancelarComponent,
+    TarjetaEventosAdministrarComponent,
   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
