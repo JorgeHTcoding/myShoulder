@@ -46,6 +46,10 @@ import { TarjetaEventosCancelarComponent } from './component/tarjeta-eventos-can
 import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-administrar/tarjeta-eventos-administrar.component';
 import { FormsModule } from '@angular/forms';
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
