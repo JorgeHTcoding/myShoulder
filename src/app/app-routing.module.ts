@@ -43,7 +43,7 @@ const routes: Routes = [
   {path:"solicitud-pacientes", component: SolicitudPacientesComponent}, 
   {path:"tarjeta-evento", component: TarjetaEventoComponent}, 
   
-
+  
 ];
 
 
