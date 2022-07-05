@@ -9,16 +9,81 @@
 </head>
 <body>
 
+
     <div class = "contenedor-general">
 
-        <div class = "contenedor-titulo">
-            <h2>Hola Claudia!</h2>
+        <div class = "contenedor-arriba">
+            <div class = "contenedor-titulo">
+                <h2>Hola Claudia!</h2>
+            </div>
+
+            <div class = "Edicion">
+                <h3>Editar mi perfil</h3>
+            </div>
         </div>
 
-        <div class = contenedor-component>
-            
+
+        <div class = "contenedor-abajo">
+            <form class = "miformu1">
+                <div class = contenedor-izquierda>
+                        <img class = "ImagenPrincipal" src="../../../assets/img/Ellipse 7.png"> 
+
+                        <!-- Nombre input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form1Example1" class="form-control" placeholder="Claudia"/>
+                            <label class="form-label" for="form1Example1"></label>
+                        </div>
+                        
+                        <!-- Apellido input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form1Example2" class="form-control" placeholder="Martin"/>
+                            <label class="form-label" for="form1Example2"></label>
+                        </div>
+                    
+                        <!-- Correo input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form1Example2" class="form-control" placeholder="c.martin@gmail.com"/>
+                            <label class="form-label" for="form1Example2"></label>
+                        </div>
+                </div>
+
+                <div class = "contenedor-derecha">   
+                 
+                    <div class = "Input-Arriba">
+                            <!-- Direccion input -->
+                            <div class="form-outline1 mb-4">
+                                <input type="text" id="form1Example1" class="form-control" placeholder="Calle Pez 25, Madrid" />
+                                <label class="form-label" for="form1Example1"></label>
+                            </div>
+
+                            <!-- Telefono input -->
+                            <div class="form-outline2 mb-4">
+                                <input type="text" id="form1Example2" class="form-control" placeholder="625369985"/>
+                                <label class="form-label" for="form1Example2"></label>
+                            </div>
+                    </div>
+                
+                    <!-- Texto Perfil input -->
+                    <!-- <div class="form-outline-area mb-4">
+                        <input type="text" id="form1Example2" class="form-control-area" placeholder="¡Hola! Mi nombre es Claudia y me gustaría poder compartir vivencias con personas que tengan algún allegado con depresión."/> 
+                        <label class="form-label" for="form1Example2"></label>
+
+                    </div> -->
+
+                    <div class = "textarea1">
+                        <textarea name="textarea" style="overflow:hidden; resize:none" rows="9" cols="68">¡Hola! Mi nombre es Claudia y me gustaría poder compartir vivencias con personas que tengan algún allegado con depresión."</textarea>
+                    </div>
+                    
+                    <!-- Boton Guardar button -->
+                    <div class = "Botones">
+                        <button type="button" class="btn btn-success">Guardar</button>
+                    </div>
+
+                   
+                </div>
+            </form>
+
         </div>
-
-
+    </div>
 </body>
 </html>

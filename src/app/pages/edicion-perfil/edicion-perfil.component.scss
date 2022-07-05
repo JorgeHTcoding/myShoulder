@@ -1,2 +1,141 @@
 @import "../../styles/colors.scss";
 @import "../../styles/functions.scss";
+
+
+.contenedor-general {
+    border: 2px solid red;
+    padding: 5%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ImagenPrincipal {
+    width:100px;
+    height:100px;
+    border-radius:90px;
+    margin-bottom: 5%;
+}
+
+h2 {
+    color:linear-gradient(90deg, #E8C597 0%, #B9AAD1 81.47%);
+}
+
+
+
+.contenedor-abajo {
+    border: 2px solid darkorchid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.miformu1 { 
+    // padding: 5%;
+    height: 320px;
+    width: 850px;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: $degMor;
+}
+
+.form-outline {
+    padding-top: 2%;
+    width: 85%;
+    height: 30px;
+   
+   
+}
+
+.form-outline1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    width: 65%;
+
+}
+
+.form-outline2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.contenedor-titulo {
+    border: 2px solid blue;
+}
+
+.contenedor-izquierda {
+    border: 2px solid green;
+    width: 25%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.contenedor-derecha {
+    border: 2px solid red;
+    width: 75%;
+    height: 300px;
+}
+
+
+.Input-Arriba {
+    // padding-top: 2%;
+    margin-bottom: -2%;
+    margin-left: 2%;
+    margin-right: 3%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-outline-area {
+    
+    border: 2px solid blue;
+    height: 200px;
+    width: 100%;
+    padding: 1%;
+    padding-left: 2%;
+    display:flex;
+    
+}
+
+
+// .form-control-area {
+//     height: 180px;
+//     width: 100%;
+   
+// }
+
+.textarea1 {
+    border-radius: 2%;
+    padding-top: 0%;
+    padding-left: 3%;
+    height: 180px;
+    width: 100%;
+    resize: none;
+}
+
+
+
+.Botones{
+    display:flex;
+    flex-direction: row-reverse;
+    margin-top: -1%;
+    margin-right: 4%;
+}
