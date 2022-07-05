@@ -35,7 +35,7 @@ const routes: Routes = [
   {path:"administrar-eventos-pro", component: AdministrarEventosProComponent},
   {path:"busqueda-evento", component: BusquedaEventoComponent},
   {path:"busqueda-evento-fam", component: BusquedaEventoFamComponent}, 
-  {path:"busqueda-profesional", component: BusquedaProfesionalComponent},  
+  {path:"busqueda-profesional", component: BusquedaProfesionalComponent}, 
   {path:"creacion-evento", component: CreacionEventoComponent}, 
   {path:"edicion-perfil", component: EdicionPerfilComponent}, 
   {path:"edicion-perfil-pro", component: EdicionPerfilProComponent}, 
