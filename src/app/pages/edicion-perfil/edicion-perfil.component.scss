@@ -80,9 +80,9 @@ h3 {
 
 
 
-// .contenedor-titulo {
-//     // border: 2px solid blue;
-// }
+.contenedor-titulo {
+    // border: 2px solid blue;
+}
 
 .contenedor-izquierda {
     // border: 2px solid green;
@@ -113,26 +113,6 @@ h3 {
 
 }
 
-.checks {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 .form-outline-area {
     // border: 2px solid blue;
     height: 200px;
@@ -144,6 +124,11 @@ h3 {
 }
 
 
+// .form-control-area {
+//     height: 180px;
+//     width: 100%;
+   
+// }
 
 .textarea1 {
     padding-top: 0%;

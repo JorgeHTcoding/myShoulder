@@ -1,0 +1,21 @@
+.filtroForm{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.inputTitle{
+    margin-right:50px
+}
+.particulaFiltro{
+    display:flex;
+    flex-direction: row;
+    
+}
+.input{
+    border:none;
+    text-decoration: none;
+    background-color: #ececec ;
+    max-width: 150px;
+    min-width: 150px;
+    padding-left: 5px;
+}
