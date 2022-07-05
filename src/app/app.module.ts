@@ -44,7 +44,7 @@ import { SolicitudPacientesComponent } from './pages/solicitud-pacientes/solicit
 import { AdministracionPacientesComponent } from './pages/administracion-pacientes/administracion-pacientes.component';
 import { TarjetaEventosCancelarComponent } from './component/tarjeta-eventos-cancelar/tarjeta-eventos-cancelar.component';
 import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-administrar/tarjeta-eventos-administrar.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
