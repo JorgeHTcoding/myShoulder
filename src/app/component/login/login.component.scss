@@ -1,0 +1,120 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.form {
+    color: $primaryText;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 700px;
+    width: 100%;
+
+    input {
+        border: none;
+        min-width: 300px;
+        height: 35px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+
+}
+
+.titulo {
+    @include titulo();
+    font-size: 2.9em;
+}
+.reminder{
+    font-size: 0.85em;
+    margin-top: 25px;
+}
+.modalDialog {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 400px;
+    width: 25%;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    padding-top: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 20% auto;
+    background-color: #ececec;   
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+   
+}
+.bloqueForm{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;    
+    
+}
+.close {
+    margin-top: 25px;
+    font-size: 1.3em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.close:hover {
+    
+    color: white;
+  }
+
+.register {
+   
+    margin-top: 55px;
+    border: none;       
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    font-size: 2em;
+    font-weight: bold;
+    background-color: white; 
+    color: #E8C597; 
+    padding-left:20px;
+    padding-right:20px;    
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+ 
+  
+  .register:hover {
+    background-color: #E8C597;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .form {
+      padding-left:10px;
+        width: 110%;
+    
+    }
+    .modalDialog{
+        padding-left:10px;
+        width: 110%;
+      }
+  }
