@@ -7,6 +7,7 @@
     width: 100%;
     @include flexCenter(row);
     font-family: 'montserrat';
+    
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
@@ -19,14 +20,19 @@
         }
     }
     ul{
+        
         .active{
             color:$secondaryColor;
+            padding-bottom: 2px;
+            border-bottom: 1px solid $secondaryColor;
         }
-        width: 40%;
+        width: 30%;
         @include flexCenter(row);
         list-style: none;
+        margin-right: 3em;
         justify-content: space-around;
         a{
+            font-weight: 300;
             text-decoration: none;
             color:$primaryText;    
         }
@@ -36,16 +42,15 @@
             background-color: $secondaryColor;
             height: 1px;
             width: 0;
-              color: $secondaryColor;         
+            margin-top: 2px;
+            color: $secondaryColor;         
             transition:0.3s;
         }
         a:hover:after  {
             width:100%;
            
         }
-        a:hover:active{
-            border-bottom: 1px solid $secondaryColor;
-        }
+      
         a:hover{
             color: $secondaryColor;
             transition: 0.3s;
