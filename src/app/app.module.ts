@@ -47,6 +47,9 @@ import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-
 import { FormsModule } from '@angular/forms';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
