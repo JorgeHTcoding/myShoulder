@@ -1,0 +1,224 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.contenedor-general {
+    border: 2px solid red;
+    padding-top: 5%;
+    width: 100vw;
+    height: 100vh;
+
+    display:flex;
+    flex-direction: row;
+
+}
+
+.contenedor-titulo-izq {
+    // border: 2px solid black;    
+    width: 38vw;
+}
+
+
+.titulo-izq {
+    border: 2px solid orange;
+    margin-left: 10%; 
+    width: 50%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.0em;
+    line-height: 2em;
+    background: -webkit-linear-gradient(180deg,#E8C597, #9C9DBF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+}
+
+
+.contenedor-titulo-der {
+    // border: 2px solid black;    
+    width: 60vw;
+
+}
+
+.titulo-der {
+    // border: 2px solid orange;
+    margin-left: 5%; 
+    width: 50%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 2em;
+    background: -webkit-linear-gradient(180deg,#E8C597, #9C9DBF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+}
+
+.contenedor-izquierdo {
+    border: 2px solid black;
+    width: 75vw;
+}
+
+
+.contenedor-bussqueda {
+    border: 2px solid green;
+    width: 75%;
+    height: 40%;
+
+    padding-left: 10%;
+    padding-top: 3%;
+}
+
+
+.col-sm-2 {
+    font-weight: 300;
+    font-size: medium;
+    color: $primaryText;
+}
+
+
+.contenedor-img-footer {
+    border: 2px solid blue;
+    width: 85%;
+    height: 46.5%;
+}
+
+
+.titulo-filtro {
+    font-weight: 700;
+    color: $primaryText;
+}
+
+.form-control {
+    margin-left: 20%;
+    padding-top: 1%;
+    background-color: #EFEFEF;
+    border-radius: 0%;
+    border: none;
+}
+
+.miformu1 {
+    width: 88%;
+
+}
+
+.boton {
+    // border: 2px solid red;
+    height: 90px;
+    width: 24%;
+    margin-left: 38%;
+    padding-top: 1%;
+    color: white;
+}
+
+
+.filtro{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.filtrar {
+    border-radius: 5px;
+    background: $degMor;
+    border:none;
+    width: 100%;
+    height: 40%; 
+}
+
+
+.contenedor-img-footer {
+    padding-top: 5%;
+
+}
+
+
+.ImagenProf {
+    width: 350px;
+    height: 280px;
+}
+
+
+.contenedor-derecho {
+    border: 2px solid black;
+}
+
+
+.ficha-1 {
+    border: 2px solid red;   
+    width: 75%;
+    height: 25%;
+    background: $degMor;
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.ImagenPrincipal {
+    width: 100px;
+    height: 100px;
+}
+
+
+.contenedor-izquierda-ficha {
+    border: 2px solid green;
+    width: 25%;
+
+    display: flex;    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor-derecha-ficha {
+    border: 2px solid blue;
+    width: 75%;
+    padding-top: 2%;
+    padding-left: 5%;;
+}
+
+
+.Input-Arriba {
+    width: 100%;
+    height: 15px;
+    padding-bottom: 45px;
+}
+
+.form-control1 {
+    width: 90%;
+    height: 5vh;
+    padding-bottom: 0%;
+}
+
+
+textarea {
+    width: 310px;
+    height: 85px;
+    
+
+
+}
+
+.Input-Abajo {
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    
+}
+
+.boton2 {
+    border: 2px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+
+}
