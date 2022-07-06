@@ -2,8 +2,9 @@
 // @import '../../styles/functions.scss' ;
 
 .total{
-height: 90vh;
+height: 79vh;
 width: 100vw;
+z-index: 30000;
 }
 
 .titulo{
@@ -193,6 +194,10 @@ width: 100vw;
     border: 2px solid white;
 }
 
+
+// .footer{
+//     z-index: -1;
+// }
 
 @media (max-width: 1000px){
 
