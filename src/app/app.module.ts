@@ -45,13 +45,9 @@ import { AdministracionPacientesComponent } from './pages/administracion-pacient
 import { TarjetaEventosCancelarComponent } from './component/tarjeta-eventos-cancelar/tarjeta-eventos-cancelar.component';
 import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-administrar/tarjeta-eventos-administrar.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 7cbce1a4ee78c68f212588f1b6ca22fdecc95e69
+import { HeaderPacComponent } from './component/header-pac/header-pac.component';
+import { HeaderProComponent } from './component/header-pro/header-pro.component';
+import { FooterAnimationComponent } from './component/footer-animation/footer-animation.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +93,9 @@ import { FormsModule } from '@angular/forms';
     AdministracionPacientesComponent,
     TarjetaEventosCancelarComponent,
     TarjetaEventosAdministrarComponent,
+    HeaderPacComponent,
+    HeaderProComponent,
+    FooterAnimationComponent,
   
   ],
   imports: [

@@ -18,6 +18,7 @@
 
 h2 {
     @include titulo();
+    width:350px;
 }
 
 h3 {
@@ -80,9 +81,6 @@ h3 {
 
 
 
-.contenedor-titulo {
-    // border: 2px solid blue;
-}
 
 .contenedor-izquierda {
     // border: 2px solid green;
