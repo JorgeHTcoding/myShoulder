@@ -22,8 +22,7 @@
 }
 
 .titulo {
-    @include titulo();
-    font-size: 2.9em;
+   @include titulo();
 }
 .reminder{
     font-size: 0.85em;

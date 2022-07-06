@@ -49,10 +49,6 @@ import { HeaderPacComponent } from './component/header-pac/header-pac.component'
 import { HeaderProComponent } from './component/header-pro/header-pro.component';
 import { FooterAnimationComponent } from './component/footer-animation/footer-animation.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
