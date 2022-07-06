@@ -47,18 +47,18 @@
    height: 500px;
    position: relative;
    box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
-   background:  linear-gradient(0deg, #9137bb6e 0%, rgb(243, 150, 37) 100%);
+   background:  linear-gradient(0deg, rgba(243, 168, 77, 0.74) 0%, #9137bbb7 100%);
    border-radius: 4px;
 
 
    .banner {
       @include flexCenter(row);
       font-weight: 600;
-      background-color: #3866bdc9;
+      background-color: #e2a794d8;
       width: 50%;
       height: 30px;
       color: white;
-      border-radius: 5px;
+      
 
    }
 
