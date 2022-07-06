@@ -6,40 +6,48 @@
     flex-direction: row;
     align-items: center;
     height: 150px;
+    width: 100%;
     .contContenido{
-        width: 350px;
+        width: 15%;
         height: 120px;
         display: flex;
         border-radius: 7px;
         flex-direction: column;
         justify-content: center;
+        flex-wrap: nowrap;
         align-items: center;
         align-content: center;
         background: $degMor;
         z-index: -1;
+        margin: 5px;
         
-    }
+    }.contenedorTxt{
+        text-align: center;
+        margin-right: 20px;
+        width: 80%;
+       
     h3{
-        margin: 0;
+       
         color:white;
-        font-size: 28px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 20px;
         font-family: 'Montserrat';
     }
     p{
         margin: 0;
         color:$primaryText;
-        font-size: 28px;
-        line-height: 34px;
+        font-size: 22px;
+       
         font-family: 'Montserrat';
     }
+}
     figure img{
-        
+        position: sticky;
         width: 150px;
         height: 150px;
         border-radius: 150px;
-        display:flex;
-        margin-left:-80px;
+        // display:flex;
+        margin-left:-40px;
         z-index:1;
       
     }
