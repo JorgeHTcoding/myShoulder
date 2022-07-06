@@ -1,0 +1,261 @@
+@import '../../styles/colors.scss' ;
+// @import '../../styles/functions.scss' ;
+
+.total{
+height: 90vh;
+width: 100vw;
+}
+
+.titulo{
+        height: 10%;
+        width: 90%;
+        margin-left: 6%;
+}
+.titulo h2{
+            color: $degMor;
+            height: 50%;
+            width: 100%;
+        }
+.titulo p{
+            font-weight: bold;
+            color: #6D6D6D;
+            height: 50%;
+            width: 100%;
+        }
+ 
+
+.container{
+    margin-top: 1%;
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.cabecera{
+        height: 10%;
+        font-weight:bolder;
+        text-align: center;
+        padding-top: 0.3%;
+        color:#6D6D6D;
+        background-color: #eaf2fa;
+        // padding: 1%;
+}
+.principal{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-image: linear-gradient(180deg, rgba(146, 169, 216, 0.8) 0%, rgba(191, 181, 211, 0.8) 85.97%);
+        // z-index: -2;
+}
+.izq{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.izq figure {
+        margin-top: 2%;
+        width: 95%;
+        height: 60%;
+ }
+.izq img{
+        width: 100%;
+        height: 100%;
+}
+
+
+.bajo{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.fecha{
+    width: 75%;
+    height: 50%;
+}
+.fecha p{
+        width: 75%;
+        height: 50%;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 3%;
+        background: white;
+        
+    }
+
+
+.botonPrincipal{
+    width: 75%;
+    height: 50%;
+}
+.boton1{
+    width: 75%;  
+    height: 50%;
+    font-size: large;
+    border: 2px solid #E9C598;
+    border-radius: 6%;
+    background-color:$secondaryColor;
+    color: white;
+    font-weight: bold;
+}
+
+.boton1:hover{
+    color: $secondaryColor;
+    background-color: white;
+    border: 2px solid white;
+}
+
+
+
+.drch{
+    width: 60%;
+    height: 100%;
+}
+.prof{
+    height: 25%;
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.prof p{
+        text-align: center;
+        padding: 1%;
+        width: 100%; 
+        height: 65%;
+        border-radius: 3%;
+        background: white;
+        z-index: -1;
+        // position:absolute;
+ }
+.prof figure{
+    height: 90px;
+    width: 90px;
+    z-index: 1;
+    margin-left: -20px;
+}
+.prof img{
+    height: 100%;
+    width: 100%;
+    // position:absolute;
+
+}
+
+.descripcion{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descripcion  p{
+    height: 80%;
+    width: 97%;
+    border: 2px solid white;
+    border-radius: 3%;
+    background: white;
+}
+
+
+
+
+.divBoton{
+    width: 100%;  
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.boton2{
+    width: 20%;  
+    height: 30%;
+    margin-right: 5%;
+    font-size: large;
+    border: 2px solid $primaryColor;
+    border-radius: 6%;
+    background:$primaryColor;
+    color: white;
+    font-weight: bold;
+}
+
+.boton2:hover{
+    color: $primaryColor;
+    background-color: white;
+    border: 2px solid white;
+}
+
+
+@media (max-width: 1000px){
+
+    .descripcion p{
+            font-size: small;
+        }
+
+    .prof p{
+            font-size: small;      
+        }
+
+    .fecha p{
+            font-size: small;            
+        }
+
+    .boton1{
+        font-size: small;              
+    }
+    .titulo h2 {
+        font-size:normal;                
+    }
+    .titulo p {
+        font-size:small;                
+    }
+}
+
+@media (max-width: 850px){
+    
+    .prof p{
+        font-size:x-small;      
+    }
+    .prof figure{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .descripcion    p{
+        font-size:xx-small;
+    }
+
+
+    .prof p{
+        font-size:xx-small;      
+    }
+
+
+    .fecha p{
+        font-size:xx-small;            
+    }
+    .boton1{
+        font-size:xx-small;              
+    }
+    .titulo h2 {
+        font-size:small;                
+    }
+    .titulo p {
+        font-size:x-small;                
+    }
+    .prof figure{
+        height: 70px;
+        width: 70px;
+    }
+}
