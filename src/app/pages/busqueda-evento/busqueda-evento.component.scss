@@ -72,7 +72,33 @@
   font-size: 55px;
   color: #7485be;
 }
+.bloqueBoton{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 195px;
+}
+.filtrar {
 
+    margin-top: 10px;
+    border: none;       
+    text-align: center;
+    text-decoration: none;
+    display:inline-block ;  
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: white; 
+    color: #E8C597 ; 
+    padding-left:10px;
+    padding-right:10px;    
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+  }
+         
+  .filtrar:hover {
+    background-color: #E8C597;
+    color: white;
+  }
 @media (max-width: 1200px) {
     .particleCard {
         display: flex;
