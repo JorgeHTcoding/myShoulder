@@ -45,6 +45,9 @@ import { AdministracionPacientesComponent } from './pages/administracion-pacient
 import { TarjetaEventosCancelarComponent } from './component/tarjeta-eventos-cancelar/tarjeta-eventos-cancelar.component';
 import { TarjetaEventosAdministrarComponent } from './component/tarjeta-eventos-administrar/tarjeta-eventos-administrar.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderPacComponent } from './component/header-pac/header-pac.component';
+import { HeaderProComponent } from './component/header-pro/header-pro.component';
+import { FooterAnimationComponent } from './component/footer-animation/footer-animation.component';
 
 
 
@@ -94,6 +97,9 @@ import { FormsModule } from '@angular/forms';
     AdministracionPacientesComponent,
     TarjetaEventosCancelarComponent,
     TarjetaEventosAdministrarComponent,
+    HeaderPacComponent,
+    HeaderProComponent,
+    FooterAnimationComponent,
   
   ],
   imports: [
