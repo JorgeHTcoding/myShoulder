@@ -1,14 +1,19 @@
 .filtroForm{
     display:flex;
     justify-content:space-around;
-    flex-wrap: wrap;
+  
+    padding-left: 110px;
+    padding-right: 110px;
 }
 .inputTitle{
-    margin-right:50px
+    margin-right:50px;
+    margin-left:50px;
+    min-width:100px;
 }
 .particulaFiltro{
-    display:flex;
+    display:flex;    
     flex-direction: row;
+    justify-content: space-around;
     
 }
 .input{
@@ -19,3 +24,16 @@
     min-width: 150px;
     padding-left: 5px;
 }
+@media (max-width: 1400px) {
+    .filtroForm {
+        display:flex;
+        flex-direction: column;
+        justify-content:space-around;
+        flex-wrap: wrap;
+    .input{
+        margin-bottom: 5px;
+    }
+    }
+    
+   
+  }
