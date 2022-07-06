@@ -8,15 +8,14 @@
 }
 
 @mixin titulo(){
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2.5em;
-        line-height: 3em;
-        color: linear-gradient(270.11deg, #9C9DBF 58.67%, #E8C597 99.94%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 3em;
+    background: -webkit-linear-gradient(180deg,#E8C597, #9C9DBF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.9em;
 }
 

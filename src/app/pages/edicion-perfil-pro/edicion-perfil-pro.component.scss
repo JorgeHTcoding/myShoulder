@@ -16,8 +16,9 @@
     margin-bottom: 5%;
 }
 
-h2 {
+.titulo {
     @include titulo();
+    width:300px;
 }
 
 h3 {
