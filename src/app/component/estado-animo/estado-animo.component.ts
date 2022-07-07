@@ -1,3 +1,4 @@
+import { outputAst } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class EstadoAnimoComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
+    let slider = document.getElementById("myRange");
+    console.log(slider)
   }
-
+  
 }
