@@ -15,6 +15,13 @@
 	color:$primaryText;
 	// padding-bottom:10%;
 }
+// .contenedorRadio{
+// 	width: 100%;
+// 	display: flex;
+// 	justify-content: flex-start;
+// 	align-items: center;
+// 	align-content: center;
+// }
 h1{
 	font-size: 30px;
 	margin: 15px;
@@ -32,18 +39,20 @@ h3{
 	align-items: center;
 	align-content: center;
 	border-radius: 7px;
-	margin: 15px;
+	margin: auto;
 }
 #radios{
   position:relative;
   width:100%;
-//   margin:0 auto;
+  margin:0 auto;
   background:linear-gradient(90deg, #92A9D8 0%, #B9AAD1 81.47%);
   
 }
 input[type="radio"]{
   position:absolute;
-  right:999%;
+  right:900%;  
+ 
+  
 }
 label{
   float:left;
@@ -54,10 +63,11 @@ label{
   cursor:pointer;
 }
 #slider{
+ 
   position:absolute;
-  left:1.9%; top:4;
+  left:3.9%; top:6;
   width:10%; padding-bottom:10%;
-  margin: 3% 1 1 5%;
+  margin: 1% 4 4 1%;
   background:#fff;
   transition:transform 1s;
   border-radius:50%;
@@ -69,8 +79,8 @@ label{
 #input1:checked  ~ #slider{ animation-name: input1; left:0; }
 #input2:checked  ~ #slider{ animation-name: input2; left:20%; }
 #input3:checked  ~ #slider{ animation-name: input3; left:40%; }
-#input4:checked  ~ #slider{ animation-name: input4; left:60%; }
-#input5:checked  ~ #slider{ animation-name: input5; left:80%; }
+#input4:checked  ~ #slider{ animation-name: input4; left: 60%; }
+#input5:checked  ~ #slider{ animation-name: input5; left: 80%; }
 
 @keyframes input1{ 30%, 70% { transform:scale(0.5); } }
 @keyframes input2{ 30%, 70% { transform:scale(0.5); } }
