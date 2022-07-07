@@ -3,11 +3,14 @@
 
 
 .contenedor-general {
-  z-index: 3;
-    padding: 5%;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
+  z-index: 10;
+    padding-left: 5%;
+    
+    height: 90vh;
+    background-image: url("../../../assets/img/No\ Borrar!.png");
+    background-repeat: no-repeat;
+  
+    background-size:cover
 }
 
 .ImagenPrincipal {
@@ -43,7 +46,7 @@ h3 {
     color:white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
     align-items: center;
 }
 
@@ -111,7 +114,7 @@ h3 {
 
 
 .contenedor-izquierda {
-    margin-top: -9%;
+    // margin-top: -9%;
     width: 21%;    
     height: 50vh;
    
@@ -222,7 +225,7 @@ textarea {
 .guardar {
     height: 15%;
     width: 65%;
-    background:  linear-gradient(270.11deg, #9c9dbf2f  58.67%,  #e8c59749 99.94%); 
+    // background:  linear-gradient(270.11deg, #9c9dbf2f  58.67%,  #e8c59749 99.94%); 
     border: none;
     text-align: center;
     text-decoration: none;
@@ -240,7 +243,7 @@ textarea {
   }
 
   .guardar:hover{
-    background:  linear-gradient(270.11deg,  #e8c59770 58.67%,  #9c9dbf62 99.94%);
+    background:  $primaryColor;
     color: white;
 }
 
@@ -250,3 +253,32 @@ textarea {
         font-size: xx-small;
     }
 }
+
+// .footer-pro{
+//     position: absolute;
+//     width: 100%;
+//     z-index: 1;
+//     bottom: 0;
+//     left: 0;
+//     display: flex;
+//     .nar{
+//         position: absolute;
+//         z-index: 1;
+//         width: 100%;
+//         height: auto;
+            
+
+//     }
+//     .mor{
+//        position: absolute;
+//         z-index: 0;
+//         bottom: 35vh;
+//         width: 100%;
+//         height: auto;
+        
+//     }
+//     .fill{
+//         background-color: $secondaryColor;
+//         height: 30vh;
+//     }
+// }
