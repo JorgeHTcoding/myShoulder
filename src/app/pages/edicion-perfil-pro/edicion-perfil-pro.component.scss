@@ -6,7 +6,9 @@
   
     padding: 5%;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    background-image: url("../../../assets/img/backEdProf.png");
+
 }
 
 .ImagenPrincipal {
@@ -17,7 +19,10 @@
 }
 
 .titulo {
-    @include titulo();
+    // @include titulo();
+    font-weight: 700;
+    color: $secondaryColor;
+    font-size: 3em;
     width:300px;
 }
 
@@ -218,30 +223,58 @@ textarea {
 }
 
 
-.guardar {
+// .guardar {
+//     height: 15%;
+//     width: 65%;
+//     background:  linear-gradient(270.11deg, #9c9dbf2f  58.67%,  #e8c59749 99.94%); 
+//     border: none;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-size: 1.5em;
+//     font-weight: bold;
+//     color: #E8C597; 
+
+//     padding-left:5%;
+//     padding-right:5%;
+
+//     transition-duration: 0.4s;
+//     cursor: pointer;
+    
+//   }
+
+//   .guardar:hover{
+//     background:  linear-gradient(270.11deg,  #e8c59770 58.67%,  #9c9dbf62 99.94%);
+//     color: white;
+// }
+
+.boton1{
+    width: 45%;
     height: 15%;
-    width: 65%;
-    background:  linear-gradient(270.11deg, #9c9dbf2f  58.67%,  #e8c59749 99.94%); 
-    border: none;
+    background: none;
+    margin-top: 10px;
+    border: 2px solid white;
+    border-radius: 2px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #E8C597; 
-
-    padding-left:5%;
-    padding-right:5%;
-
+    color: white ;
+    padding-left: 10px;
+    padding-right: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
-    
-  }
 
-  .guardar:hover{
-    background:  linear-gradient(270.11deg,  #e8c59770 58.67%,  #9c9dbf62 99.94%);
-    color: white;
 }
+.boton1:hover {
+    background-color: white ;
+    color: #E8C597;
+}
+
+
+
+
 
 @media screen and (max-width:550px){
 
