@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    min-height: 700px;
+    
+    min-height: 600px;
     width: 100%;
 
     input {
@@ -30,7 +30,7 @@
 }
 .modalDialog {
     
-    
+    z-index:30000;
     height: 0px;
     position: fixed;
     top: 0;
@@ -65,6 +65,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    
    
     
 }
@@ -87,13 +88,13 @@
   }
 
 .register {
-    z-index: 21000;
+   
     margin-top: 25px;
     border: none;       
     text-align: center;
     text-decoration: none;
     display: inline-block;    
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     background-color: white; 
     color: #E8C597; 
