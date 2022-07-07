@@ -5,7 +5,7 @@
 .contenedor-general {
     // border: 2px solid red;
     width: 100vw;
-    height: 87vh;
+    height: 85vh;
 
     display:flex;
     flex-direction: row;
@@ -17,6 +17,7 @@
 .contenedor-titulo-izq {
     // border: 2px solid black;    
     width: 38vw;
+   
 }
 
 
@@ -185,6 +186,11 @@
 
 
 @media (max-width: 1200px) {
+    .contenedor-general{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+    }
     .particleCard {
         display: flex;
         flex-direction: column;
@@ -208,3 +214,67 @@
   }
   
   }
+  @media screen and (min-width:380px) and (max-width:768px){
+    .header{
+        display:none;
+    }
+    // .contenedor-genera{
+    //     width: 100vw;
+    //    height: 100vh;
+    //    transition:all 0.1s ease-out;
+
+    // }
+    .footer{
+        display:none
+
+
+    }
+    img{
+        display:none;
+    }
+    .contenedor-general {
+        flex-basis: 95%;
+        height: 82%;
+        display: flex;
+         flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: auto ;
+        // border: 6px solid green;
+         z-index: 30000;
+         transition:all 0.1s ease-out;
+    
+    }
+    .contenedor-izquierdo{
+        display: flex;
+        flex-direction: column;
+        flex-basis:100vh;
+        // margin-bottom: 100px;
+        transition:all 0.1s ease-out;
+        
+    }
+
+    .contenedor-derecho{
+        display: flex;
+        flex-direction: column;
+        flex-basis:100vh;
+        transition:all 0.1s ease-out;
+    }
+   .cartaPaciente{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 3px;
+    
+   }
+
+   .contenedor-titulo-izq , .contenedor-titulo-der{
+    width: 100%;
+   }
+   .titulo-der{
+    width: 100%;
+   }
+   .miformu1{
+    width: 100%;
+   }
+}
