@@ -1,3 +1,5 @@
+<app-header-pac></app-header-pac>
+
 <div class = "contenedor-general">
 
     <div class = "contenedor-izquierdo">
@@ -50,7 +52,6 @@
                 </div>
 
               </form>
-      
         </div>
     
 
@@ -68,121 +69,66 @@
                 <h1 class = "titulo-der">Profesionales</h1>
             </div>
 
-            <div class = "contenedor-titulo-ficha1">
-                <h6 class = "titulo-prof-ficha1">Marisa</h6>
-            </div>  
+            <div class = "bloque-car">
 
-            <div class = "ficha-1">
-                <div class = "contenedor-izquierda-ficha">
-                    <img class = "ImagenPrincipal" src="../../../assets/img/chica.png"> 
-                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
 
-                <div class = "contenedor-derecha-ficha">
-                    <div class = "Input-Arriba">
-                    
-                        <div class="form-outline1 mb-4">
-                            <input type="text" id="form1Example1" class="form-control1"/>
-                            <label class="form-label" for="form1Example1"></label>
-                        </div>
-                    </div>
-                          
-                    <div class = "Input-Abajo">
 
-                        <div class = "Abajo-Izq">
-                            <div class = "textarea1">
-                                <textarea name="textarea" style="overflow:hidden; resize:none"></textarea>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="particleCard">
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
                             </div>
                         </div>
 
-                        <div class = "Abajo-Der">
-                            <div class="boton2">
-                                <button class="contacta">Contacta</button>
+                        <div class="carousel-item ">
+                            <div class="particleCard">
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="particleCard">
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
+                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
                             </div>
                         </div>
                     </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active primary"
+                            aria-current="true" aria-label="Slide 1"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
                 </div>
-            
+
             </div>
-
-
-
-            <div class = "contenedor-titulo-ficha1">
-                <h6 class = "titulo-prof-ficha1">Luís</h6>
-            </div>  
-
-            <div class = "ficha-1">
-                <div class = "contenedor-izquierda-ficha">
-                    <img class = "ImagenPrincipal" src="../../../assets/img/chico.png"> 
-                </div>
-
-
-                <div class = "contenedor-derecha-ficha">
-                    <div class = "Input-Arriba">
-                    
-                        <div class="form-outline1 mb-4">
-                            <input type="text" id="form1Example1" class="form-control1"/>
-                            <label class="form-label" for="form1Example1"></label>
-                        </div>
-                    </div>
-                          
-                    <div class = "Input-Abajo">
-
-                        <div class = "Abajo-Izq">
-                            <div class = "textarea1">
-                                <textarea name="textarea" style="overflow:hidden; resize:none"></textarea>
-                            </div>
-                        </div>
-
-                        <div class = "Abajo-Der">
-                            <div class="boton2">
-                                <button class="contacta">Contacta</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class = "contenedor-titulo-ficha1">
-                <h6 class = "titulo-prof-ficha1">Antonio</h6>
-            </div>  
-
-            <div class = "ficha-1">
-                <div class = "contenedor-izquierda-ficha">
-                    <img class = "ImagenPrincipal" src="../../../assets/img/chico.png"> 
-                </div>
-
-
-                <div class = "contenedor-derecha-ficha">
-                    <div class = "Input-Arriba">
-                    
-                        <div class="form-outline1 mb-4">
-                            <input type="text" id="form1Example1" class="form-control1"/>
-                            <label class="form-label" for="form1Example1"></label>
-                        </div>
-                    </div>
-                          
-                    <div class = "Input-Abajo">
-
-                        <div class = "Abajo-Izq">
-                            <div class = "textarea1">
-                                <textarea name="textarea" style="overflow:hidden; resize:none"></textarea>
-                            </div>
-                        </div>
-
-                        <div class = "Abajo-Der">
-                            <div class="boton2">
-                                <button class="contacta">Contacta</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
 
     </div>
 
 </div>
+
+<app-footer></app-footer>

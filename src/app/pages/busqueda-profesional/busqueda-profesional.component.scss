@@ -3,13 +3,14 @@
 
 
 .contenedor-general {
-    border: 2px solid red;
-    padding-top: 5%;
+    // border: 2px solid red;
     width: 100vw;
-    height: 100vh;
+    height: 87vh;
 
     display:flex;
     flex-direction: row;
+    z-index: 30000;
+    position: absolute;
 
 }
 
@@ -38,7 +39,6 @@
 .contenedor-titulo-der {
     // border: 2px solid black;    
     width: 60vw;
-
 }
 
 .titulo-der {
@@ -133,116 +133,78 @@
 
 
 .contenedor-img-footer {
-    padding-top: 5.5%;
+    padding-top: 6.5%;
 }
 
 
 .ImagenProf {
     width: 350px;
-    height: 280px;
+    height: 265px;
 }
 
 
-// .contenedor-derecho {
-//     border: 2px solid black;
-// }
-
-
-.ficha-1 {
-    // border: 2px solid red;   
-    width: 75%;
-    height: 22%;
-    background: $degMor;
-
-    display: flex;
-    flex-direction: row;
-}
-
-
-.ImagenPrincipal {
-    width: 100px;
-    height: 100px;
-}
-
-
-.contenedor-izquierda-ficha {
+.cartaPaciente{
     // border: 2px solid green;
-    width: 25%;
+    width: 57vw;
+    margin-left: -15%;
+    margin-right: -15%;
 
-    display: flex;    
-    flex-direction: row;
+    display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-.contenedor-derecha-ficha {
-    // border: 2px solid blue;
-    width: 75%;
-    padding-top: 1%;
-    padding-left: 5%;;
+.particleCard {
+  @include flexCenter(column);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 
-.Input-Arriba {
-    width: 100%;
-    height: 15px;
-    padding-bottom: 45px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;     
+  background-size: 100%, 100%;       
+  background-image: none;
 }
 
-.form-control1 {
-    width: 90%;
-    height: 5vh;
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 40px;
+  color: #7485be;
 }
 
-
-.Input-Abajo {
-    border: 2px solid orange;
-    display: flex;
-    flex-direction: row;
-    height: 58%;
-    width: 66%;  
-}
-
-
-
-textarea {
-    width: 20.5vw;
-    height: 11vh;
-    // margin-right: 3vh;
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 40px;
+  color: #7485be;
 }
 
 
+@media (max-width: 1200px) {
+    .particleCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+             
+      
+    }
+    .tarjeta{
+        margin-bottom: 25px;  
+    }
 
-.Abajo-Der {
-    display:flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items:flex-end;
-    align-content: flex-end;  
-}
-
-.boton2 {
-    border: 2px solid red;
-    width: 7.5vw;
     
-    
-    // display:flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // align-items: flex-end;
-    // align-content: flex-end;
-}
 
-
-.contacta {
-    font-weight: 700;
-    border: none;
-    padding: 4%;
-}
-
-.titulo-prof-ficha1 {
-    padding-top: 1%;
-    font-weight: 700;
-    color: $primaryText;
-}
+  .carousel-indicators{
+    display:none;
+  }
+  
+  .footer{
+    display:none;
+  }
+  
+  }
