@@ -3,22 +3,14 @@
 
 
 .contenedor-general {
-  z-index: 10;
+    z-index: 10;
     padding-left: 5%;
-    
-    height: 90vh;
-    background-image: url("../../../assets/img/No\ Borrar!.png");
-    background-repeat: no-repeat;
-  
-<<<<<<< HEAD
-    background-size:cover
-=======
+    background-repeat: no-repeat; 
+    background-size:cover;
     padding: 5%;
     width: 100vw;
     height: 90vh;
     background-image: url("../../../assets/img/backEdProf.png");
-
->>>>>>> edPerfilProf1
 }
 
 .ImagenPrincipal {
