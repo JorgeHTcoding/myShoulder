@@ -7,6 +7,7 @@
     padding: 5%;
     width: 100vw;
     height: 90vh;
+   
 }
 
 
@@ -19,6 +20,11 @@
     
 }
 
+a{
+    display:block;
+    width: 100%;
+    height: 100%;
+}
 
 .contenedor-abajo {
     // border: 2px solid green; 
@@ -28,6 +34,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    z-index:200000;
 }
 
 
@@ -43,7 +50,7 @@
     width: 35%;
     height: 95%;
     background: $degMor;
-
+    z-index:200000;
     box-shadow: 7px 5px 5px rgb(119, 114, 114);
 }
 
@@ -58,6 +65,7 @@
     // flex-wrap: wrap;
     // justify-content: space-evenly;
     box-shadow: 7px 5px 5px rgb(119, 114, 114);
+    z-index:200000;
 }
 
 

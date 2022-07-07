@@ -2,8 +2,19 @@
 @import "../../styles/functions.scss";
 
 
+.contenedor-arriba{
+   
+    height: 150px;
+    
+}
+.contenedor-titulo{
+    
+    padding:0;
+    height: 100px;
+}
 .contenedor-general {
-    // border: 2px solid red;
+    
+    margin-top: 75px ;
     padding-left: 5%;
     width: 100vw;
     height: 89vh;
@@ -34,7 +45,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 60%;
+    height: 50%;
 }
 
 .miformu1 { 
