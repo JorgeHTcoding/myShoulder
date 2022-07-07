@@ -55,6 +55,7 @@
     margin-bottom: 15px;
     padding-top: 25px;
     padding-left: 40px;
+    z-index: 30000;
 }
 
 .carousel-control-prev-icon,
@@ -78,6 +79,7 @@
   color: #7485be;
 }
 .bloqueBoton{
+    z-index: 30000;
     display: flex;
     justify-content: flex-start;
     padding-left: 195px;
@@ -97,12 +99,14 @@
     padding-right:10px;    
     transition-duration: 0.4s;
     cursor: pointer;
+    z-index: 30000;
 
   }
          
   .filtrar:hover {
     background-color: #E8C597;
     color: white;
+    z-index: 30000;
   }
 @media (max-width: 1200px) {
     .particleCard {

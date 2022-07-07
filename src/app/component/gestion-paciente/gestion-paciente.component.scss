@@ -103,11 +103,13 @@
     padding-right: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
+    z-index: 30000;
 
 }
 .boton1:hover {
     background-color: $primaryColor ;
     color: white;
+    z-index: 30000;
 }
 
 .boton2{
@@ -125,9 +127,11 @@
     transition-duration: 0.4s;
     cursor: pointer;
     width: 100%;
+    z-index: 30000;
 
 }
 .boton2:hover {
     background-color:white ;
     color:  $primaryColor;
+    z-index: 30000;
 }
