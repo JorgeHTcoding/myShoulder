@@ -48,6 +48,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderPacComponent } from './component/header-pac/header-pac.component';
 import { HeaderProComponent } from './component/header-pro/header-pro.component';
 import { FooterAnimationComponent } from './component/footer-animation/footer-animation.component';
+import { FooterProComponent } from './component/footer-pro/footer-pro.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { FooterAnimationComponent } from './component/footer-animation/footer-an
     HeaderPacComponent,
     HeaderProComponent,
     FooterAnimationComponent,
+    FooterProComponent,
   
   ],
   imports: [
