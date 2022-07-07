@@ -18,7 +18,7 @@ footer{
         left: 0;
         width: 100vw;
         height: auto;
-        animation: wave-nar 15s ease-in-out infinite ;
+        animation: wave-nar 20s ease-in-out infinite ;
     }
     .wave-mor{
         
@@ -78,5 +78,10 @@ footer{
     100%{
         
         transform: scalex(1);
+    }
+}
+@media screen and (min-width: 1200px){
+    .container{
+        width: 100vw;
     }
 }

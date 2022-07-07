@@ -92,12 +92,14 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 300px;
+
 }
 
 .contenedor-derecha {
     // border: 2px solid red;
     width: 75%;
     height: 300px;
+   
 }
 
 
@@ -173,10 +175,24 @@ textarea {
     color: white;
 }
 
+.imagen{
+   
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+img .chica {
+    width:60%;
+    margin-right:- 160px;
+   
+}
 @media screen and (max-width:475px){
 
     .boton {
         margin-top: -15%;
         margin-right: 4%;
     }  
+    .chica{
+        display: none;
+    }
 }
