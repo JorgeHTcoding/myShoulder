@@ -8,9 +8,10 @@
     height: 150px;
     width: 100%;
     
+    
     .contContenido{
-        width: 15%;
-        height: 120px;
+        width: 380px;
+        height: 90px;
         display: flex;
         border-radius: 7px;
         flex-direction: column;
@@ -20,22 +21,21 @@
         align-content: center;
         text-align: center;
         background:linear-gradient(90deg, #E8C597 0%, #B9AAD1 81.47%);
-        margin-left:-40px;
+        margin-left:-45px;
         margin-right: 0;
         z-index: -1;
-        
+        padding: 50px;
     }.contenedorTxt{
-        width: 90%;
-        margin-left:25px;
+        text-align: center;
+        width: 80%;
+        margin-left:20px;
         h3{
             margin: 20px;
             color:white;
             font-size: 22px;
-            line-height: px;
             font-family: 'Montserrat';
         }
         p{
-            
             color:$primaryText;
             font-size: 22px;
             line-height: 20px;
@@ -44,8 +44,8 @@
     }
     figure img{
         position: sticky;
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         border-radius: 150px;
         // display:flex;
         z-index: 1;
