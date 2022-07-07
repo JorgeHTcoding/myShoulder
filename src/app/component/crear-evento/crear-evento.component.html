@@ -1,27 +1,36 @@
-<h4>CREAR EVENTO</h4>
-
-<div class="container">
+<app-header-pro></app-header-pro>
 
 
-    <div class="principal">
-        <div class="izq">
-            <input type="text" placeholder="Insertar url de imagen">
-            <div class="datos">
-                <label> DATOS DE IMPORTANCIA </label>
-                <input type="text" placeholder="MODALIDAD:">
-                <input type="text" placeholder="LUGAR:">
-                <input type="text" placeholder="ORGANIZACION:">
+<div class="general">
+
+    <h4>CREAR EVENTO</h4>
+
+    <div class="container">
+    
+    
+        <div class="principal">
+            <div class="izq">
+                <input type="text" placeholder="Insertar url de imagen">
+                <div class="datos">
+                    <label> DATOS DE IMPORTANCIA </label>
+                    <input type="text" placeholder="MODALIDAD:">
+                    <input type="text" placeholder="LUGAR:">
+                    <input type="text" placeholder="ORGANIZACION:">
+                </div>
+    
             </div>
-
+            <div class="drch">
+                <input type="text" placeholder="Escribe un titulo para tu actividad">
+                <textarea style="overflow:hidden; resize:none">Inserta una descripcion del evento AQUI:</textarea>
+            </div>
         </div>
-        <div class="drch">
-            <input type="text" placeholder="Escribe un titulo para tu actividad">
-            <textarea style="overflow:hidden; resize:none">Inserta una descripcion del evento AQUI:</textarea>
+    
+        <div class="boton">
+            <button type="button" class="botonn"> Publicar evento </button>
         </div>
+    
     </div>
-
-    <div class="boton">
-        <button type="button" class="botonn"> Publicar evento </button>
-    </div>
-
 </div>
+
+
+<app-footer></app-footer>

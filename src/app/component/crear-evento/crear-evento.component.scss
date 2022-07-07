@@ -2,12 +2,24 @@
 @import '../../styles/functions.scss' ;
 
 
+.general{
+    width: 100vw;
+    height: 82vh;
+    position: absolute;
+    z-index: 30000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 h4{
 padding-left: 20%;
 color:#6D6D6D
 }
 .container{
-    background-image: linear-gradient(180deg, rgba(146, 169, 216, 0.8) 0%, rgba(191, 181, 211, 0.8) 85.97%);
+    background-image: linear-gradient(180deg, rgb(146, 169, 216) 0%, rgb(191, 181, 211) 85.97%);
     width: 70%;
     height: 65vh;
     padding: 3%;
@@ -19,9 +31,10 @@ color:#6D6D6D
         display: flex;
         flex-direction: row;
         .izq{
+            // border: 1px solid rgb(195, 17, 17);
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
             width: 40%;
             height: 100%;
             .datos{
@@ -46,6 +59,7 @@ color:#6D6D6D
             }
         }
         .drch{
+            // border: 1px solid rgb(46, 59, 210);
             width: 80%;
             height: 100%;
             input{
@@ -87,6 +101,34 @@ color:#6D6D6D
             background-color: white;
             border: 2px solid white;
 
+        }
+    }
+}
+
+
+@media (max-width: 1060px){
+
+
+    .drch{
+        input{
+            font-size: small;
+            padding: 1%;
+        }
+        textarea{
+            font-size: small;
+            padding: 1%;
+        }
+    }
+    .izq{
+        input{
+            font-size: small;
+            padding: 2%;
+            margin: 5%;
+        }
+        label{
+            font-size: small;
+            // padding: 1%;
+            margin-top: 5%;
         }
     }
 }
