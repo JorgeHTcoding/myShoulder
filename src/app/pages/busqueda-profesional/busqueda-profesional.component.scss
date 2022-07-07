@@ -3,7 +3,8 @@
 
 
 .contenedor-general {
-    // border: 2px solid red;
+    
+    padding-top: 5%;
     width: 100vw;
     height: 87vh;
 
@@ -184,19 +185,35 @@
 }
 
 
-@media (max-width: 1200px) {
-    .particleCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-             
-      
-    }
-    .tarjeta{
-        margin-bottom: 25px;  
-    }
+.Input-Abajo {
+    
+    display: flex;
+    flex-direction: row;
+    height: 58%;
+    width: 66%;  
+}
 
+
+
+textarea {
+    width: 20.5vw;
+    height: 11vh;
+    // margin-right: 3vh;
+}
+
+
+
+.Abajo-Der {
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:flex-end;
+    align-content: flex-end;  
+}
+
+.boton2 {
+   
+    width: 7.5vw;
     
 
   .carousel-indicators{
