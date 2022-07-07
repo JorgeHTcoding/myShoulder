@@ -49,7 +49,18 @@
     width: 100%;
     height: 15px;
     padding-bottom: 45px;
+    padding-top: 5px;
 }
+
+.form-outline1 {
+    
+    width: 90%;
+    height: 30px;
+   
+    background-color: white;
+}
+
+
 
 .form-control1 {
     width: 90%;
@@ -66,8 +77,13 @@
 }
 
 
+.textarea1 {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+}
 
-textarea {
+.textarea {
     width: 19vw;
     height: 11vh; 
 }
