@@ -5,15 +5,15 @@
 
 .contenedor-titulo-ficha1 {
     padding-top: 1.5%;
-    margin-left: -65%;
+    
 }
 
 .ficha-1 {
     // border: 2px solid red;   
     width: 75%;
-    height: 22%;
+    height: 15%;
     background: $degMor;
-
+    padding:  7px 1px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,7 +30,6 @@
 .contenedor-izquierda-ficha {
     // border: 2px solid green;
     width: 25%;
-
     display: flex;    
     flex-direction: row;
     justify-content: center;
@@ -50,7 +49,18 @@
     width: 100%;
     height: 15px;
     padding-bottom: 45px;
+    padding-top: 5px;
 }
+
+.form-outline1 {
+    
+    width: 90%;
+    height: 30px;
+   
+    background-color: white;
+}
+
+
 
 .form-control1 {
     width: 90%;
@@ -67,8 +77,13 @@
 }
 
 
+.textarea1 {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+}
 
-textarea {
+.textarea {
     width: 19vw;
     height: 11vh; 
 }
@@ -111,4 +126,26 @@ textarea {
     padding-top: 1%;
     font-weight: 700;
     color: $primaryText;
+}
+@media screen and (min-width:380px) and (max-width:768px){
+    img{
+        display: none;
+    }
+    .ficha-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .boton2{
+        display: flex;
+        align-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 60px;
+    }
+    .Input-Abajo , .Input-Abajo {
+        width: 100%;
+
+    }
+
 }
