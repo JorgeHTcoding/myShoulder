@@ -11,9 +11,9 @@
 .ficha-1 {
     // border: 2px solid red;   
     width: 75%;
-    height: 22%;
+    height: 15%;
     background: $degMor;
-
+    padding:  7px 1px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,7 +30,6 @@
 .contenedor-izquierda-ficha {
     // border: 2px solid green;
     width: 25%;
-
     display: flex;    
     flex-direction: row;
     justify-content: center;
@@ -111,4 +110,26 @@ textarea {
     padding-top: 1%;
     font-weight: 700;
     color: $primaryText;
+}
+@media screen and (min-width:380px) and (max-width:768px){
+    img{
+        display: none;
+    }
+    .ficha-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .boton2{
+        display: flex;
+        align-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 60px;
+    }
+    .Input-Abajo , .Input-Abajo {
+        width: 100%;
+
+    }
+
 }
