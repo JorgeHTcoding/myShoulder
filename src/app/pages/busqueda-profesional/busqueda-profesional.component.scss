@@ -196,20 +196,23 @@
 }
 
 
-textarea {
-    width: 310px;
-    height: 84px;
-    margin-right: 24px;
-}
-
 .Input-Abajo {
-    // border: 2px solid orange;
+    border: 2px solid orange;
     display: flex;
     flex-direction: row;
     height: 58%;
-    width: 90%;
-    
+    width: 66%;  
 }
+
+
+
+textarea {
+    width: 20.5vw;
+    height: 11vh;
+    // margin-right: 3vh;
+}
+
+
 
 .Abajo-Der {
     display:flex;
@@ -219,21 +222,23 @@ textarea {
     align-content: flex-end;  
 }
 
-// .boton2 {
-//     // border: 2px solid red;
-
-//     // display:flex;
-//     // flex-direction: row;
-//     // justify-content: center;
-//     // align-items: flex-end;
-//     // align-content: flex-end;
-// }
+.boton2 {
+    border: 2px solid red;
+    width: 7.5vw;
+    
+    
+    // display:flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: flex-end;
+    // align-content: flex-end;
+}
 
 
 .contacta {
     font-weight: 700;
     border: none;
-    padding: 7%;
+    padding: 4%;
 }
 
 .titulo-prof-ficha1 {
