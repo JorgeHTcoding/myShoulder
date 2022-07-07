@@ -10,7 +10,7 @@
             <div class="textos">
                 <h4 class="novedades">Novedades</h4>
                 <p class="textoInfo"> Rosa te ha enviado un mensaje</p>
-                <p class="textoInfo"> Te has apuntado a un <span class="naranjito">Evento</span> </p>
+                <p class="textoInfo"> Te has apuntado a un <span onclick= "location.href= 'http://localhost:4200/tarjeta-evento';" class="naranjito">Evento</span> </p>
             </div>
             <div class="componenteEstadoAnimo">
                 <app-estado-animo></app-estado-animo>
@@ -24,10 +24,10 @@
             <div class="mostrarEvento">
                 <h4 class="tituloEventos">Próximos eventos</h4>
                 <div class="eventoInd">
-                    <app-mostrar-evento></app-mostrar-evento>
+                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/tarjeta-evento';"></app-mostrar-evento>
                 </div>
                 <div class="eventoInd">
-                    <app-mostrar-evento></app-mostrar-evento>
+                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/tarjeta-evento';"></app-mostrar-evento>
                 </div>
             </div>
             <div class="separador"></div>
