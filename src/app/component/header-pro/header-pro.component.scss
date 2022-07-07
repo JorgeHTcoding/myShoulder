@@ -5,7 +5,8 @@
     @include flexCenter(row);
     justify-content:space-between;
     padding: 1em;
-    color:$primaryText
+    color:$primaryText;
+    z-index: 500000;
 }
 .img{
     height: 50px;
