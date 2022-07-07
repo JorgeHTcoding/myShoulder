@@ -4,8 +4,11 @@
 
 .contenedor-general {
     // border: 2px solid red;
+    padding-left: 5%;
     width: 100vw;
-    height: 100vh;
+    height: 89vh;
+    z-index: 30000;
+    position:absolute;
 }
 
 .ImagenPrincipal {
@@ -35,7 +38,7 @@ h3 {
 }
 
 .miformu1 { 
-    // padding: 5%;
+    
     height: 320px;
     width: 850px;
     color:white;
@@ -99,7 +102,7 @@ h3 {
 
 
 .Input-Arriba {
-    // padding-top: 2%;
+
     margin-bottom: -2%;
     margin-left: 2%;
     margin-right: 3%;
@@ -121,12 +124,6 @@ h3 {
 }
 
 
-// .form-control-area {
-//     height: 180px;
-//     width: 100%;
-   
-// }
-
 .textarea1 {
     padding-top: 0%;
     padding-left: 3%;
@@ -142,6 +139,7 @@ textarea {
     color: $primaryText;
     font-weight: 600;
     text-align: center;
+    border: none;
 }
 
 
