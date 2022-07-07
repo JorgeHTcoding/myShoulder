@@ -117,13 +117,14 @@ h4{
     color:#E8C597 ;
 }
 
-@media screen and (min-width:480px) and (max-width:768px){
+@media screen and (min-width:480px) and (max-width:900px){
     .header{
         display:none;
     }
     .contenedorPadre{
         width: 100vw;
        height: 100vh;
+       transition:all 0.1s ease-out;
 
     }
     .footer{
@@ -146,6 +147,7 @@ h4{
         margin: auto ;
         // border: 6px solid green;
          z-index: 30000;
+         transition:all 0.1s ease-out;
     
     }
     .contenedorIzq{
@@ -153,13 +155,16 @@ h4{
         flex-direction: column;
         flex-basis:50%;
         margin-bottom: 100px;
+        transition:all 0.1s ease-out;
         
     }
 
     .contenedorDcha{
         display: flex;
         flex-direction: column;
-        flex-basis:50%
+        flex-basis:50%;
+        transition:all 0.1s ease-out;
+
     }
    
 }
