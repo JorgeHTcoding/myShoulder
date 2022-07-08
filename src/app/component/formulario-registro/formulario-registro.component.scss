@@ -15,6 +15,7 @@
 }
 
 .bloqueForm{
+    
     display:flex;
     flex-direction: column;
     padding-bottom: 68px;   
@@ -27,36 +28,33 @@
     height: 10%;
     color: white;
     padding: 1%;
-    // border:2px solid red;
+    
 }
 
 .form{
    
-    width: 80%;
-    height: 50%;
-    // border:2px solid rgb(217, 243, 22);
+    width: 100%;
+    height: 60%;    
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    margin-left: 15%;
+    align-items: center;    
     z-index:50000;
-}
-.formControl{
-    width: 300px;
-}
-.camposIzq{
     
+}
+
+.camposIzq{
+   
     font-size: x-small;
-    min-width: 25%;
-    min-height: 70%;
+    min-width: 20%;
+    min-height: 80%;
     // height: 180px;
     display: flex;
     flex-direction: column;
     // justify-content:center;
-    align-items: flex-end;
+   
     z-index:50000;
-    padding-right: 5px;
+    padding-right: 20px;
 }
 
 .camposIzq input{
@@ -64,48 +62,59 @@
     width: 100%;
     // border: 1px solid rgb(195, 25, 25);
     border-radius: 0%;
+    margin-bottom: 5.5px;
 }
 .camposIzq p{
     width: 100%;    
-    font-size: 1.5em;
+    font-size: 1.6em;
     color:white;
 }
 
 .camposDrch{
     
-    min-width: 25%;
-    min-height: 70%;
     font-size: x-small;
+    min-width: 20%;
+    min-height: 80%;
     // height: 180px;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    align-items:center;
+    // justify-content:center;
+   
     z-index:50000;
+    padding-right: 20px;
 }
 
 .camposDrch input{
     height: 30px;
     width: 100%;
     // border: 1px solid white;
+    margin-bottom: 5px;
     border-radius: 0%;
 }
 .camposDrch p{
     width: 100px;    
-    font-size: 1.5em;
+    font-size: 1.6em;
     color:white;
 
 }
-.bloqueChecks{
+.bloqueDerecha{
     
+    min-width: 20%;
+    min-height: 80%;
+    
+}
+.bloqueChecks{
+    display: flex;
+    justify-content: flex-start;
+   
     z-index:600000;
     
 }
 .checks{
-    // border:2px solid orange;
+    
     height: 20%;
-    width: 50%;
-    margin-left: 35%;
+    width: 100%;
+    margin-left: 30%;
     display: flex;
     flex-direction: column;
     font-size: x-small;
@@ -122,17 +131,15 @@
     margin-right: 5px;
 }
 
-input{
-    border: 1px solid white;
-    border-radius: 0%;
-}
+
 
 .abajo{
 
-height: 80%;    
+width: 80%;
+height: 90%;    
 display: flex;
 flex-direction: row;
-justify-content: flex-end;
+justify-content: flex-start;
 align-items: flex-end;
 z-index: 2000;
 position: absolute;
@@ -143,19 +150,38 @@ position: absolute;
     margin-right: 250px;
 } 
 
-.boton{
-    // border:2px solid rgb(0, 145, 255); 
-    width: 20%;
-    margin-bottom: 50px;
+.bloqueBoton{
+    display: flex;
+    justify-content: flex-end;  
+    align-items: flex-end;
+    padding-right: 21px;
+    width: 100%;
+    margin-top: 6px;
+    
+    
 }
 
-#botonn{
-background-color: white;
-color: #E8C597;
-font-weight: 700;
-border: 1px solid white;
-border-radius: 0%;
-width: 70%;
+.botonn{
+    @include flexCenter(row);
+    height: 30px;
+    border-radius: 0%;
+    width: 45%;
+    font-weight: bold;
+    background-color: white;   
+    border: 2px solid white;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;  
+    font-size: 1.1em;       
+    color:#acadc7 ;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.botonn:hover {
+    background-color: #C0C0DD ;
+    color: white;
 }
 
 .texto{
