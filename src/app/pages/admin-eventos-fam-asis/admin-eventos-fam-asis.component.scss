@@ -26,8 +26,9 @@
 
 .bloqueInfo {
     display: flex;
-    padding-left: 15px;
+    padding-left: 25px;
     flex-direction: row;
+    padding-top: 25px;
 }
 
 .titulo {
@@ -51,14 +52,6 @@
     font-weight: bold;
     color: $primaryText;
     margin-bottom: 15px;
-}
-
-.filtro {
-    font-weight: bold;
-    color: $primaryText;
-    margin-bottom: 10px;
-    padding-top: 25px;
-    padding-left: 40px;
 }
 
 .carousel-control-prev-icon,
@@ -87,42 +80,23 @@
     padding-right: 140px;
 }
 
-.filtrar {
-
-    margin-top: 5px;
-    border: 2px solid #E8C597;
-    border-radius: 2px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: white;
-    color: #E8C597;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-
-}
-
-.filtrar:hover {
-    background-color: #E8C597;
-    color: white;
-}
-
 .asistente {
     z-index: 30000;
 }
 
 .bloqueSwap {
+    padding-top: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex start;    
     z-index: 30000;
-    padding-left: 50px;
+    padding-left: 160px;
 }
 
 .anfitrion {
 
     margin-top: 10px;
+    width: 8%;
     border: 2px solid $secondaryColor;
     border-radius: 2px;
     text-align: center;

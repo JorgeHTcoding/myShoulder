@@ -105,8 +105,7 @@
 }
 .bloqueChecks{
     display: flex;
-    justify-content: flex-start;
-   
+    justify-content: flex-start;        
     z-index:600000;
     
 }
@@ -122,6 +121,7 @@
     z-index:60000;
 }
 .checks label{
+    
     font-size: 1.5em;
    
 }
@@ -166,22 +166,22 @@ position: absolute;
     height: 30px;
     border-radius: 0%;
     width: 45%;
-    font-weight: bold;
-    background-color: white;   
+   
+    background-color: #C0C0DD;   
     border: 2px solid white;
     border-radius: 2px;
     text-align: center;
     text-decoration: none;  
     font-size: 1.1em;       
-    color:#acadc7 ;
+    color:white ;
     padding-left: 10px;
     padding-right: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 .botonn:hover {
-    background-color: #C0C0DD ;
-    color: white;
+    background-color: white ;
+    color: #C0C0DD;
 }
 
 .texto{
@@ -191,10 +191,19 @@ position: absolute;
     width: 40%;
     padding: 1%;
 }
+.hide {
+    display: none;
+    
+    
+  }
+  
+  .form-check-label:hover + .hide {
+   
+    display: block;
+    font-size:1.5em;
+    color: rgb(56, 56, 56);
+  }
 
-.footer{
-    border:2px solid yellow; 
-}
 ////////////////////////////////////////////////////////////////////////////
 
 @media (max-width:1000px){

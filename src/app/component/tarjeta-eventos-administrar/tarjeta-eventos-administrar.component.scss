@@ -46,15 +46,15 @@
    width: 400px;
    height: 500px;
    position: relative;
-   box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
-   background:  linear-gradient(0deg, rgba(243, 168, 77, 0.74) 0%, #9137bbb7 100%);
+   box-shadow:  0 0 20px rgba(0, 0, 0, 0.315);
+   background:  linear-gradient(0deg, rgb(250, 204, 148) 0%, #a552cc 100%);
    border-radius: 4px;
 
 
    .banner {
       @include flexCenter(row);
       font-weight: 600;
-      background-color: #e2a794d8;
+      background-color: #E1A394;
       width: 50%;
       height: 30px;
       color: white;
@@ -136,6 +136,6 @@
     }
            
     .boton:hover {
-      background-color: #E8C597;
+      background-color: #8b9cd8;
       color: white;
     }

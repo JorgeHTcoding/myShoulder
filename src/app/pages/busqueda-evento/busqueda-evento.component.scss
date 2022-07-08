@@ -25,7 +25,8 @@
 }
 
 .bloqueInfo {
-    padding-left: 15px;
+    padding-left: 45px;
+    padding-top:25px;
 }
 
 .titulo {
@@ -40,6 +41,7 @@
 
 .info {
     font-weight: bold;
+    padding-left: 10px;
     color: $primaryText;
     margin-bottom: 15px;
 }
@@ -77,28 +79,7 @@
     justify-content: flex-start;
     padding-left: 195px;
 }
-.filtrar {
 
-    margin-top: 10px;
-    border: none;       
-    text-align: center;
-    text-decoration: none;
-    display:inline-block ;  
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: white; 
-    color: #E8C597 ; 
-    padding-left:10px;
-    padding-right:10px;    
-    transition-duration: 0.4s;
-    cursor: pointer;
-
-  }
-         
-  .filtrar:hover {
-    background-color: #E8C597;
-    color: white;
-  }
 @media (max-width: 1200px) {
     .particleCard {
         display: flex;
@@ -131,7 +112,5 @@
           
         }
       
-        .carousel{
-         
-        }
+       
     }
