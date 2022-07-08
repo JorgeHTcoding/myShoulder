@@ -4,18 +4,19 @@
 
 .general{
     width: 100vw;
-    height: 82vh;
+    height: 70vh;
+    margin-top: 50px;
     position: absolute;
     z-index: 30000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 
 h4{
-padding-left: 20%;
 color:#6D6D6D
 }
 .container{
@@ -89,8 +90,7 @@ color:#6D6D6D
         button{
             padding: 1%;
             margin-top: 2%;
-            border: 2px solid #E9C598;
-            border-radius: 6%;
+            border: 2px solid #E9C598;            
             background-color:$secondaryColor;
             color: white;
             font-weight: bold;

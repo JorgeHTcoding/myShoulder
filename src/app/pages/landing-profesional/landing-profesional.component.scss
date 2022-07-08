@@ -64,12 +64,25 @@ h4{
     height: 100%;
     // margin-left: 5%;
     // margin-top: 5%;
+    padding-top: 70px;
     z-index: 30000;
+}
+.bloqueMensajes{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 25px;
 }
 .solicitudes{
     color:$primaryText;
 }
-
+.textoPacientes{
+    padding-top: 25px;
+}
+.textoFamiliares{
+    padding-top: 25px;
+}
 .contenedorDcha {
     // border: 6px solid blue;
     width: 100%;
@@ -106,6 +119,7 @@ h4{
     justify-content: center;
     position: absolute;
     bottom: 0;
+    padding-left: 80px;
 
 }
 .footer{
