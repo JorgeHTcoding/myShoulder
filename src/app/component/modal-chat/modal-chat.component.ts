@@ -11,5 +11,6 @@ export class ModalChatComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  show:boolean = false;
 
 }

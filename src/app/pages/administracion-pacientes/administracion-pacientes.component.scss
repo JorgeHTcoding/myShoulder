@@ -1,7 +1,12 @@
 
 @import "../../styles/colors.scss";
 @import "../../styles/functions.scss";
-
+.tuchat{
+  background: #e8c597bd;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+}
 .cuerpo {
     @-ms-viewport {
         width: extend-to-zoom;
