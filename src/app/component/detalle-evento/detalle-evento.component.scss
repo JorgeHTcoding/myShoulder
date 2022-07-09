@@ -32,7 +32,7 @@ margin-top: 45px;
 .container{
     margin-top: 1%;
     width: 90%;
-    height: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -62,17 +62,20 @@ margin-top: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .izq figure {
         margin-top: 2%;
         width: 95%;
         height: 60%;
+        // border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
  }
 .izq img{
-        width: 100%;
-        height: 100%;
+        width: 82%;
+        height: 78%;
 }
 
 
@@ -89,7 +92,7 @@ margin-top: 45px;
 }
 .fecha{
     width: 75%;
-    height: 50%;
+    height: 40%;
 }
 .fecha p{
         width: 75%;
@@ -98,8 +101,8 @@ margin-top: 45px;
         border: 2px solid white;        
         background: white;
         font-size: 1.3em;
-        color: $primaryText
-        
+        color: $primaryText;
+        padding-top: 7px;
     }
 
 
@@ -155,8 +158,8 @@ margin-top: 45px;
         // position:absolute;
  }
 .prof figure{
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
     z-index: 1;
     margin-left: -20px;
 }
@@ -169,19 +172,21 @@ margin-top: 45px;
 
 .descripcion{
     height: 75%;
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 4%;
     
 }
 
 .descripcion  p{
     height: 80%;
-    width: 97%;
+    width: 95%;
+    padding: 2%;
     border: 2px solid white;   
     background: white;
-    padding:5px;
+
 }
 
 
@@ -193,6 +198,7 @@ margin-top: 45px;
     display: flex;
     align-items: center;
     justify-content: right;
+
 }
 
 
@@ -205,6 +211,7 @@ margin-top: 45px;
     background:$primaryColor;
     color: white;
     font-weight: bold;
+    margin-right: 25%;
 }
 
 .boton2:hover{
