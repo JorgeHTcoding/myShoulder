@@ -7,15 +7,15 @@
     padding-left: 5%;      
     background-repeat: no-repeat; 
     background-size:cover;
-    padding: 5%;
+    padding-top: 1%;
     width: 100vw;
-    height: 90vh;
-    background-image: url("../../../assets/img/backEdProf.png");
+    height: 89vh;
+    background-image: url("../../../assets/img/backEdProf2.png");
 } 
 
 .ImagenPrincipal {
-    width:100px;
-    height:100px;
+    width:180px;
+    height:180px;
     border-radius:90px;
     margin-bottom: 5%;
 }
@@ -24,11 +24,11 @@
     // @include titulo();
     font-weight: 700;
     color: $secondaryColor;
-    font-size: 3em;
+    font-size: 2.5em;
     width:300px;
 }
 
-h3 {
+h4 {
     font-weight: 700;
     color: $primaryText;
 }
@@ -61,7 +61,7 @@ h3 {
 
 .form-outline {
     padding-top: 2%;
-    width: 85%;
+    width: 90%;
     height: 7%;
     
 }
@@ -73,7 +73,8 @@ h3 {
     align-items: center;
     text-align: left;
     padding: 1%;
-    width: 25%
+    width: 25%;
+    
 }
 
 
@@ -117,8 +118,9 @@ h3 {
 
 
 .contenedor-izquierda {
-    // margin-top: -9%;
-    width: 21%;    
+    // border: 2px solid green;
+    margin-top: -5%;
+    width: 30%;    
     height: 50vh;
    
     display:flex;
@@ -143,7 +145,8 @@ h3 {
     display:flex;
     flex-direction: row;
     justify-content: left;
-    align-items: center;    
+    align-items: center;  
+      
 }
 
 .Input-Medio {
@@ -188,13 +191,11 @@ h3 {
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    margin-top: -2%;
+    margin-top: -2.5%;
 }
 
 .textarea1 {
-
     // border: 2px solid black;
-    padding-top: 0%;
     padding-left: 3%;
     height: 35vh;
     width: 65%;
@@ -210,6 +211,8 @@ textarea {
     width: 100%;
     height: 98%;
     border: none;
+    padding-top: 2%;
+    padding-left: 4%;
 }
 
 

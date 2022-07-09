@@ -4,7 +4,7 @@
 
 .contenedor-general {
    
-    margin-top:45px;
+    // margin-top: 20px;
     width: 100vw;
     height: 80vh;
 
@@ -17,14 +17,14 @@
 
 .contenedor-titulo-izq {
     // border: 2px solid black;    
-    width: 25vw;
+    width: 21.5vw;
 }
 
 
 .titulo-izq {
     // border: 2px solid orange;
-    margin-left: 10%; 
-    width: 50%;
+    margin-left: 20%; 
+    width: 80%;
     font-family: 'Montserrat';
     font-size: 1em;
     font-weight: 700;
@@ -33,18 +33,16 @@
     background: -webkit-linear-gradient(180deg,#E8C597, #9C9DBF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 }
 
 
 .contenedor-titulo-der {
     // border: 2px solid black;    
-    width: 60vw;
+    width: 58vw;
 }
 
 .titulo-der {
     // border: 2px solid orange;
-    
     margin-left: 5%; 
     width: 50%;
     font-family: 'Montserrat';
@@ -60,15 +58,15 @@
 
 .contenedor-izquierdo {
     // border: 2px solid black;
-    width: 75vw;
+    width: 79vw;
 }
 
 
 .contenedor-bussqueda {
     // border: 2px solid green;
-    width: 75%;
+    width: 100%;
     height: 40%;
-    padding-left: 10%;
+    padding-left: 20%;
     padding-top: 3%;
 }
 
@@ -77,6 +75,7 @@
     font-weight: 300;
     font-size: medium;
     color: $primaryText;
+    padding-right: 11vh;
 }
 
 
@@ -96,30 +95,34 @@
 }
 
 .form-control {
-    margin-left: 20%;
+    // margin-left: 20%;
     padding-top: 1%;
+    padding-left: 20%;
     background-color: #EFEFEF;
     border-radius: 0%;
     border: none;
+    width: 28vh;
 }
 
 .miformu1 {
-    width: 88%;
-
+    // border: 2px solid blue;
+    width: 70%;
+    height: 100%
 }
 
 .boton {
     // border: 2px solid red;
-    height: 90px;
-    width: 24%;
+    height: 60px;
+    width: 50%;
     margin-left: 38%;
     padding-top: 1%;
+    padding-left: 11.5%;
     
 }
 
 
 .filtro{
-    // border: 2px solid red;
+    border: 2px solid red;
     display: flex;
     flex-direction: row;
 }
@@ -164,8 +167,8 @@
 .cartaPaciente{
     // border: 2px solid green;
     width: 60vw;
-    margin-left: -15%;
-    margin-right: -15%;
+    // margin-left: -10%;
+    // margin-right: -10%;
 
     display:flex;
     flex-direction: column;
@@ -175,8 +178,8 @@
 
 .particleCard {
   @include flexCenter(column);
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -193,6 +196,7 @@
   content: '>';
   font-size: 40px;
   color: #7485be;
+  margin-left: -6vw;
 }
 
 .carousel-control-prev-icon:after {
