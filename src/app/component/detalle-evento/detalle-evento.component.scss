@@ -32,7 +32,7 @@ margin-top: 45px;
 .container{
     margin-top: 1%;
     width: 90%;
-    height: 80%;
+    height: 85%;
     display: flex;
     flex-direction: column;
 }
@@ -92,7 +92,7 @@ margin-top: 45px;
 }
 .fecha{
     width: 75%;
-    height: 40%;
+    height: 50%;
 }
 .fecha p{
         width: 75%;
@@ -112,7 +112,7 @@ margin-top: 45px;
 }
 .boton1{
     width: 75%;  
-    height: 60%;
+    height: 50%;
     font-size: large;
     border: 2px solid #E9C598;
     
@@ -193,29 +193,31 @@ margin-top: 45px;
 
 
 .divBoton{
+    
     width: 100%;  
-    height: 20%;
+    height: 7%;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    align-items:flex-start;
+    justify-content: flex-end;
 
 }
 
 
 .boton2{
+
+   margin-top: 10px;
+    border:none;
     width: 20%;  
-    height: 30%;
-    margin-right: 5%;
-    font-size: large;
-    border: 2px solid $primaryColor;    
-    background:$primaryColor;
+    height: 35px;    
+    font-size: large;     
+    background:#b2a9c5;
     color: white;
     font-weight: bold;
-    margin-right: 25%;
+   
 }
 
 .boton2:hover{
-    color: $primaryColor;
+    color: #b2a9c5;
     background-color: white;
     border: 2px solid white;
 }
