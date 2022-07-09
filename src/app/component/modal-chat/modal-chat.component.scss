@@ -1,19 +1,31 @@
 @import '../../styles/colors.scss';
 @import '../../styles/functions.scss';
 
-//Medidas Standar Chat(Se pueden modificar)
+// Medidas Standar Chat(Se pueden modificar)
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(194, 192, 190, 0.459);
+    background-position: center;
+}
 .chat{
-    height:60vh;
-    width:40%;
+    box-shadow: 3px 5px 19px 5px rgba(69,69,69,0.46);
+    border:2px solid rgba(255, 255, 255, 0.678);
+    height:70vh;
+    width:50%;
     background: $degMor;
     @include flexCenter(column);
     justify-content: space-evenly;
-    z-index: 25000;
-    position:absolute;
+    // z-index: 25000;
+    position:fixed;
     color:$primaryText;
     padding-bottom: 1em;
+    // position: absolute;
+    // z-index: 100000000;
+    left: 25%;
+    top:20%;
+    
 }
-
 .nombre-chat{
     color:white;
     width: 80%;
@@ -29,10 +41,14 @@
     align-items: flex-start;
     justify-content: flex-start;
     .recepcion{
-        margin: .3em;
-        padding: .3em;
-        width: 80%;
-        
+        margin: .8em;
+         padding-top:.3em;
+        padding-bottom:.3em;
+        padding-left:.7em;
+        padding-right:.7em;
+        border-radius: 1em;
+        width: 70%;
+        background-color:#e8c597b6 ;        
         .rec-name{
             color:$primaryColor;
             font-weight: 500;
@@ -40,14 +56,18 @@
         }
     }
     .send{
-        margin: .3em;
-        padding: .3em;
-        max-width: 80%;
-        
+        margin: .8em;
+        padding-top:.3em;
+        padding-bottom:.3em;
+        padding-left:.7em;
+        padding-right:.7em;
+        border-radius: 1em;
+        max-width: 70%;
+         background-color:#e8c597b6 ;
         align-self: flex-end;
         .send-name{
             text-align: left;
-            color:$secondaryColor;
+            color:$primaryColor;
             font-weight: 500;
         }
         .content{
@@ -85,13 +105,14 @@
 .enviar{
     margin:.3em;
 
-    padding:0;
+    padding:1em;
 }
 .slide_right:hover {
   color:white;
   font-weight: 500;
     background: $degMor;    
-    width: 80%;
+    width: 100%;
+   
 }
 .button_slide {
     margin:.6em;
@@ -102,6 +123,7 @@
   transition: ease 0.6s;
   padding-top: .3em;
   padding-bottom: .3em;
-
+//  padding-left:1em;
+//     padding-right:1em;
 
 }

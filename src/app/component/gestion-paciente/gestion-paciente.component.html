@@ -1,4 +1,8 @@
-<div class="cuerpo">
+<div class="tuchat" *ngIf="show">
+    <app-modal-chat></app-modal-chat>
+</div>
+
+<div class="cuerpo" >
     <div class="bloqueTarjeta">
         <div class="bloqueIzq">
             <div class="cajaInfo">
@@ -36,8 +40,9 @@
                 </div>
             </div>
             <div class="bloqueDer">
-                <button class="boton2">Chat</button>
+                <button class="boton2" (click)="show=!show">Chat</button>
                 <button class="boton2">Baja</button>
             </div>
         </div>
     </div>
+    

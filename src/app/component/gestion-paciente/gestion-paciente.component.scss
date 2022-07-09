@@ -1,6 +1,14 @@
 @import "../../styles/colors.scss";
 @import "../../styles/functions.scss";
-
+// .chat{
+//     overflow:visible;
+//     position:absolute;
+//     left: 25%;
+//     bottom: 5%;
+//     background-color: red;
+//     height: 100vh;
+//     width: 100vw;
+// }
 .cuerpo{
     @-ms-viewport {
         width: extend-to-zoom;

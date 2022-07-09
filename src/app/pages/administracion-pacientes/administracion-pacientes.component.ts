@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GestionPacienteComponent } from 'src/app/component/gestion-paciente/gestion-paciente.component';
 @Component({
   selector: 'app-administracion-pacientes',
   templateUrl: './administracion-pacientes.component.html',
@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AdministracionPacientesComponent implements OnInit {
 
   constructor() { }
-
+ 
+  show:boolean= true;
   ngOnInit(): void {
   }
-
 }
