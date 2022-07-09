@@ -4,34 +4,39 @@
 
 
 .contenedor-titulo-ficha1 {
-    padding-top: 1.5%;
+    // border: 2px solid magenta;
+    // padding-top: 1%;
+    width: 90%;
+    text-align: center;
     
 }
 
 .ficha-1 {
-    // border: 2px solid red;   
+    // border: 2px solid red; 
     width: 75%;
-    height: 15%;
+    height: 27vh;
     background: $degMor;
-    padding:  7px 1px;
+    padding:  10px 1px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: -5%;
 }
 
 
 .ImagenPrincipal {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 
 .contenedor-izquierda-ficha {
     // border: 2px solid green;
     width: 25%;
+    height: 200px;
     display: flex;    
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -41,22 +46,20 @@
     // border: 2px solid blue;
     width: 75%;
     padding-top: 1%;
-    padding-left: 5%;;
+    padding-left: 1%;
 }
 
 
 .Input-Arriba {
-    width: 100%;
+    width: 70vh;
     height: 15px;
     padding-bottom: 45px;
     padding-top: 5px;
 }
 
 .form-outline1 {
-    
     width: 90%;
     height: 30px;
-   
     background-color: white;
 }
 
@@ -73,19 +76,19 @@
     display: flex;
     flex-direction: row;
     height: 60%;
-    width: 90%;  
+    width: 93%;  
 }
 
 
 .textarea1 {
     width: 100%;
-    height: 90%;
+    height: 92%;
     background-color: white;
 }
 
 .textarea {
-    width: 19vw;
-    height: 11vh; 
+    width: 24vw;
+    height: 13vh; 
 }
 
 
@@ -98,15 +101,14 @@
     justify-content:space-evenly;
     align-items:flex-end;
     align-content: flex-end;  
-
     margin-bottom: 1%;
 }
 
+
 .boton2 {
     // border: 2px solid blue;     
-   
-    width: 110px;
-    height: 80px;
+    width: 118px;
+    height: 100px;
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -116,16 +118,33 @@
 
 
 .contacta {
-    font-weight: 700;
-    border: none;
-    padding: 4%;
-    
+    margin-top: 10px;
+    border: 2px solid $primaryColor;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: white;
+    color: $primaryColor ;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
 }
+
+.contacta:hover {
+    background-color: $primaryColor ;
+    color: white;
+}
+
 
 .titulo-prof-ficha1 {
     padding-top: 1%;
     font-weight: 700;
-    color: $primaryText;
+    color: white;
 }
 @media screen and (min-width:380px) and (max-width:768px){
     img{
