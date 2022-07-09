@@ -11,13 +11,14 @@
 }
 
 .Titulo {
-    padding-top: 2%;
-    margin-left: 4%;
+    padding-top: 3%;
+    margin-left: 7%;
 }
 
 .textarea1 {
     margin-left: 4%;
-    padding-top: 1%;  
+    padding-top: 1%;
+    padding: 3%;  
 }
 
 
@@ -26,23 +27,25 @@ textarea {
     color: $primaryText;
     font-weight: 400;
     text-align: left;
-    width: 96%;
+    width: 92%;
     height: 27vh;
     border: none;
+    padding: 1%;
 }
 
 .boton {
+    // border:2px solid green;
     display:flex;
     flex-direction: row;
     justify-content: right;
     align-items: left;
-    margin-right: 4%;
-    padding-top: 2%;
-     
+    margin-right: 10%;
+    padding-bottom: 5%;
 }
 
 .enviar {
     background: $secondaryColor;
     width: 20%;
     border: none;   
+    margin-bottom: 50px;
 }
