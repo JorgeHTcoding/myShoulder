@@ -2,14 +2,18 @@
 @import "../../styles/functions.scss";
 
 .contenedor{
+    
     display:flex;
     flex-direction: row;
     align-items: center;
-    height: 150px;
+    height: 90px;
     width: 100%;
+  
+   
     .contContenido{
+       
         width: 380px;
-        height: 90px;
+        height: 80px;
         display: flex;
         border-radius: 7px;
         flex-direction: column;
@@ -30,21 +34,22 @@
         h3{
             margin: 20px;
             color:white;
-            font-size: 22px;
+            font-size: 18px;
             font-family: 'Montserrat';
         }
         p{
            
             color:$primaryText;
-            font-size: 22px;
-            line-height: 20px;
+            font-size: 18px;
+            line-height: 10px;
             font-family: 'Montserrat';
         }
     }
     figure img{
+        
         position: sticky;
-        width: 120px;
-        height: 120px;
+        width: 90px; //120px
+        height: 90px;//120px
         border-radius: 150px;
         // display:flex;
          margin-left:-40px;
@@ -53,4 +58,13 @@
     }
 
 
+}
+.contImg{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 16px;
 }
