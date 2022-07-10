@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LandingFamiliarComponent implements OnInit {
 
   constructor() { }
-
+  show:boolean= true;
   ngOnInit(): void {
   }
 

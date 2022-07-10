@@ -114,7 +114,7 @@ h4{
     align-content: center;
     align-items: center;
     height: auto;
-    // margin-right: 30px;
+    margin-bottom: 22px;
    
     
 }
@@ -127,18 +127,22 @@ h4{
 .imagen{
     height: 35%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     position: absolute;
     bottom: 0;
+    padding-left: 165px;
 
 }
 .eventoProf{
     // border: 3px solid black;
     height: 100px;
     display: flex;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
 
 }
+// .componenteEstadoAnimo{
+//     border: 2px solid black;
+// }
 .eventoInd{
     padding-bottom: 20px;
 }

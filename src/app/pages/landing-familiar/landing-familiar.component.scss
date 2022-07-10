@@ -54,6 +54,8 @@ h4{
     // margin: auto ;
     // border: 6px solid green;
      z-index: 30000;
+    margin-left: 2%;
+    margin-right: 2%;
 
 
    
@@ -91,7 +93,7 @@ h4{
     height: 10%;
 }
 .tituloProf{
-    
+    margin-bottom: 0%;
     color:$primaryText 
 }
 .mostrarProfesional{
@@ -100,17 +102,19 @@ h4{
     justify-content: center;
     align-content: center;
     align-items: center;
+    padding-top: 110px;
     
 }
-// .tituloProf{
-//     padding-right:20px;
-// }
+.tituloProf{
+    padding-right:20px;
+}
 .imagen{
     height: 35%;
     display: flex;
     justify-content: center;
     position: absolute;
     bottom: 0;
+    padding-left: 195px;
 
 }
 .footer{

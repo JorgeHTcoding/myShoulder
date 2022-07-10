@@ -1,13 +1,17 @@
-<div class="contenedor">
-    <div class="contContenido">
+
+<div class="contenedor" >
+    <div class="funcionalidad"  *ngIf="show"> 
+        <app-modal-chat></app-modal-chat>
+    </div>
+    <div class="contContenido" >
     <div class="contenedorTxt">
-        <h3 class="tituloContenido">Rosa</h3>
+        <h3  class="tituloContenido">Rosa</h3>
         <p class="parrafoContenido">Habla con Rosa</p>
     </div>
     </div>
     <div class="contImg">
         <figure>
-            <img src="../../../assets/img/prof.jpg" alt="foto evento">
+            <img src="../../../assets/img/prof.jpg" alt="foto evento" (click)="show=!show">
         </figure>
     </div>
-</div>
+
