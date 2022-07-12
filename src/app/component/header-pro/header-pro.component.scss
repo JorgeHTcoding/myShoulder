@@ -11,6 +11,7 @@
 .img{
     height: 50px;
     width: auto;
+    padding-left: .5em;
     img{
         height: 50px;
         width: auto;
@@ -22,6 +23,7 @@
     margin:0;
     padding:0;
     text-align:center;
+    font-weight: 500;
 }
 #nav li {
     display:block;

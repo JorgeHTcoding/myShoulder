@@ -5,9 +5,10 @@
 	box-sizing: border-box;
 }
 .contenedor{
- 
+	display: flex;
+	flex-direction: column;
 	
-	width: 100%;
+	width: 70%;
 	height: 50%;
 	// background:linear-gradient(90deg, #92A9D8 0%, #B9AAD1 81.47%);
 	border-radius: 7px;
@@ -44,7 +45,8 @@ h3{
 #radios{
   
   position:relative;
-  width:100%; 
+  width:100%;
+ 
   background:linear-gradient(90deg, #92A9D8 0%, #B9AAD1 81.47%);
   
 }
@@ -58,7 +60,7 @@ label{
   float:left;
   width:15%; padding-bottom:15%;
   margin:0 2%;
-  background:rgba(255,255,255,.2);
+  background:rgb(255, 255, 255);
   border-radius:50%;
   cursor:pointer;
 }
@@ -106,7 +108,8 @@ label{
 //Alvaro
 
 .slidecontainer {
-  width: 100%; /* Width of the outside container */
+  width: 90%; /* Width of the outside container */
+  
 }
 
 /* The slider itself */
@@ -116,9 +119,10 @@ label{
   appearance: none;
   width: 100%; /* Full-width */
   height: 20px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
+  background: #ffffff; /* Grey background */
+  border-radius: 2em;
   outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
@@ -134,6 +138,7 @@ label{
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
+  border-radius: 100%;
   background: $secondaryColor; /* Green background */
   cursor: pointer; /* Cursor on hover */
   
@@ -147,25 +152,28 @@ label{
 }
 .animo{
 	color: white;
+  font-weight: 500;
+  padding-top: .5em
 }
 .slidecontainer{
 	@include flexCenter(column);
 	justify-content: center;
-	row-gap: .3em;
+	
 }
 #enviarAnimo{
-	margin-top: .4em;
+  font-weight: 500;
+	margin-top: .6em;
 	box-sizing: none;
 	background-color: transparent;
 	color:white;
 	border: none;
 	padding-bottom: .3em;
 	transition: .6s;
-width: 60%;
+  width: 50%;
 }
 
 #enviarAnimo:hover{
-	background-color: rgba(255, 255, 255, 0.767);
+	background-color: rgb(255, 255, 255);
 	color:$primaryColor;
 	
 }
