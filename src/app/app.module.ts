@@ -49,6 +49,10 @@ import { HeaderPacComponent } from './component/header-pac/header-pac.component'
 import { HeaderProComponent } from './component/header-pro/header-pro.component';
 import { FooterAnimationComponent } from './component/footer-animation/footer-animation.component';
 import { FooterProComponent } from './component/footer-pro/footer-pro.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, ROUTES } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
@@ -103,7 +107,9 @@ import { FooterProComponent } from './component/footer-pro/footer-pro.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
