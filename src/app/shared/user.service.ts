@@ -9,7 +9,21 @@ import { registerLocaleData } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class UserService {
 
-  constructor() { }
+  private url: string;
+  public user:User; 
+  constructor( private http:HttpClient) { }
+
+  //MODIFICAR PERFIL PACIENTE.
+
+    edit(nuevoUser:User):Observable<Object>{
+      this.url = "http://localhost:3000/user";
+      console.log("Hemos entrado");
+      console.log(nuevoUser);
+      return this.http.put(this.url,nuevoUser)
+    }
+    
 }

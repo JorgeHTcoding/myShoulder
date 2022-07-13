@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BusquedaProfesionalComponent implements OnInit {
 
   constructor() { }
-
+  contacta:boolean=false;
   ngOnInit(): void {
   }
 
