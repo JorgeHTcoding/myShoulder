@@ -1,6 +1,9 @@
 
-<div class = "ficha-1">
+<div class = "ficha-1" >
 
+    <div *ngIf="contacta">
+        <app-modal-presentacion></app-modal-presentacion>
+    </div>
     <div class = "contenedor-izquierda-ficha">
 
         <div class = "contenedor-titulo-ficha1">
@@ -29,7 +32,7 @@
 
             <div class = "Abajo-Der">
                 <div class="boton2">
-                    <button class="contacta">Contacta</button>
+                    <button class="contacta" (click)="contacta=!contacta">Contacta</button>
                 </div>
             </div>
         </div>
