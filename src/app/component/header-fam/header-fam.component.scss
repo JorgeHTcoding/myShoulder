@@ -1,0 +1,120 @@
+@import '../../styles/colors.scss';
+@import '../../styles/functions.scss';
+
+.header{
+    @include flexCenter(row);
+    justify-content:space-between;
+    padding: 1em;
+    color:$primaryText;
+   
+}
+.img{
+    height: 50px;
+    width: auto;
+    padding-left: .5em;
+    img{
+        height: 50px;
+        width: auto;
+    }
+}
+
+#nav {
+    list-style:none inside;
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-weight: 500;
+}
+#nav li {
+    display:block;
+    position:relative;
+    float:left;
+    
+}
+#nav li a {
+    
+display:block;
+padding:0;
+text-decoration:none;
+width:200px; /* this is the width of the menu items */
+line-height:35px; /* this is the hieght of the menu items */
+ /* list item font color */
+}
+#nav li li a {font-size:80%;
+                color:$primaryText} /* smaller font size for sub menu items */
+#nav li li a:hover {
+                color:$secondaryColor} /* smaller font size for sub menu items */
+#nav li:hover {color:$secondaryColor}
+    a:after {
+            content: '';
+            @include flexCenter(column);
+            background: $degMor;
+            height: 1px;
+            width: 0;
+            margin-top: 2px;
+            color: $primaryText;
+            transition: 0.3s;
+            align-items: center;
+           
+           
+        }
+
+        a:hover:after {
+            margin-left:25%;
+            width: 50%;
+        }
+        
+        a:hover {
+            
+            color: $secondaryColor;
+            transition: 0.3s;
+            
+        }
+ /* highlights current hovered list item and the parent list items when hovering over sub menues */
+#nav ul {
+    position:absolute;
+    padding:0;
+    left:0;
+    display:none; /* hides sublists */
+}
+#nav li:hover ul ul {display:none;} /* hides sub-sublists */
+#nav li:hover ul {display:block;} /* shows sublist on hover */
+#nav li li:hover ul {
+    display:block; /* shows sub-sublist on hover */
+    margin-left:200px; /* this should be the same width as the parent list item */
+    margin-top:-35px; /* aligns top of sub menu with top of list item */
+}
+
+.activa{
+    //Preguntar a estos;
+    color: $secondaryColor;
+   font-weight: 700;
+   
+//    border-bottom:2px solid $secondaryColor;
+}
+.no-activa{
+    color:$primaryText
+}
+
+@media (max-width:1050px) {
+    #nav li a {
+    
+display:block;
+padding:0;
+text-decoration:none;
+width:100px; /* this is the width of the menu items */
+line-height:35px; /* this is the hieght of the menu items */
+ /* list item font color */
+}
+}
+@media (max-width:510px) {
+    #nav li a {
+    
+display:block;
+padding:0;
+text-decoration:none;
+width:80px; /* this is the width of the menu items */
+line-height:35px; /* this is the hieght of the menu items */
+ /* list item font color */
+}
+}
