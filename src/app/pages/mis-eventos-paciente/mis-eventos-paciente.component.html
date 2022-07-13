@@ -15,23 +15,29 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="particleCard">
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
+                    <div class="show-eventos">
+                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
+                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
+                      </div>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item ">
-                <div class="particleCard">
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
+           <div class="particleCard">
+                    <div class="show-eventos">
+                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
+                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
+                      </div>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="particleCard">
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
-                    <app-tarjeta-eventos-cancelar  class="tarjeta"></app-tarjeta-eventos-cancelar>
+               <div class="particleCard">
+                    <div class="show-eventos">
+                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
+                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
