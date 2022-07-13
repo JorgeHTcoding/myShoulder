@@ -1,4 +1,7 @@
 <div class="contenedorPadre">
+    <div *ngIf="modalChat">
+        <app-modal-chat class="modalChat"></app-modal-chat>
+        </div>
     <div class="header">
         <app-header-pac></app-header-pac>
     </div>
@@ -35,7 +38,7 @@
                 <h4 class="tituloProf">Mis profesionales</h4>
                 
                 <div class="eventoProf">
-                    <app-mostrar-prof></app-mostrar-prof>
+                    <app-mostrar-prof (click)="modalChat=!modalChat" ></app-mostrar-prof>
                 </div>
                 <!-- <div class="eventoProf">
                     <app-mostrar-prof></app-mostrar-prof>
