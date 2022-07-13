@@ -21,9 +21,9 @@
     color:$primaryText;
     padding-bottom: 1em;
     // position: absolute;
-    // z-index: 100000000;
-    left: 25%;
-    top:20%;
+    z-index: 100000000;
+    right: .5rem;
+    bottom: .5rem;
     
 }
 .nombre-chat{
@@ -48,7 +48,7 @@
         padding-right:.7em;
         border-radius: 1em;
         width: 70%;
-        background-color:#e8c597b6 ;        
+        background-color:#e8c59763 ;        
         .rec-name{
             color:$primaryColor;
             font-weight: 500;
