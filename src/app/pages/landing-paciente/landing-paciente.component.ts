@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPacienteComponent implements OnInit {
 
   constructor() { }
+  modalChat:boolean=false;
   show:boolean= true;
  
   ngOnInit(): void {
