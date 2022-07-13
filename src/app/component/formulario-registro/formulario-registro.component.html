@@ -1,6 +1,9 @@
 <app-header></app-header>
 
 <div class="contenedor">
+  <div *ngIf="modalAfir2">
+  <app-modal-afir-registro></app-modal-afir-registro>
+  </div>
   <div class="bloqueForm">  
       <div class="titulo">
         <h2>My Shoulder</h2>
@@ -66,7 +69,7 @@
             </div>
           </div>
           <div class="bloqueBoton">
-            <button class="botonn" type="submit" [disabled]="userForm.invalid">Registrarse</button>
+            <button class="botonn"  (click)="modalAfir2=!modalAfir2" type="submit" [disabled]="userForm.invalid" >Registrarse</button>
             <!-- onclick="location.href= 'http://localhost:4200/';" -->
           </div>
         </div>

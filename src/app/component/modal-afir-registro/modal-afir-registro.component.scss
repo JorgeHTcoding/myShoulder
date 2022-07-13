@@ -3,13 +3,17 @@
 
 
 .form {
+
     color: $primaryText;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    min-height: 600px;
+    align-items: center; 
+    justify-content: center;
+    align-content: center;   
+    min-height: 150px;
     width: 100%;
+    padding-bottom: 30px;
+    z-index:999999;
 
     input {
         border: none;
@@ -18,63 +22,55 @@
         margin-bottom: 10px;
         padding-left: 5px;
     }
-
 }
 
 .titulo {
    @include titulo();
 }
-.reminder{
-    font-size: 0.85em;
-    padding-top: 25px;
-}
+
 .modalDialog {
+   
     
-    z-index:30000;
-    height: 0px;
+    margin-top: 200px;
+    margin-left: -200px;
+    z-index:999999;
+    height: 0%;   
     position: fixed;
-    top: 0;
-    right: 0;   
     min-width: 400px;
     width: 25%;    
-    opacity: 0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
+    opacity: 1;
+    
+    // -webkit-transition: opacity 400ms ease-in;
+    // -moz-transition: opacity 400ms ease-in;
+    // transition: opacity 400ms ease-in;
+    // pointer-events: none;
+    
 }
 
 .modalDialog:target {
+    
     opacity: 1;
     pointer-events: auto;
 }
 
 .modalDialog>div {
-   
+    border:2px solid rgba(102, 102, 102, 0.493);
+    box-shadow: 3px 5px 19px 5px rgba(69,69,69,0.46);
     min-width: 100%;
     max-width: 100%;
-    position: relative;
-    margin: 20% auto;
+    position: relative;   
     background-color: #ececec;   
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-   
-}
-.bloqueForm{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     
    
-    
 }
-.close {
+
+.closeAfir {
+   
     display: flex;
     width: 100%;
-    justify-content: flex-start;
-    z-index: 21000;
-    padding-left: 13px;
+    justify-content: flex-end;    
+    z-index: 41000;
+    padding-right: 13px;
     font-size: 1.5em;
     color: #E8C597;       
     text-decoration: none;   
@@ -82,34 +78,11 @@
     cursor: pointer;
      
 }
-.close:hover {
+.closeAfir:hover {
     
     color: white;
   }
 
-.register {
-   
-    margin-top: 25px;
-    border: none;       
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;    
-    font-size: 1.5em;
-    font-weight: bold;
-    background-color: white; 
-    color: #E8C597; 
-    padding-left:20px;
-    padding-right:20px;    
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-  
- 
-  
-  .register:hover {
-    background-color: #E8C597;
-    color: white;
-  }
   
   @media (max-width: 600px) {
     .form {

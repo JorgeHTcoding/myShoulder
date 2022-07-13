@@ -20,6 +20,7 @@ public passCheck: string = "Las contraseñas no coinciden";
     this.user = new User("","","","","",0,"","","","","","","");
     this.registro = new Registro(this.user,"")
   }
+  modalAfir2:boolean=false;
   onSubmit(form:NgForm){  
       
       let passvalue = form.value.password;
@@ -39,6 +40,7 @@ public passCheck: string = "Las contraseñas no coinciden";
       })
     }
   }
+  
 
   ngOnInit(): void {
   }
