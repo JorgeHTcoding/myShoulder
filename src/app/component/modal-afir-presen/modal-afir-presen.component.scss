@@ -3,13 +3,17 @@
 
 
 .form {
+
     color: $primaryText;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center; 
+    justify-content: center;
+    align-content: center;   
     min-height: 180px;
     width: 100%;
-    
+    margin-bottom: 30px;
+   
 
     input {
         border: none;
@@ -28,17 +32,18 @@
     padding-top: 25px;
 }
 .modalDialog {
-   
+//    border: 2px solid red;
     z-index:30000;
-    height: 0px;
+    height: 100%;
     position: fixed;
     min-width: 400px;
     width: 25%;    
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+    
 }
 
 .modalDialog:target {
@@ -54,17 +59,18 @@
     position: relative;
     margin: 20% ;
     background-color: #ececec;   
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
+    // -webkit-transition: opacity 400ms ease-in;
+    // -moz-transition: opacity 400ms ease-in;
+    // transition: opacity 400ms ease-in;
    
 }
 
-.close {
+.closeAfir {
+
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    z-index: 21000;
+    z-index: 41000;
     padding-right: 13px;
     font-size: 1.5em;
     color: #E8C597;       
@@ -73,7 +79,7 @@
     cursor: pointer;
      
 }
-.close:hover {
+.closeAfir:hover {
     
     color: white;
   }

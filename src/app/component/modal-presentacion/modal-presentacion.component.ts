@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ModalPresentacionComponent implements OnInit {
 
   constructor() { }
+  modalAfir:boolean=false;
 
   ngOnInit(): void {
   }

@@ -20,7 +20,7 @@ export class UserService {
   //MODIFICAR PERFIL PACIENTE.
 
     edit(nuevoUser:User):Observable<Object>{
-      this.url = "http://localhost:3000/user";
+      this.url = "http://localhost:4200/user";
       console.log("Hemos entrado");
       console.log(nuevoUser);
       return this.http.put(this.url,nuevoUser)
