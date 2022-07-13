@@ -1,0 +1,92 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.form {
+    color: $primaryText;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    min-height: 180px;
+    width: 100%;
+    
+
+    input {
+        border: none;
+        min-width: 300px;
+        height: 35px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+}
+
+.titulo {
+   @include titulo();
+}
+.reminder{
+    font-size: 0.85em;
+    padding-top: 25px;
+}
+.modalDialog {
+   
+    z-index:30000;
+    height: 0px;
+    position: fixed;
+    min-width: 400px;
+    width: 25%;    
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+   
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 20% ;
+    background-color: #ececec;   
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+   
+}
+
+.close {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 21000;
+    padding-right: 13px;
+    font-size: 1.5em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.close:hover {
+    
+    color: white;
+  }
+
+  
+  @media (max-width: 600px) {
+    .form {
+      padding-left:10px;
+        width: 110%;
+    
+    }
+    .modalDialog{
+        padding-left:10px;
+        width: 110%;
+      }
+  }

@@ -52,6 +52,7 @@ import { FooterProComponent } from './component/footer-pro/footer-pro.component'
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, ROUTES } from '@angular/router';
 import { HeaderFamComponent } from './component/header-fam/header-fam.component';
+import { ModalAfirPresenComponent } from './component/modal-afir-presen/modal-afir-presen.component';
 
 
 
@@ -104,6 +105,7 @@ import { HeaderFamComponent } from './component/header-fam/header-fam.component'
     FooterAnimationComponent,
     FooterProComponent,
     HeaderFamComponent,
+    ModalAfirPresenComponent,
   
   ],
   imports: [

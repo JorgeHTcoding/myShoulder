@@ -25,22 +25,26 @@
 }
 
 .bloqueInfo {
-    padding-left: 15px;
+  display: flex;
+  padding-left: 25px;
+  flex-direction: column;
+  padding-top: 25px;
 }
 
 .titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 205px;
-    height: 50px;
-    @include titulo();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  @include titulo();
 
 }
 
 .info {
     font-weight: bold;
     color: $primaryText;
+    padding-left: 20px;
     margin-bottom: 15px;
 }
 

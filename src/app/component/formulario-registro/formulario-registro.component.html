@@ -6,10 +6,10 @@
         <h2>My Shoulder</h2>
       </div>
       <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-      <div class="form">
+      <div class="form-group">
         <div class="camposIzq">
           <div>
-            <p for="exampleInputEmail1" class="form-label">Usuario*</p>
+            <p class="form-label">Usuario*</p>
             <input type="text" name="usuario" class="form-control" [(ngModel)]="user.nombre" #user="ngModel"
           [ngClass]="{'is-invalid': (user.dirty || user.touched) && user.invalid }" required>
           <div *ngIf="(user.dirty || user.touched) && user.invalid " class="invalid-feedback">
@@ -18,7 +18,7 @@
            
           </div>
           <div>
-            <p for="exampleInputPassword1" class="form-label">Contraseña*</p>
+            <p  class="form-label">Contraseña*</p>
             <input type="password" name="password" class="form-control" [(ngModel)]="user.password" #password="ngModel"
             [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid }" minlength="8" required>
             <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">   
@@ -28,16 +28,16 @@
             
           </div>
           <div>
-            <p for="exampleInputPassword1" class="form-label">Repite contraseña*</p>
-            <input type="password" name="password2" class="form-control" [(ngModel)]="registro.pass2" #password2="ngModel"
-            [ngClass]="{'is-invalid': (password2.dirty || password2.touched) && password2.invalid }" minlength="8" required>
-            <div class="invalid-feedback" *ngIf="(password2.dirty || password2.touched) && password2.invalid">
+            <p  class="form-label">Repite contraseña*</p>
+            <input type="password" name="pass2" class="form-control" [(ngModel)]="registro.pass2" #pass2="ngModel"
+            [ngClass]="{'is-invalid': (pass2.dirty || pass2.touched) && pass2.invalid }" minlength="8" required>
+            <div class="invalid-feedback" *ngIf="(pass2.dirty || pass2.touched) && pass2.invalid">
           <div *ngIf="password.errors.required">Repite la contraseña</div>
           <div *ngIf="password.errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
             </div>
           </div>
           <div>
-            <p for="exampleInputEmail1" class="form-label">Correo*</p>
+            <p class="form-label">Correo*</p>
             <input type="email" name="correo" class="form-control" [(ngModel)]="user.email" #email="ngModel"
             [ngClass]="{'is-invalid': (email.dirty || email.touched) && email.invalid }" email required>
           <div *ngIf="(email.dirty || email.touched) && email.invalid" class="invalid-feedback">
@@ -49,24 +49,24 @@
         <div class="bloqueDerecha">
           <div class="camposDrch">
             <div>
-              <p for="exampleInputEmail1" class="form-label">Nombre</p>
+              <p  class="form-label">Nombre</p>
               <input type="text" class="form-control" id="inputNombre">
             </div>
             <div>
-              <p for="exampleInputPassword1" class="form-label">Apellido</p>
+              <p  class="form-label">Apellido</p>
               <input type="text" class="form-control" id="inputApellido">
             </div>
             <div>
-              <p for="exampleInputPassword1" class="form-label">Telefono</p>
+              <p class="form-label">Telefono</p>
               <input type="text" class="form-control" id="inputTelefono">
             </div>
             <div>
-              <p for="exampleInputEmail1" class="form-label">Ciudad</p>
+              <p  class="form-label">Ciudad</p>
               <input type="text" class="form-control" id="inputCiudad">
             </div>
           </div>
           <div class="bloqueBoton">
-            <button class="botonn"  type="submit" [disabled]="userForm.invalid">Registrarse</button>
+            <button class="botonn" type="submit" [disabled]="userForm.invalid">Registrarse</button>
             <!-- onclick="location.href= 'http://localhost:4200/';" -->
           </div>
         </div>

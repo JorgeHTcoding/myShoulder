@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { RegistroService } from 'src/app/shared/registro.service';
 import { FormGroup, NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
@@ -19,14 +20,22 @@ public passCheck: string = "Las contraseñas no coinciden";
     this.user = new User("","","","","",0,"","","","","","","");
     this.registro = new Registro(this.user,"")
   }
-  onSubmit(form:NgForm){
-    console.log(form.value)
-    console.log(this.user)
-    if(this.user.password != this.registro.pass2){
+  onSubmit(form:NgForm){  
+      
+      let passvalue = form.value.password;
+      console.log(passvalue)
+    
+      console.log(form.value)
+   
+    if(passvalue != this.registro.pass2){    
+      
+      console.log(this.registro.pass2 + " pass2")
       console.log("Las contraseñas no coinciden")
     }else{
-      this.registroService.registrar(this.user).subscribe((data:User)=>{
+      console.log("valores form: " + form.value)
+      this.registroService.registrar(form.value).subscribe((data:User)=>{
         console.log(data)
+       
       })
     }
   }
