@@ -9,6 +9,7 @@ export class BusquedaProfesionalComponent implements OnInit {
 
   constructor() { }
   contacta:boolean=false;
+  modalAfir:boolean=false;
   ngOnInit(): void {
   }
 
