@@ -1,4 +1,7 @@
 <div class="container" *ngIf="show">
+    <div *ngIf="modalConf">
+        <app-modal-conf-asis-even></app-modal-conf-asis-even>
+        </div>
     <div class="bloqueImagen">
         <img class="imagen"  src="https://snacknation.com/wp-content/uploads/2020/12/outdoor-team-building-activities.png">   
              <div class="tipo">
@@ -15,8 +18,8 @@
 
                 </p>
             </div>
-        <button class="boton" (click)="popEvent()" (click)="show=!show">¡No puedo asistir!</button>
-
+        <button class="boton" (click)="modalConf=!modalConf" >¡No puedo asistir!</button>
+        <!-- (click)="popEvent()" -->
         </div>
 
     </div>

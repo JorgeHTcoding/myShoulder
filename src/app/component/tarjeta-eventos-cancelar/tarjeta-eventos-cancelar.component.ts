@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetaEventosCancelarComponent implements OnInit {
   show=true;
+  modalConf:boolean=false;
   constructor() { }
   eventos:any=[1,2,3]
   ngOnInit(): void {

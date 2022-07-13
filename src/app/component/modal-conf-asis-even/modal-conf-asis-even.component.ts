@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ModalConfAsisEvenComponent implements OnInit {
 
   constructor() { }
-
+  eventos:any=[1,2,3]
+  
   ngOnInit(): void {
   }
+  popEvent(){
+    this.eventos.pop(1)
+    console.log("saintentao")
+    console.log(this.eventos)
+}
 
 }
