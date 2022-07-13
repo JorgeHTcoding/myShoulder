@@ -1,0 +1,151 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.form {
+
+    color: $primaryText;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    align-content: center;   
+    min-height: 150px;
+    width: 100%;
+    padding-bottom: 30px;
+    z-index:999999;
+
+    input {
+        border: none;
+        min-width: 300px;
+        height: 35px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+}
+
+.titulo {
+   @include titulo();
+}
+
+.modalDialog {
+   
+    
+    margin-top: 200px;
+    // margin-left: -200px;
+    z-index:999999;
+    height: 0%;   
+    position: fixed;
+    min-width: 400px;
+    width: 25%;    
+    opacity: 1;
+    
+    // -webkit-transition: opacity 400ms ease-in;
+    // -moz-transition: opacity 400ms ease-in;
+    // transition: opacity 400ms ease-in;
+    // pointer-events: none;
+    
+}
+
+.modalDialog:target {
+    
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    border:2px solid rgba(102, 102, 102, 0.493);
+    box-shadow: 3px 5px 19px 5px rgba(69,69,69,0.46);
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;   
+    background-color: #ececec;   
+    
+   
+}
+
+.closeAfir {
+   
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;    
+    z-index: 41000;
+    padding-right: 13px;
+    font-size: 1.5em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.closeAfir:hover {
+    
+    color: white;
+    
+  }
+  .boton1{
+    min-width: 100px;
+    background: none;   
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;    
+    color: rgb(148, 148, 148) ;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+.bloqueBotones{
+    padding-top: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.boton1:hover {
+    background-color:rgb(148, 148, 148) ;
+    color: white;
+}
+.boton2{
+    min-width: 100px;
+    background: none;   
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;    
+    color: rgb(148, 148, 148) ;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+.boton2:hover {
+    background-color: rgb(148, 148, 148) ;
+    color: white;
+}
+
+
+  
+  @media (max-width: 600px) {
+    .form {
+      padding-left:10px;
+        width: 110%;
+    
+    }
+    .modalDialog{
+        padding-left:10px;
+        width: 110%;
+      }
+
+    
+    
+    
+  }

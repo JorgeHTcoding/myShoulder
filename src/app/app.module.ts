@@ -55,6 +55,13 @@ import { HeaderFamComponent } from './component/header-fam/header-fam.component'
 import { ModalAfirPresenComponent } from './component/modal-afir-presen/modal-afir-presen.component';
 import { ModalAfirRegistroComponent } from './component/modal-afir-registro/modal-afir-registro.component';
 import { ModalAfirEdicionComponent } from './component/modal-afir-edicion/modal-afir-edicion.component';
+import { ModalConfAsisEvenComponent } from './component/modal-conf-asis-even/modal-conf-asis-even.component';
+import { ModalConfElimPacComponent } from './component/modal-conf-elim-pac/modal-conf-elim-pac.component';
+import { ModalConfResNegComponent } from './component/modal-conf-res-neg/modal-conf-res-neg.component';
+import { ModalConElimEvenComponent } from './component/modal-con-elim-even/modal-con-elim-even.component';
+import { ModalConModEvenComponent } from './component/modal-con-mod-even/modal-con-mod-even.component';
+import { ModalConCreEvenComponent } from './component/modal-con-cre-even/modal-con-cre-even.component';
+import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/modal-con-cre-even-pro.component';
 
 
 
@@ -110,6 +117,13 @@ import { ModalAfirEdicionComponent } from './component/modal-afir-edicion/modal-
     ModalAfirPresenComponent,
     ModalAfirRegistroComponent,
     ModalAfirEdicionComponent,
+    ModalConfAsisEvenComponent,
+    ModalConfElimPacComponent,
+    ModalConfResNegComponent,
+    ModalConElimEvenComponent,
+    ModalConModEvenComponent,
+    ModalConCreEvenComponent,
+    ModalConCreEvenProComponent,
   
   ],
   imports: [
