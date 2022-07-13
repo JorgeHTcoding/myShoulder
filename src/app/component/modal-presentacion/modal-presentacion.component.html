@@ -1,18 +1,27 @@
 
     <div class = "Modal-Present">
+        <div *ngIf="modalAfir">
+            <app-modal-afir-presen></app-modal-afir-presen>
+        </div>
         <div class = "contenedor-principal">
-            <a href="#cerrar" title="Close" class="close">x</a> 
+            <a href="busqueda-profesional/#cerrar" title="Close" class="close">x</a> 
 
             <div class = "Titulo">  
                 <span>Carta de presentación:</span>  
             </div>
+
 
             <div class = "textarea1">
                 <textarea name="textarea" style="overflow:hidden; resize:none"> Describe brevemente tu situación al profesional para que pueda valorar tu caso...</textarea>
             </div>
 
             <div class="boton">
-                <button class="enviar">Enviar</button>
+
+
+
+                <button class="enviar" (click)="modalAfir=!modalAfir" >Enviar</button>
+
             </div>
+ 
         </div>
     </div>
