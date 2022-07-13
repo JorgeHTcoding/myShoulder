@@ -53,6 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, ROUTES } from '@angular/router';
 import { HeaderFamComponent } from './component/header-fam/header-fam.component';
 import { ModalAfirPresenComponent } from './component/modal-afir-presen/modal-afir-presen.component';
+import { ModalAfirRegistroComponent } from './component/modal-afir-registro/modal-afir-registro.component';
+import { ModalAfirEdicionComponent } from './component/modal-afir-edicion/modal-afir-edicion.component';
 
 
 
@@ -106,6 +108,8 @@ import { ModalAfirPresenComponent } from './component/modal-afir-presen/modal-af
     FooterProComponent,
     HeaderFamComponent,
     ModalAfirPresenComponent,
+    ModalAfirRegistroComponent,
+    ModalAfirEdicionComponent,
   
   ],
   imports: [
