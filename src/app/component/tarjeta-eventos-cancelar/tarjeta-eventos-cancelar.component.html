@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="show">
     <div class="bloqueImagen">
         <img class="imagen"  src="https://snacknation.com/wp-content/uploads/2020/12/outdoor-team-building-activities.png">   
              <div class="tipo">
@@ -15,7 +15,7 @@
 
                 </p>
             </div>
-        <button class="boton">¡No puedo asistir!</button>
+        <button class="boton" (click)="popEvent()" (click)="show=!show">¡No puedo asistir!</button>
 
         </div>
 

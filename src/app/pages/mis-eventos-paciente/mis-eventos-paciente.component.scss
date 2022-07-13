@@ -11,6 +11,8 @@
 
 .particleCard {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     padding-left: 170px;
     padding-right: 170px;
@@ -113,6 +115,9 @@
       
     }
     .tarjeta{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
         margin-bottom: 25px;  
     }
     .carousel {
@@ -136,4 +141,13 @@
         }
       
         
+    }
+    .show-eventos{
+      @include flexCenter(row);
+      justify-content: space-between;
+      .tarjeta2{
+        margin-left: 1em;
+      }
+
+      
     }
