@@ -9,6 +9,7 @@ export class GestionPacienteComponent implements OnInit {
 
   constructor() { }
   show:boolean=false;
+  show2:boolean=false;
   ngOnInit(): void {
   }
 
