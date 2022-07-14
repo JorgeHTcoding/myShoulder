@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CartaPacienteComponent implements OnInit {
 
   constructor() { }
-
+  aceptar:boolean=false;
+  rechazar:boolean=false;
   ngOnInit(): void {
   }
 
