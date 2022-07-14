@@ -23,6 +23,8 @@
 
 .titulo {
    @include titulo();
+   margin-bottom: 50px;
+   margin-top: 50px;
 }
 .reminder{
     font-size: 0.85em;
@@ -103,7 +105,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
   }
-  
+
  
   
   .register:hover {
