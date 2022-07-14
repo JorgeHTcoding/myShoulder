@@ -9,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class EstadoAnimoComponent implements OnInit {
 
   constructor() { }
-  
+  enviado:string="Enviar"
   ngOnInit(): void {
     let slider = document.getElementById("myRange");
     console.log(slider)
   }
-  
+  enviar(){
+    this.enviado="Enviado"
+  }
 }

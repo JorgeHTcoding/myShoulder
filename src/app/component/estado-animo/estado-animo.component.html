@@ -29,7 +29,7 @@
 		<p class="animo">Ansiedad</p>
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   
-  <button id="enviarAnimo" name="enviarAnimo" type ="button" onclick="enviarAnimo()">Enviar</button>
+  <button id="enviarAnimo" name="enviarAnimo" type ="button" onclick="enviarAnimo()" (click)="enviar()">{{enviado}}</button>
 	</div>
 
 	</div>

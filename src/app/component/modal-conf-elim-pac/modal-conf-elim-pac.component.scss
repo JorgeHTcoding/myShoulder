@@ -2,14 +2,15 @@
 @import "../../styles/functions.scss";
 
 
-.form {
+.bloqueForm {
 
     color: $primaryText;
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    align-content: center;   
+    align-content: center; 
+    text-align: center;  
     min-height: 150px;
     width: 100%;
     padding-bottom: 30px;
@@ -31,27 +32,20 @@
 .modalDialog {
    
     
-    margin-top: 200px;
+    
     // margin-left: -200px;
     z-index:999999;
-    height: 0%;   
+     margin-left: 23%;
     position: fixed;
+    bottom: center;
+    right: center;
     min-width: 400px;
     width: 25%;    
-    opacity: 1;
     
-    // -webkit-transition: opacity 400ms ease-in;
-    // -moz-transition: opacity 400ms ease-in;
-    // transition: opacity 400ms ease-in;
-    // pointer-events: none;
     
 }
 
-.modalDialog:target {
-    
-    opacity: 1;
-    pointer-events: auto;
-}
+
 
 .modalDialog>div {
     border:2px solid rgba(102, 102, 102, 0.493);
@@ -64,7 +58,7 @@
    
 }
 
-.closeAfir {
+.close {
    
     display: flex;
     width: 100%;
@@ -78,7 +72,7 @@
     cursor: pointer;
      
 }
-.closeAfir:hover {
+.close:hover {
     
     color: white;
     
@@ -102,7 +96,7 @@
 }
 .bloqueBotones{
     padding-top: 15px;
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }

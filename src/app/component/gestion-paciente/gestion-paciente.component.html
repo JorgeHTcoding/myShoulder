@@ -1,3 +1,6 @@
+  <div class="tuchat" *ngIf="show2">
+                    <app-modal-conf-elim-pac></app-modal-conf-elim-pac>
+                </div>
 <div class="tuchat" *ngIf="show">
     <app-modal-chat></app-modal-chat>
 </div>
@@ -41,8 +44,9 @@
             </div>
             <div class="bloqueDer">
                 <button class="boton2" (click)="show=!show">Chat</button>
-                <button class="boton2">Baja</button>
+                <button class="boton2" (click)="show2=!show2">Baja</button>
+               
             </div>
         </div>
     </div>
-    
+   
