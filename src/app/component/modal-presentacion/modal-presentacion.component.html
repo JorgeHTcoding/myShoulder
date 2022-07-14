@@ -1,11 +1,11 @@
 
-    <div class = "Modal-Present">
-        <div *ngIf="modalAfir">
+    <div class = "Modal-Present" id="card-Present">
+        <div *ngIf="modalAfir" >
             <app-modal-afir-presen></app-modal-afir-presen>
         </div>
         <div class = "contenedor-principal">
-            <a href="busqueda-profesional/#cerrar" title="Close" class="close">x</a> 
-
+            <span onclick="document.getElementById('card-Present').style.display='none'" title="Close" class="closebutton">&times;</span> 
+            <!-- a href="busqueda-profesional/#cerrar" -->
             <div class = "Titulo">  
                 <span>Carta de presentación:</span>  
             </div>
