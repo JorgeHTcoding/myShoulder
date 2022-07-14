@@ -62,6 +62,7 @@ import { ModalConElimEvenComponent } from './component/modal-con-elim-even/modal
 import { ModalConModEvenComponent } from './component/modal-con-mod-even/modal-con-mod-even.component';
 import { ModalConCreEvenComponent } from './component/modal-con-cre-even/modal-con-cre-even.component';
 import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/modal-con-cre-even-pro.component';
+import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/modal-afir-apun-even.component';
 
 
 
@@ -124,6 +125,7 @@ import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/
     ModalConModEvenComponent,
     ModalConCreEvenComponent,
     ModalConCreEvenProComponent,
+    ModalAfirApunEvenComponent,
   
   ],
   imports: [

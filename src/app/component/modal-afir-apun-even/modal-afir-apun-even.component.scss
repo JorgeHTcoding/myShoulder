@@ -1,0 +1,114 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.form {
+    
+    color: $primaryText;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    align-content: center;   
+    min-height: 160px;
+    width: 100%;
+    margin-bottom: 150px;
+   
+
+    input {
+        border: none;
+        min-width: 300px;
+        height: 35px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+}
+
+.titulo {
+   @include titulo();
+}
+.reminder{
+    font-size: 0.85em;
+    padding-top: 25px;
+}
+.modalDialog {
+//    border: 2px solid red;
+    z-index:99999;
+    margin-left: -200px;
+    
+    height: 100%;
+    position: fixed;
+    min-width: 400px;
+    width: 25%;    
+  
+}
+
+.modalDialog:target {
+    
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+   
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index:99999;
+    
+    background-color: #ececec;   
+    // -webkit-transition: opacity 400ms ease-in;
+    // -moz-transition: opacity 400ms ease-in;
+    // transition: opacity 400ms ease-in;
+   
+}
+
+.closeAfir {
+
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index:99999;
+    padding-right: 13px;
+    font-size: 1.5em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.closeAfir:hover {
+    
+    color: white;
+  }
+
+  .closebutton{
+
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 999999;
+    padding-right: 13px;
+    font-size: 1.5em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.closebutton:hover {
+    
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .form {
+      padding-left:10px;
+        width: 110%;
+    
+    }
+    .modalDialog{
+        padding-left:10px;
+        width: 110%;
+      }
+  }
