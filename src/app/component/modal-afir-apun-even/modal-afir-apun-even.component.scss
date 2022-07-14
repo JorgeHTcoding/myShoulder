@@ -33,9 +33,7 @@
 }
 .modalDialog {
 //    border: 2px solid red;
-    z-index:99999;
-    margin-left: -200px;
-    
+    z-index:99999;       
     height: 100%;
     position: fixed;
     min-width: 400px;
@@ -43,27 +41,21 @@
   
 }
 
-.modalDialog:target {
-    
-    opacity: 1;
-    pointer-events: auto;
-}
 
 .modalDialog>div {
-   
+
+    box-shadow: 3px 5px 19px 5px rgba(69,69,69,0.46);
+    border:2px solid rgba(151, 151, 151, 0.849);
+    height:200px;
     min-width: 100%;
     max-width: 100%;
     position: relative;
-    z-index:99999;
-    
+    z-index:99999;    
     background-color: #ececec;   
-    // -webkit-transition: opacity 400ms ease-in;
-    // -moz-transition: opacity 400ms ease-in;
-    // transition: opacity 400ms ease-in;
-   
+  
 }
 
-.closeAfir {
+.closebutton {
 
     display: flex;
     width: 100%;
@@ -77,7 +69,7 @@
     cursor: pointer;
      
 }
-.closeAfir:hover {
+.closebutton:hover {
     
     color: white;
   }
