@@ -9,6 +9,8 @@ export class EdicionPerfilProComponent implements OnInit {
 
   constructor() { }
 
+  afirEdPerfil:boolean=false;
+  
   ngOnInit(): void {
   }
 
