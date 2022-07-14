@@ -28,14 +28,17 @@
    @include titulo();
 }
 
-.modalDialog {
+.modalEdPerfil {
    
     z-index:30000;
     height: 0%;
     position: fixed;
     min-width: 400px;
     width: 25%;    
+    margin-left: 10%;
+    margin-top: 150px;
     opacity: 1;
+    
     // -webkit-transition: opacity 400ms ease-in;
     // -moz-transition: opacity 400ms ease-in;
     // transition: opacity 400ms ease-in;
@@ -43,13 +46,13 @@
     
 }
 
-.modalDialog:target {
+.modalEdPerfil:target {
     
     opacity: 1;
     pointer-events: auto;
 }
 
-.modalDialog>div {
+.modalEdPerfil>div {
  
     min-width: 100%;
     max-width: 100%;
@@ -59,12 +62,12 @@
    
 }
 
-.closeAfir {
+.closebutton {
    
     display: flex;
     width: 100%;
     justify-content: flex-end;    
-    z-index: 41000;
+    z-index: 99999;
     padding-right: 13px;
     font-size: 1.5em;
     color: #E8C597;       
@@ -73,7 +76,7 @@
     cursor: pointer;
      
 }
-.closeAfir:hover {
+.closebutton:hover {
     
     color: white;
   }

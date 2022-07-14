@@ -2,6 +2,7 @@
 <app-header-pac></app-header-pac>
     <div class = "contenedor-general">
 
+
         <div class = "contenedor-arriba">
             <div class = "contenedor-titulo">
                 <h2 class = "titulo">Hola Claudia!</h2>
@@ -14,6 +15,7 @@
 
 
         <div class = "contenedor-abajo">
+
             <form class = "miformu1">
                 <div class = contenedor-izquierda>
                         <img class = "ImagenPrincipal" src="../../../assets/img/profilepicttest.png" #input1> 
@@ -37,7 +39,10 @@
                         </div>
                 </div>
 
-                <div class = "contenedor-derecha">   
+                <div class = "contenedor-derecha">  
+                    
+
+
                     <div class = "Input-Arriba">
                             <!-- Direccion input -->
                             <div class="form-outline1 mb-4">
@@ -52,14 +57,26 @@
                             </div>
                     </div>
                 
+  
+
                     <div class = "textarea1">
+
+                        <div *ngIf="afirEdPerfil">
+                            <app-modal-afir-edicion></app-modal-afir-edicion>
+                        </div>
+
                         <div class="bloqueTexto">
                         <textarea name="textarea" style="overflow:hidden; resize:none" #input7>¡Hola! 
                     Mi nombre es Claudia y me gustaría poder compartir vivencias con personas que tengan algún allegado con depresión."</textarea>  
-                    <button class="submit" on-click=modificar(input1,input2,input3,input4,input5,input6,input7)>Guardar</button>
+               
+
+                    <button class="submit" (click)="afirEdPerfil=!afirEdPerfil" on-click=modificar(input1,input2,input3,input4,input5,input6,input7)>Guardar</button>
+
                     </div>
                 </div>
-               
+
+
+
                    
                 </div>
             </form>

@@ -103,11 +103,16 @@
 
                     <div class = "Input-Bajo">
                         <div class = "textarea1">
+
+                            <div *ngIf="afirEdPerfil">
+                                <app-modal-afir-edicion></app-modal-afir-edicion>
+                            </div>
+
                             <textarea name="textarea" style="overflow:hidden; resize:none" placeholder = "Descripción"></textarea>
                         </div>
                
                         <div class="boton">
-                            <button class="boton1">Guardar</button>
+                            <button class="boton1" (click)="afirEdPerfil=!afirEdPerfil">Guardar</button>
                         </div>
                         
                     </div>

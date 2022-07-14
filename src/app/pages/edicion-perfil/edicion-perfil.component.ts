@@ -14,6 +14,8 @@ export class EdicionPerfilComponent implements OnInit {
 
   constructor( public userService:UserService  ) { }
 
+  afirEdPerfil:boolean=false;
+
   modificar(nuevaUrl:HTMLInputElement,nuevoNombre:HTMLInputElement,nuevoApellido:HTMLInputElement,nuevoCorreo:HTMLInputElement,nuevaDireccion:HTMLInputElement,nuevoTlf:HTMLInputElement,nuevoTexto:HTMLInputElement){
 
     let nuevoUser = new User ("","",nuevoNombre.value,nuevoApellido.value,nuevoCorreo.value,nuevoTlf.valueAsNumber,nuevoTexto.value,nuevaUrl.value,nuevaDireccion.value,"","","","");
