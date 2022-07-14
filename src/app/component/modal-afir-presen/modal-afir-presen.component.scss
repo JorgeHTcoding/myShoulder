@@ -33,18 +33,14 @@
 }
 .modalDialog {
 //    border: 2px solid red;
-    z-index:30000;
-  
-    height: 80%;
+    z-index:99999;
+    margin-left: -200px;
+    
+    height: 100%;
     position: fixed;
     min-width: 400px;
     width: 25%;    
-    opacity: 1;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-    
+  
 }
 
 .modalDialog:target {
@@ -58,7 +54,8 @@
     min-width: 100%;
     max-width: 100%;
     position: relative;
-   
+    z-index:99999;
+    
     background-color: #ececec;   
     // -webkit-transition: opacity 400ms ease-in;
     // -moz-transition: opacity 400ms ease-in;
@@ -71,7 +68,7 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    z-index: 41000;
+    z-index:99999;
     padding-right: 13px;
     font-size: 1.5em;
     color: #E8C597;       
