@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalle-evento.component.scss']
 })
 export class DetalleEventoComponent implements OnInit {
-
+  modalNoIr:boolean=false;
+  modalIr:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
