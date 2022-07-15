@@ -18,23 +18,23 @@
 
             <form class = "miformu1">
                 <div class = contenedor-izquierda>
-                        <img class = "ImagenPrincipal" src="../../../assets/img/profilepicttest.png" #input1> 
+                        <img class = "ImagenPrincipal" src="../../../assets/img/profilepicttest.png" > 
 
                         <!-- Nombre input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example1" class="form-control" placeholder="Claudia" #input2/>
+                            <input type="text" id="form1Example1" class="form-control" placeholder="{{usuario.name}}" #input2/>
                             <label class="form-label" for="form1Example1"></label>
                         </div>
                         
                         <!-- Apellido input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="Martin" #input3/>
+                            <input type="text" id="form1Example2" class="form-control" placeholder="{{usuario.sname}}" #input3/>
                             <label class="form-label" for="form1Example2"></label>
                         </div>
                     
                         <!-- Correo input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="c.martin@gmail.com" #input4/>
+                            <input type="text" id="form1Example2" class="form-control" placeholder="{{usuario.email}}" #input4/>
                             <label class="form-label" for="form1Example2"></label>
                         </div>
                 </div>
@@ -46,13 +46,13 @@
                     <div class = "Input-Arriba">
                             <!-- Direccion input -->
                             <div class="form-outline1 mb-4">
-                                <input type="text" id="form1Example1" class="form-control" placeholder="Calle Pez 25, Madrid" #input5/>
+                                <input type="text" id="form1Example1" class="form-control" placeholder="{{usuario.direccion}}" #input5/>
                                 <label class="form-label" for="form1Example1"></label>
                             </div>
 
                             <!-- Telefono input -->
                             <div class="form-outline2 mb-4">
-                                <input type="number" id="form1Example2" class="form-control" placeholder="625369985" #input6/>
+                                <input type="number" id="form1Example2" class="form-control" placeholder="{{usuario.telefono}}" #input6/>
                                 <label class="form-label" for="form1Example2"></label>
                             </div>
                     </div>
@@ -66,11 +66,10 @@
                         </div>
 
                         <div class="bloqueTexto">
-                        <textarea name="textarea" style="overflow:hidden; resize:none" #input7>¡Hola! 
-                    Mi nombre es Claudia y me gustaría poder compartir vivencias con personas que tengan algún allegado con depresión."</textarea>  
+                        <textarea name="textarea" style="overflow:hidden; resize:none" #input7>{{usuario.descripcion}}</textarea>  
                
 
-                    <button class="submit" (click)="afirEdPerfil=!afirEdPerfil" on-click=modificar(input1,input2,input3,input4,input5,input6,input7)>Guardar</button>
+                    <button class="submit" (click)="afirEdPerfil=!afirEdPerfil" on-click=modificar(input2,input3,input4,input5,input6,input7)>Guardar</button>
 
                     </div>
                 </div>
