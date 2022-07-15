@@ -12,24 +12,32 @@ import { Observable } from 'rxjs';
 export class EdicionPerfilComponent implements OnInit {
   public usuario:User;
   public miUsuario:User[];
-  public id_user:number = 6;
-  constructor( public userService:UserService  ) { }
+  // public id_user:number = 6;
+  constructor( public userService:UserService  ) { 
+    
+    this.usuario = userService.user
+  }
 
   afirEdPerfil:boolean=false;
 
-  public modificar(nuevoNombre:HTMLInputElement,nuevoApellido:HTMLInputElement,nuevoCorreo:HTMLInputElement,nuevaDireccion:HTMLInputElement,nuevoTlf:HTMLInputElement,nuevoTexto:HTMLInputElement){
-
-    let nuevoUser = new User ("","",nuevoNombre.value,nuevoApellido.value,nuevoCorreo.value,nuevoTlf.valueAsNumber,nuevoTexto.value,"",nuevaDireccion.value,"","","","");
-      this.userService.edit(nuevoUser).subscribe((data:User)=>{
+  public modificar(){
+    // console.log(this.userService.user.id_user + 'este es el user')
+    // let nuevoUser = new User ("","",nuevoNombre.value,nuevoApellido.value,nuevoCorreo.value,nuevoTlf.valueAsNumber,nuevoTexto.value,"",nuevaDireccion.value,"","","","");
+    // console.log(nuevoUser)
+   
+    this.userService.edit(this.usuario).subscribe((data:User)=>{
         this.miUsuario.push(data)
+        
       })
+      
   }
 
   
-  public mostrar(id_user:number){
+  public mostrar(){
+    // console.log(this.userService.user.id_user + 'este es el user')
     console.log('Entramos en get');
-    this.userService.getOne(id_user).subscribe((data:User)=>{
-      this.usuario = data;
+    this.userService.getOne(this.userService.user.id_user).subscribe((data:User[])=>{
+      this.miUsuario = data;
       
     })
     console.log(this.usuario)
@@ -37,7 +45,7 @@ export class EdicionPerfilComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Estamos dentro del on init')
-    this.userService.getOne(this.id_user).subscribe((data:User)=>{
+    this.userService.getOne(this.userService.user.id_user).subscribe((data:User)=>{
     this.usuario = data;
   })
   }

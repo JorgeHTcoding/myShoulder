@@ -26,7 +26,7 @@ export class UserService {
       this.url = "http://localhost:3000/user";
       console.log("Hemos entrado");
       console.log(nuevoUser);
-      return this.http.put(this.url+"?id=",nuevoUser)
+      return this.http.put(this.url,nuevoUser)
     }
 
     // MOSTRAR  PERFIL 
