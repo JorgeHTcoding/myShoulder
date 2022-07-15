@@ -10,26 +10,26 @@
     
         <div class="principal">
             <div class="izq">
-                <input type="text" placeholder="Insertar url de imagen" #input1>
+                <input type="text" placeholder="Insertar url de imagen" #url>
 
                 <div class="datos">
                     <label> DATOS DE IMPORTANCIA </label>
-                    <input type="text" placeholder="MODALIDAD:" #input2>
-                    <input type="text" placeholder="LOCALIDAD:" #input3>
-                    <input type="text" placeholder="DIRECCION:" #input4>
-                    <input type="text" placeholder="TERAPIA:"  #input5>
-                    <input type="text" placeholder="FECHA:"    #input6>
+                    <input type="text" placeholder="MODALIDAD:" #modalidad>
+                    <input type="text" placeholder="LOCALIDAD:" #localidad>
+                    <input type="text" placeholder="DIRECCION:" #direccion>
+                    <input type="text" placeholder="TERAPIA:"  #terapia>
+                    <input type="text" placeholder="FECHA:"    #fecha>
                 </div>
     
             </div>
             <div class="drch">
-                <input type="text" placeholder="Escribe un titulo para tu actividad" #input7>
-                <textarea style="overflow:hidden; resize:none" placeholder="Inserta una descripcion del evento AQUI: " #input8></textarea>
+                <input type="text" placeholder="Escribe un titulo para tu actividad" #titulo>
+                <textarea style="overflow:hidden; resize:none" placeholder="Inserta una descripcion del evento AQUI: " #descripcion></textarea>
             </div>
         </div>
     
         <div class="boton">
-            <button type="button" (click)=anadirEvento(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value,input8.value) class="botonn"> Publicar evento </button>
+            <button type="button" (click)=anadirEvento(titulo.value,localidad.value,direccion.value,descripcion.value,modalidad.value,terapia.value,fecha.value,url.value) class="botonn"> Publicar evento </button>
             <button type="button">Modificar</button>
             <button type="button">Eliminar</button>
         </div>

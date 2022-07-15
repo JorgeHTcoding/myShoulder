@@ -25,9 +25,9 @@ export class GeventosService {
     return this.http.put(this.url,id_evento)
   }
   
-  // eliminar(id_evento:number):any{
-  //   console.log("Esntramos a eliminar")
-  //   this.url="http://localhost:3000/gestion-evento"
-  //   return this.http.delete(this.url,id_evento)
-  // }
+  eliminar(id_evento:number):any{
+    console.log("Esntramos a eliminar")
+    this.url="http://localhost:3000/gestion-evento?id="+id_evento
+    return this.http.delete(this.url)
+  }
 }
