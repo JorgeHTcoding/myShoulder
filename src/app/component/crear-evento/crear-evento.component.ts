@@ -26,10 +26,16 @@ export class CrearEventoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+//this.usuario.id_user
 
-  anadirEvento(input1:string, input2:string, input3:string, input4:string, input5:string, input6:string, input7:string, input8:string) {
+  
 
-    let nuevoEvento = new Eventos(this.usuario.id_user,input1,input2,input3,input4,input5,input6,input7,input8)
+  anadirEvento(titulo:string, localidad:string, direccion:string, descripcion:string, modalidad:string, terapia:string, fecha:string, url:string) {
+
+    let nuevoEvento = new Eventos(6,titulo,localidad,direccion,descripcion,modalidad,terapia,fecha,url)
+
+    console.log("Paso por nuevo Evento: " + nuevoEvento);
+
        this.eventosService.add(nuevoEvento).subscribe((data:Eventos) =>
         {
          console.log(data);
