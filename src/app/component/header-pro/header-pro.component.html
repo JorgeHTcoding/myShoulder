@@ -5,21 +5,21 @@
     </div>
     <div class="bloque-enlace">
     <ul id="nav">
-        <li><a href="#" class="activa">Home</a></li>
+        <li><a routerLink="/" class="activa">Home</a></li>
         <li><a  class="no-activa">Pacientes</a>
             <ul>
-                <li><a onclick= "location.href= 'http://localhost:4200/solicitud-pacientes';">Solicitudes</a></li>
-                <li><a onclick= "location.href= 'http://localhost:4200/administracion-pacientes';">Administrar pacientes</a></li>
+                <li><a routerLink="/solicitud-pacientes">Solicitudes</a></li>
+                <li><a routerLink="/administracion-pacientes">Administrar pacientes</a></li>
                     </ul>
-        <li><a  onclick= "location.href= 'http://localhost:4200/busqueda-evento';" class="no-activa">Eventos</a>
-            <ul>
-               
-                <li><a onclick= "location.href= 'http://localhost:4200/administrar-eventos-pro';" class="no-activa">Administrar Eventos</a>
-                    </ul>
-        <li><a onclick= "location.href= 'http://localhost:4200/landing-profesional';"class="no-activa">Perfil</a>
+        <li><a  routerLink="/busqueda-evento" class="no-activa">Eventos</a>
             <ul>               
-                <li><a onclick= "location.href= 'http://localhost:4200/edicion-perfil-pro';">Modificar</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a routerLink="/administrar-eventos-pro" class="no-activa">Administrar Eventos</a>
+                    <li><a routerLink="/creacion-evento" class="no-activa">Crear evento</a>
+                    </ul>
+        <li><a routerLink="/landing-profesional" class="no-activa">Perfil</a>
+            <ul>               
+                <li><a routerLink="/edicion-perfil-pro">Modificar</a></li>
+                <li><a routerLink="/">Logout</a></li>
                     </ul>
                 </li>
             </ul>
