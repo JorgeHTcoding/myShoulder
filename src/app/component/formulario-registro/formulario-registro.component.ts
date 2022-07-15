@@ -17,7 +17,7 @@ public registro: Registro;
 public passCheck: string = "Las contraseñas no coinciden";
 
   constructor(public registroService:RegistroService) { 
-    this.user = new User("","","","","",0,"","","","","","","");
+    this.user = new User("","","","","",null,"","","","","","","");
     this.registro = new Registro(this.user,"")
   }
   modalAfir2:boolean=false;
