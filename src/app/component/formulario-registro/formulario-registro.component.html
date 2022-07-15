@@ -2,114 +2,117 @@
 
 <div class="contenedor">
   <div *ngIf="modalAfir2">
-  <app-modal-afir-registro></app-modal-afir-registro>
+    <app-modal-afir-registro></app-modal-afir-registro>
   </div>
-  <div class="bloqueForm">  
-      <div class="titulo">
-        <h2>My Shoulder</h2>
-      </div>
-      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="bloqueForm">
+    <div class="titulo">
+      <h2>My Shoulder</h2>
+    </div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
       <div class="form-group">
         <div class="camposIzq">
           <div>
             <p class="form-label">Usuario*</p>
-            <input type="text" name="usuario" class="form-control" [(ngModel)]="user.nombre" #user="ngModel"
-          [ngClass]="{'is-invalid': (user.dirty || user.touched) && user.invalid }" required>
-          <div *ngIf="(user.dirty || user.touched) && user.invalid " class="invalid-feedback">
-        <div *ngIf="user.errors.required">El usuario es obligatorio</div>
-      </div>
-           
+            <input type="text" name="nick" class="form-control" [(ngModel)]="user.nick" #nick="ngModel"
+              [ngClass]="{'is-invalid': (nick.dirty || nick.touched) && nick.invalid }" required>
+            <div *ngIf="(nick.dirty || nick.touched) && nick.invalid " class="invalid-feedback">
+              <div *ngIf="user.errors.required">El usuario es obligatorio</div>
+            </div>
+
           </div>
           <div>
-            <p  class="form-label">Contraseña*</p>
+            <p class="form-label">Contraseña*</p>
             <input type="password" name="password" class="form-control" [(ngModel)]="user.password" #password="ngModel"
-            [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid }" minlength="8" required>
-            <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">   
-          <div *ngIf="password.errors.required">La contraseña es obligatoria</div>
-          <div *ngIf="password.errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
-        </div>
-            
+              [ngClass]="{'is-invalid': (password.dirty || password.touched) && password.invalid }" minlength="8"
+              required>
+            <div class="invalid-feedback" *ngIf="(password.dirty || password.touched) && password.invalid">
+              <div *ngIf="password.errors.required">La contraseña es obligatoria</div>
+              <div *ngIf="password.errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
+            </div>
+
           </div>
           <div>
-            <p  class="form-label">Repite contraseña*</p>
+            <p class="form-label">Repite contraseña*</p>
             <input type="password" name="pass2" class="form-control" [(ngModel)]="registro.pass2" #pass2="ngModel"
-            [ngClass]="{'is-invalid': (pass2.dirty || pass2.touched) && pass2.invalid }" minlength="8" required>
+              [ngClass]="{'is-invalid': (pass2.dirty || pass2.touched) && pass2.invalid }" minlength="8" required>
             <div class="invalid-feedback" *ngIf="(pass2.dirty || pass2.touched) && pass2.invalid">
-          <div *ngIf="password.errors.required">Repite la contraseña</div>
-          <div *ngIf="password.errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
+              <div *ngIf="password.errors.required">Repite la contraseña</div>
+              <div *ngIf="password.errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
             </div>
           </div>
           <div>
             <p class="form-label">Correo*</p>
-            <input type="email" name="correo" class="form-control" [(ngModel)]="user.email" #email="ngModel"
-            [ngClass]="{'is-invalid': (email.dirty || email.touched) && email.invalid }" email required>
-          <div *ngIf="(email.dirty || email.touched) && email.invalid" class="invalid-feedback">
-            <div  *ngIf="email.errors.required">La dirección de email es obligatoria</div>
-            <div  *ngIf="email.errors.email">La dirección no es válida</div>
-           </div>
+            <input type="email" name="email" class="form-control" [(ngModel)]="user.email" #email="ngModel"
+              [ngClass]="{'is-invalid': (email.dirty || email.touched) && email.invalid }" email required>
+            <div *ngIf="(email.dirty || email.touched) && email.invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">La dirección de email es obligatoria</div>
+              <div *ngIf="email.errors.email">La dirección no es válida</div>
+            </div>
           </div>
         </div>
         <div class="bloqueDerecha">
           <div class="camposDrch">
             <div>
-              <p  class="form-label">Nombre</p>
-              <input type="text" class="form-control" id="inputNombre">
+              <p class="form-label">Nombre</p>
+              <input type="text" name="name" class="form-control" [(ngModel)]="user.name" #name="ngModel">
             </div>
             <div>
-              <p  class="form-label">Apellido</p>
-              <input type="text" class="form-control" id="inputApellido">
+              <p class="form-label">Apellido</p>
+              <input type="text" name="sname" class="form-control" [(ngModel)]="user.sname" #sname="ngModel">
             </div>
             <div>
               <p class="form-label">Telefono</p>
-              <input type="text" class="form-control" id="inputTelefono">
+              <input type="number" name="telefono" class="form-control" [(ngModel)]="user.telefono" #telefono="ngModel">
             </div>
             <div>
-              <p  class="form-label">Ciudad</p>
-              <input type="text" class="form-control" id="inputCiudad">
+              <p class="form-label">Ciudad</p>
+              <input type="text" name="direccion" class="form-control" [(ngModel)]="user.direccion"
+                #direccion="ngModel">
             </div>
           </div>
           <div class="bloqueBoton">
-            <button class="botonn"  (click)="modalAfir2=!modalAfir2" type="submit" [disabled]="userForm.invalid" >Registrarse</button>
+            <button class="botonn" (click)="modalAfir2=!modalAfir2" type="submit"
+              [disabled]="userForm.invalid">Registrarse</button>
             <!-- onclick="location.href= 'http://localhost:4200/';" -->
           </div>
         </div>
       </div>
-      
-    </form>
-      <div class="bloqueChecks">
-        <div class="checks">
-          <h6 class="form-check-label" for="flexCheckDefault">
-            Perfil:
-          </h6>
-          <div>
-            <input class="form-check-input" type="radio" value="" id="checkPro"  name="checker">
-            <label class="form-check-label" for="flexCheckDefault">
-              Profesional*
-            </label>
-            <div class="hide">Cuenta dedicada para profesionales certificados (Psicólogos).</div>
-          </div>
-          <div>
-            <input  class="form-check-input" type="radio" value="" id="checkPaciente"  name="checker" > 
-            <label class="form-check-label" for="flexCheckChecked">
-              Paciente*
-            </label>
-            <div class="hide">Cuenta basica de paciente, con acceso a eventos para pacientes y busqueda de
-              profesionales.</div>
-          </div>
-          <div>
-            <input class="form-check-input" type="radio" value="" id="checkFamiliar"  name="checker">
-            <label class="form-check-label" for="flexCheckDefault">
-              Familiar/Tutor legal*
-            </label>
-            <div class="hide">Cuenta de paciente con opciones de acceso y creacion de eventos relacionados con otros
-              familiares, además de la opcion de hacer de tutor legal de pacientes dependientes los cuales no
-              puedenauto-gestionarse.</div>
-          </div>
+
+    
+    <div class="bloqueChecks">
+      <div class="checks">
+        <h6 class="form-check-label" for="flexCheckDefault">
+          Perfil:
+        </h6>
+        <div>
+          <input class="form-check-input" type="radio" value="profesional" id="checkPro" name="tipo" [(ngModel)]="user.tipo" #tipo="ngModel">
+          <label class="form-check-label" for="flexCheckDefault">
+            Profesional*
+          </label>
+          <div class="hide">Cuenta dedicada para profesionales certificados (Psicólogos).</div>
+        </div>
+        <div>
+          <input class="form-check-input" type="radio" value="paciente" id="checkPaciente" name="tipo" [(ngModel)]="user.tipo" #tipo="ngModel">
+          <label class="form-check-label" for="flexCheckChecked">
+            Paciente*
+          </label>
+          <div class="hide">Cuenta basica de paciente, con acceso a eventos para pacientes y busqueda de
+            profesionales.</div>
+        </div>
+        <div>
+          <input class="form-check-input" type="radio" value="familiar" id="checkFamiliar" name="tipo" [(ngModel)]="user.tipo" #tipo="ngModel">
+          <label class="form-check-label" for="flexCheckDefault">
+            Familiar/Tutor legal*
+          </label>
+          <div class="hide">Cuenta de paciente con opciones de acceso y creacion de eventos relacionados con otros
+            familiares, además de la opcion de hacer de tutor legal de pacientes dependientes los cuales no
+            puedenauto-gestionarse.</div>
         </div>
       </div>
-      
+    </div>
+  </form>
   </div>
-  
+
   <div class="abajo">
 
     <div class="bloqueImagen">

@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       }else{
         this.registroService.logueado = true;         
         this.registroService.user = data.result;   
-        console.log( "este es el user: " + this.user.nick  ) 
+        console.log( "estado logueo: " + this.registroService.logueado  ) 
         console.log( "este es la id del usuario : " + this.user.id_user )   
         
         this.router.navigateByUrl('/')
