@@ -14,16 +14,20 @@ import { registerLocaleData } from '@angular/common';
 export class UserService {
 
   private url: string;
+  public logueado:boolean;
   public user:User; 
-  constructor( private http:HttpClient) { }
+  constructor( private http:HttpClient) { 
+    this.logueado = false;}
+
 
   //MODIFICAR PERFIL PACIENTE.
 
-    edit(nuevoUser:User):Observable<Object>{
-      this.url = "http://localhost:4200/user";
+    public edit(nuevoUser:User):Observable<Object>{
+      this.url = "http://localhost:3000/user";
       console.log("Hemos entrado");
       console.log(nuevoUser);
       return this.http.put(this.url,nuevoUser)
     }
-    
+              
 }
+

@@ -1,21 +1,37 @@
-    <div id="openModal" class="modalDialog">
-                      
-           <div class="bloqueForm">
-             
-            <div class="form">       
-                <a href="#close" title="Close" class="close">x</a>            
-                <h2 class="titulo">My Shoulder</h2>
-                <form>
-                    <p class="inputTitle">USUARIO</p>
-                    <input type="text" class="input">
-                    <p class="inputTitle">CONTRASEÑA</p>
-                    <input type="password" class="input">
-                    <p class="reminder">¿Olvidaste la contraseña?</p>
-                </form>
-                <button class="register">Log-In</button>
+<div id="openModal" class="modalDialog">
+
+    <div class="bloqueForm">
+        <div class="form">
+            <a href="#close" title="Close" class="close">x</a>
+            <h2 class="titulo">My Shoulder</h2>
+
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input type="text" name="nick" class="form-control" [(ngModel)]="user.nick" #nick="ngModel"
+                        [ngClass]="{'is-invalid': (nick.dirty || nick.touched) && nick.invalid }" required>
+                    <div *ngIf="(nick.dirty || nick.touched) && nick.invalid " class="invalid-feedback">
+                        <div *ngIf="nick.errors.required">El usuario es obligatorio</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" class="form-control" [(ngModel)]="user.password "
+                        #password="ngModel"
+                        [ngClass]="{'is-invalid': (password .dirty || password .touched) && password .invalid }"
+                        required>
+                    <div class="invalid-feedback" *ngIf="(password .dirty || password .touched) && password .invalid">
+                        <div *ngIf="password .errors.required">El password es obligatorio
+                        </div>
+                    </div>
+                </div>
                 
-            </div>
-            
+                <div class="form-group">
+                    <button type="submit" class="register" [disabled]="userForm.invalid">Log-In</button>
+                </div>
+            </form>
         </div>
     </div>
-
+</div>

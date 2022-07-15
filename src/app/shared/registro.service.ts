@@ -18,16 +18,16 @@ export class RegistroService {
     this.logueado = false;
   }
 
-    registrar(user:User){
+    registrar(user:User):Observable<object>{
       this.url ="http://localhost:3000/registro";
       console.log(this.url +"aqui url")      
       console.log(user.name + "este es el nombre del usuario en el service");
       return this.http.post<User>(this.url,user)         
     }
 
-    login(user:User){
+    login(user:User):Observable<object>{
       console.log(user)
-      console.log(user.name + "este es el nombre del usuario en el service");
+      console.log(user.id_user + " este es el id_usuario en el service");
       this.url ="http://localhost:3000/login";      
       return this.http.post(this.url,user)
     }          
