@@ -63,7 +63,8 @@ import { ModalConModEvenComponent } from './component/modal-con-mod-even/modal-c
 import { ModalConCreEvenComponent } from './component/modal-con-cre-even/modal-con-cre-even.component';
 import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/modal-con-cre-even-pro.component';
 import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/modal-afir-apun-even.component';
-
+import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
+import { GestionarEventoComponent } from './component/gestionar-evento/gestionar-evento.component';
 
 
 @NgModule({
@@ -126,6 +127,8 @@ import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/mod
     ModalConCreEvenComponent,
     ModalConCreEvenProComponent,
     ModalAfirApunEvenComponent,
+    GestionEventoComponent,
+    GestionarEventoComponent,
   
   ],
   imports: [

@@ -19,6 +19,7 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { RegistroComponent } from './pages/registro/registro.component';
 import { SolicitudPacientesComponent } from './pages/solicitud-pacientes/solicitud-pacientes.component';
 import { TarjetaEventoComponent } from './pages/tarjeta-evento/tarjeta-evento.component';
+import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
 
 
 const routes: Routes = [
@@ -42,7 +43,7 @@ const routes: Routes = [
   {path:"mis-eventos-paciente", component: MisEventosPacienteComponent}, 
   {path:"solicitud-pacientes", component: SolicitudPacientesComponent}, 
   {path:"tarjeta-evento", component: TarjetaEventoComponent}, 
-  
+  {path:"gestion-evento", component: GestionEventoComponent}
   
 ];
 
