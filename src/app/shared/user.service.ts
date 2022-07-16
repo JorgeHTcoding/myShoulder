@@ -22,18 +22,19 @@ export class UserService {
 
   //MODIFICAR PERFIL PACIENTE.
 
-     edit(nuevoUser:User):Observable<Object>{
+     edit(id_user:User):Observable<Object>{
       this.url = "http://localhost:3000/user";
       console.log("Hemos entrado");
-      console.log(nuevoUser);
-      return this.http.put(this.url+"?id=",nuevoUser)
+      console.log(id_user);
+      return this.http.put(this.url,id_user)
     }
 
     // MOSTRAR  PERFIL 
      
     getOne(id_user:number):Observable<Object>{
       console.log(id_user + " Esta es la ID de usuario")  
-      this.url ="http://localhost:3000/user" ;     
+      this.url ="http://localhost:3000/user" ; 
+      console.log(id_user);    
       console.log(id_user + " AQUI ID USUARIO SERVICE")
       return this.http.get(this.url+"?id="+ id_user)
     }

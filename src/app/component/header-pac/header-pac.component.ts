@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-header-pac',
@@ -7,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderPacComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userService : UserService , private router:Router ) { }
 
+  goEditarPaciente(){
+    console.log('Hemos entrado en navigate')
+    this.router.navigateByUrl('/edicion-perfil')
+  }
+  
   ngOnInit(): void {
   }
 
