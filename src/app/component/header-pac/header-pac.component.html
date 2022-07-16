@@ -1,4 +1,3 @@
-
 <div class="header">
     <div class="img">
     <img src="../../../assets/img/logo.svg" />
@@ -6,19 +5,23 @@
     <div class="bloque-enlace">
     <ul id="nav">
         <li><a href="#" class="activa">Home</a></li>
-        <li><a onclick= "location.href= 'http://localhost:4200/busqueda-profesional';" class="no-activa">Profesionales</a>
+        <li><a routerLink="/busqueda-profesionales" class="no-activa">Profesionales</a>
             <!-- <ul>
                 <li><a href="#">Solicitudes</a></li>
                 <li><a href="#">Chats</a></li>
                     </ul> -->
-        <li><a onclick= "location.href= 'http://localhost:4200/busqueda-evento';" class="no-activa">Eventos</a>
+        <li><a routerLink="/busqueda-evento" class="no-activa">Eventos</a>
             <ul>
-                <li><a onclick= "location.href= 'http://localhost:4200/mis-eventos-paciente';">Mis Eventos</a></li>
+                <li><a routerLink="/mis-eventos-paciente">Mis Eventos</a></li>
                 <!-- <li><a href="#">Chats</a></li> -->
                     </ul>
-        <li><a onclick= "location.href= 'http://localhost:4200/landing-paciente';" class="no-activa">Perfil</a>
+        <li><a routerLink="/landing-paciente" class="no-activa">Perfil</a>
+<<<<<<< HEAD
+            <ul>
+=======
             <ul>                
-                <li><a onclick= "location.href= 'http://localhost:4200/edicion-perfil';">Modificar</a></li>
+>>>>>>> geventos
+                <li><a routerLink="/edicion-perfil">Modificar</a></li>
                 <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
