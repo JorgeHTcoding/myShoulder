@@ -3,7 +3,7 @@
         <app-header-pro></app-header-pro>
     </div>
     <div class="tituloPagina">
-        <h2 class="tituloh2Pagina">Hola Rosa!</h2>
+        <h2 class="tituloh2Pagina">Hola {{user.name}}!</h2>
     </div>
     <div class="cont">
         <div class="contenedorIzq">
@@ -43,10 +43,11 @@
             <div class="mostrarEvento">
                 
                 <div class="eventoInd">
-                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/creacion-evento';"></app-mostrar-evento>
+                    
+                    <app-mostrar-evento routerLink="http://localhost:4200/creacion-evento"></app-mostrar-evento>
                 </div>
                 <div class="eventoInd">
-                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/creacion-evento';"></app-mostrar-evento>
+                    <app-mostrar-evento routerLink="http://localhost:4200/creacion-evento"></app-mostrar-evento>
                 </div>
                 <!-- <div class="eventoInd">
                     <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/tarjeta-evento';"></app-mostrar-evento>
