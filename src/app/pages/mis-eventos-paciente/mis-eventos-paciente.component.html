@@ -11,17 +11,32 @@
 
 
         <div class="carousel-inner">
-          
-            <div class="carousel-item active">
+
+
+            <!-- <div class="carousel-item active">
                 <div class="particleCard">
                     <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
-                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
+                      <div class="tarjeta2" *ngFor="let tarjeta of eventos; let i = index">
+
+                          <app-tarjeta-eventos-cancelar [elementoPadre] = "tarjeta" ; let i = index></app-tarjeta-eventos-cancelar>
+                       
                       </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item ">
+            </div> -->
+
+
+            <div class="carousel-item active">
+              <div class="particleCard">
+                       <div class="show-eventos">
+                         <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
+                           <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
+                         </div>
+                       </div>
+                   </div>
+               </div>
+
+           <!-- <div class="carousel-item ">
            <div class="particleCard">
                     <div class="show-eventos">
                       <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
@@ -29,17 +44,23 @@
                       </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
+            </div> -->
+
+
+            <!-- <div class="carousel-item">
                <div class="particleCard">
-                    <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
+                    <div class="show-eventos" *ngFor="for let tarjeta of eventos">
+                      <div class="tarjeta2">
                         <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
                       </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+            
         </div>
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

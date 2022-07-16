@@ -13,11 +13,12 @@ export class GeventosService {
   
   constructor(private http: HttpClient) { }
 
-  getAll():any{
+  getAll(id_user:number):Observable<Object>{
     console.log("Entramos a getEvento")
-    this.url="http://localhost:3000/eventos"
-    return this.http.get(this.url)
+    this.url="http://localhost:3000/eventosUser"
+    return this.http.get(this.url + "?id_user=" + id_user);
   }
+
   modificar(id_evento:number):any{
     id_evento=id_evento;
     console.log("Entramos a modificar")
