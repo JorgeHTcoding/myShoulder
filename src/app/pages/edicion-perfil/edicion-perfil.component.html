@@ -14,28 +14,38 @@
         </div>
 
 
-        <div class = "contenedor-abajo">
-
+        <div class = "contenedor-abajo" >
+            <!--  #perfilForm="ngForm" (ngSubmit)=modificar() -->
             <form class = "miformu1">
-                <div class = contenedor-izquierda>
+                <div class = contenedor-izquierda >
                         <img class = "ImagenPrincipal" src="../../../assets/img/profilepicttest.png" > 
 
                         <!-- Nombre input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form1Example1" class="form-control" placeholder="" #input2/>
-                            <label class="form-label" for="form1Example1"></label>
+                        <div class="form-outline mb-4" for="form1Example1">
+                            <label class="form-label" for="form1Example1" #form1Example1 >
+                                <input type="text" id="form1Example1" class="form-control" name="name" [(ngModel)]="user.name" #name="ngModel">
+                            </label>
+                            
+                            <!-- {{user.name}} -->
                         </div>
                         
                         <!-- Apellido input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="" #input3/>
-                            <label class="form-label" for="form1Example2"></label>
+                        <div class="form-outline mb-4" for="form1Example2" >
+                            <label class="form-label" for="form1Example2" #form1Example2 >
+                                <input type="text" id="form1Example2" class="form-control" name="sname" [(ngModel)]="user.sname" #sname="ngModel">
+                            </label>
+                            
+                            <!-- {{user.sname}} -->
                         </div>
                     
                         <!-- Correo input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="" #input4/>
-                            <label class="form-label" for="form1Example2"></label>
+                        <div class="form-outline mb-4" for="form1Example2">
+                            <label class="form-label" for="form1Example2" #form1Example2>
+                                <input type="text" id="form1Example2" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" >
+                            </label>
+                            
+                            <!-- {{user.email}} -->
+                            
                         </div>
                 </div>
 
@@ -45,15 +55,21 @@
 
                     <div class = "Input-Arriba">
                             <!-- Direccion input -->
-                            <div class="form-outline1 mb-4">
-                                <input type="text" id="form1Example1" class="form-control" placeholder="" #input5/>
-                                <label class="form-label" for="form1Example1"></label>
+                            <div class="form-outline1 mb-4" for="form1Example1">
+                                <label class="form-label" for="form1Example1" #form1Example1 >
+                                    <input type="text" id="form1Example1" class="form-control" name="direccion" [(ngModel)]="user.direccion" #direccion="ngModel">
+                                </label>
+                                
+                                <!-- {{user.direccion}} -->
                             </div>
 
                             <!-- Telefono input -->
-                            <div class="form-outline2 mb-4">
-                                <input type="number" id="form1Example2" class="form-control" placeholder="" #input6/>
-                                <label class="form-label" for="form1Example2"></label>
+                            <div class="form-outline2 mb-4" for="form1Example2">
+                                <label class="form-label" for="form1Example2" #form1Example2 >
+                                    <input type="number" id="form1Example2" class="form-control" name="telefono" [(ngModel)]="user.telefono" #telefono="ngModel" >
+                                </label>
+                               
+                                <!-- {{user.telefono}} -->
                             </div>
                     </div>
                 
@@ -65,11 +81,15 @@
                             <app-modal-afir-edicion></app-modal-afir-edicion>
                         </div>
 
-                        <div class="bloqueTexto">
-                        <textarea name="textarea" style="overflow:hidden; resize:none" #input7>{{usuario.descripcion}}</textarea>  
-               
+                        <div class="bloqueTexto" for="form1Example2">
+                        <textarea name="textarea" style="overflow:hidden; resize:none" #form1Example2 name="descripcion"[(ngModel)]="user.descripcion" #descripcion="ngModel" >
+                            <!-- {{user.descripcion}} -->
+                        </textarea>  
+                        <div *ngIf="user">
+                           
+                          </div>
 
-                    <button class="submit" (click)="afirEdPerfil=!afirEdPerfil" on-click=modificar()>Guardar</button>
+                    <button type="submit" class="submit" (click)="afirEdPerfil=!afirEdPerfil" (click)="modificar()">Guardar</button>
 
                     </div>
                 </div>
