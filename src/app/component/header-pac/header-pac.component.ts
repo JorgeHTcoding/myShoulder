@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { UserService } from 'src/app/shared/user.service';
 import { RegistroService } from 'src/app/shared/registro.service';
-import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
 @Component({
