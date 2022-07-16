@@ -16,28 +16,28 @@ export class LoginComponent implements OnInit {
  
 
   constructor(public registroService:RegistroService, public userService:UserService , private router:Router) { 
-    this.user = new User("","","","","",null,"","","","","","","",) ;      
-   
+    this.user = new User("","","","","",null,"","","","","","","",) ;
+
   }
   public onSubmit(form:NgForm){
     this.registroService.login(this.user).subscribe((data:any)=>{
       if(data.error==true){
         this.registroService.logueado = false;
-        this.registroService.user = null;        
+        this.registroService.user = null;
       }else{
-        this.registroService.logueado = true;         
+        this.registroService.logueado = true;
         this.registroService.user = data.result; 
         this.userService.user = data[0];
         console.log( "estado logueo: " + this.registroService.logueado  ) 
         console.log( "este es la id del usuario: " + this.userService.user.id_user )
-                 
+
         if(this.userService.user.tipo == "paciente"){
           this.router.navigateByUrl('/landing-paciente')
         }else if(this.userService.user.tipo == "profesional"){
           this.router.navigateByUrl('/landing-profesional')
         }else{
-          this.router.navigateByUrl('/landing-profesional')
-        }       
+          this.router.navigateByUrl('/landing-familiar')
+        }
       }
     })
   }

@@ -5,7 +5,7 @@
 
         <div class = "contenedor-arriba">
             <div class = "contenedor-titulo">
-                <h2 class = "titulo">Hola Claudia!</h2>
+                <h2 class = "titulo">Hola {{user.name}}!</h2>
             </div>
 
             <div class = "Edicion">
@@ -18,7 +18,7 @@
             <!--  #perfilForm="ngForm" (ngSubmit)=modificar() -->
             <form class = "miformu1">
                 <div class = contenedor-izquierda >
-                        <img class = "ImagenPrincipal" src="../../../assets/img/profilepicttest.png" > 
+                        <img class = "ImagenPrincipal" src="{{user.img}}" > 
 
                         <!-- Nombre input -->
                         <div class="form-outline mb-4" for="form1Example1">
@@ -56,19 +56,15 @@
                     <div class = "Input-Arriba">
                             <!-- Direccion input -->
                             <div class="form-outline1 mb-4" for="form1Example1">
-                                <label class="form-label" for="form1Example1" #form1Example1 >
-                                    <input type="text" id="form1Example1" class="form-control" name="direccion" [(ngModel)]="user.direccion" #direccion="ngModel">
-                                </label>
-                                
+                                <label class="form-label" for="form1Example1" #form1Example1 ></label>
+                                <input type="text" id="form1Example1" class="form-control" name="direccion" [(ngModel)]="user.direccion" #direccion="ngModel">
                                 <!-- {{user.direccion}} -->
                             </div>
 
                             <!-- Telefono input -->
                             <div class="form-outline2 mb-4" for="form1Example2">
-                                <label class="form-label" for="form1Example2" #form1Example2 >
-                                    <input type="number" id="form1Example2" class="form-control" name="telefono" [(ngModel)]="user.telefono" #telefono="ngModel" >
-                                </label>
-                               
+                                <label class="form-label" for="form1Example2" #form1Example2 ></label>
+                                <input type="number" id="form1Example2" class="form-control" name="telefono" [(ngModel)]="user.telefono" #telefono="ngModel" >
                                 <!-- {{user.telefono}} -->
                             </div>
                     </div>
