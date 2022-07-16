@@ -10,22 +10,23 @@
 
     <div class="container">
         <div class="cabecera">
-            <h4>Taller de parentalidad creativa</h4>
+            <h4>{{evento.titulo}}</h4>
         </div>
         <div class="principal">
 
             <div class="izq">
                 <figure>
-                    <img src="../../../assets/img/groupactivity.png">
+                    <img src="{{evento.img}}">
                 </figure>
                 <!-- <p>on-line</p> -->
                 <div class="bajo">
                     <div class="fecha">
-                        <p>07/10/2022 - 19:00 h</p>
+                        <p>{{evento.fecha}}</p>
                     </div> 
                     <div class="botonPrincipal">
-                        <button class="boton1" (click)="modalIr=!modalIr" type="button">¡Apuntame!</button>
-                        <button (click)="modalNoIr=!modalNoIr" class="boton1">No puedo ir</button>
+                        <!-- (click)="apuntame(id_user,evento.id_eventos)" -->
+                        <button class="boton1" (click)="modalIr=!modalIr" (click)="apuntame()" type="button" >¡Apuntame!</button>
+                        <button (click)="modalNoIr=!modalNoIr" class="boton1"(click)="desapuntame()">No puedo ir</button>
                     </div>
                     
                 </div>
@@ -40,7 +41,7 @@
             <div class="drch">
                 <div class="prof" >
                     <div >
-                        <p>Este taller lo imparte Rosa, una de nuestras psicologas cognitivo-conductuales</p>
+                        <p>Este taller lo imparte {{evento.name}} {{evento.sname}}, una de nuestras psicologos especializados en terapias {{evento.terapia}}</p>
                     </div>
                     <figure>
                         <img src="../../../assets/img/rosaperfil.png">
@@ -48,8 +49,7 @@
                 </div>
                 <div class="descripcion">
                     <p>
-                        Los padres cuentan con mucha información sobre cualquier tema relacionado con la crianza de los hijos pero se encuentran con dificultades a la hora de poner en práctica esos consejos. <br>
-                        En ocasiones no saben qué hacer con tanta información y no saben cómo relacionarse con sus hijos. Poder trabajar en grupo estas y otras dificultades compartidas en relación a su rol de padre y madre les ayudará.
+                        {{evento.descripcion}}
                     </p>
                 </div>
 
