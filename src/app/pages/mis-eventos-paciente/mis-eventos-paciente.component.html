@@ -12,21 +12,16 @@
 
         <div class="carousel-inner">
 
+            <div class="carousel-item active">
+                <div class="particleCard" *ngFor="let evento of group">
+                  <div class="show-eventos">
+                    <app-tarjeta-eventos-cancelar class="tarjeta2" [elementoPadre] = "evento"></app-tarjeta-eventos-cancelar>     
+                  </div> 
+                </div>
+            </div>
+
 
             <!-- <div class="carousel-item active">
-                <div class="particleCard">
-                    <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="let tarjeta of eventos; let i = index">
-
-                          <app-tarjeta-eventos-cancelar [elementoPadre] = "tarjeta" ; let i = index></app-tarjeta-eventos-cancelar>
-                       
-                      </div>
-                    </div>
-                </div>
-            </div> -->
-
-
-            <div class="carousel-item active">
               <div class="particleCard">
                        <div class="show-eventos">
                          <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
@@ -36,7 +31,7 @@
                    </div>
                </div>
 
-           <!-- <div class="carousel-item ">
+           <div class="carousel-item ">
            <div class="particleCard">
                     <div class="show-eventos">
                       <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
@@ -44,10 +39,10 @@
                       </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
 
-            <!-- <div class="carousel-item">
+            <div class="carousel-item">
                <div class="particleCard">
                     <div class="show-eventos" *ngFor="for let tarjeta of eventos">
                       <div class="tarjeta2">

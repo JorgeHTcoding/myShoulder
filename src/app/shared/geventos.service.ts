@@ -16,14 +16,10 @@ export class GeventosService {
 
   getAll(id_user:number):Observable<Object>{
     console.log("Entramos a getEvento")
-    this.url="http://localhost:3000/eventosUser"
-    return this.http.get(this.url + "?id_user=" + id_user);
+    console.log(id_user);
+    this.url="http://localhost:3000/eventosUser?id="+id_user
+    return this.http.get(this.url);
   }
-<<<<<<< HEAD
-
-  modificar(id_evento:number):any{
-    id_evento=id_evento;
-=======
   getOne(id_evento:number):any{
     console.log("Entramos a getEvento")
     this.url="http://localhost:3000/eventos?id="+id_evento
@@ -31,7 +27,6 @@ export class GeventosService {
   }
   modificar(id_evento:number,evento:Eventos):any{
     
->>>>>>> main
     console.log("Entramos a modificar")
     this.url="http://localhost:3000/gestion-evento?id="+id_evento
     return this.http.put(this.url,evento)

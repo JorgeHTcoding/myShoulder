@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         }else if(this.userService.user.tipo == "profesional"){
           this.router.navigateByUrl('/landing-profesional')
         }else{
-          this.router.navigateByUrl('/landing-familiar')
+          this.router.navigateByUrl('/landing-paciente')
         }       
       }
     })
