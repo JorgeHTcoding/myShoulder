@@ -3,6 +3,7 @@ import { Gevento } from '../models/gevento.model';
 import { HttpClient} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Eventos } from '../models/eventos';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,17 @@ export class GeventosService {
 
   private url:string;
   public evento:Gevento;
-  
   constructor(private http: HttpClient) { }
   //obtiene todos los eventos
   getAll():any{
     console.log("Entramos a getEvento")
     this.url="http://localhost:3000/eventos"
+    return this.http.get(this.url)
+  }
+  //get user event
+  getAllAnfitrion(id:number):any{
+    console.log("Entramos a getEvento")
+    this.url="http://localhost:3000/anfitrion?id="+id
     return this.http.get(this.url)
   }
   //obtiene todos los eventos de USER
