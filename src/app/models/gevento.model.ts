@@ -32,7 +32,7 @@ export class Gevento {
     this.descripcion = descripcion;
     this.modalidad = modalidad;
     this.terapia = terapia;
-    this.fecha=fecha;
-    this.img=img;
+    this.fecha = fecha;
+    this.img = img;
 }
 }
