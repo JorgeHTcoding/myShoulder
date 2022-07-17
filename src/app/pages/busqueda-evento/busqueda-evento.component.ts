@@ -6,6 +6,7 @@ import { User } from 'src/app/models/user';
 import { observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { provideProtractorTestingSupport } from '@angular/platform-browser';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-busqueda-evento',
@@ -13,31 +14,45 @@ import { provideProtractorTestingSupport } from '@angular/platform-browser';
   styleUrls: ['./busqueda-evento.component.scss']
 })
 export class BusquedaEventoComponent implements OnInit {
-  public eventos:Eventos;
-  public group:Eventos[]; 
+  public eventos: Eventos;
+  public group: Eventos[];
   public eventoHijo: Eventos;
+  public groupShown: any;
+  public itGroup: number;
 
-  constructor(public userService:UserService, public eventosService:EventosService) {
-    this.eventosService.getAll(this.userService.user.id_user).subscribe((data: Eventos[]) => {     
-      let array=[]      
-     
-      
-      for(let i =0;i<data.length;i++){
-          for(let j=0;j<3;j++){
-            
-            console.log("cero tu puta madra cabron: " + data)
-              // array[i][j].push(data)
-              
-          }
-      }
-      
-      console.log(array)
-      this.group = data;
-      console.log(data)
-    })
-   }
-
+  constructor(public userService: UserService, public eventosService: EventosService) {
+    this.itGroup = 0;
+  }
   ngOnInit(): void {
+    console.log("id user: " + this.userService.user.id_user)
+    this.eventosService.getAll(this.userService.user.id_user).subscribe((data: Eventos[]) => {
+      console.log(data)
+      this.group = data;
+      this.setGropShown();
+      
+    },
+      
+    (err: HttpErrorResponse) => {
+      console.log("error on parsing: " + err.message);})
+  }
+
+
+  setGropShown() {
+   
+    this.groupShown = this.group.slice(this.itGroup * 3, (this.itGroup + 1) * 3);
+    console.log("group al tirar de funcion: " + this.group)
+  }
+  previous() {
+    if (this.itGroup != 0) {
+      this.itGroup = this.itGroup - 1;
+      this.setGropShown();
+    }
+  }
+  next() {
+    if (((this.itGroup + 1) * 3) < this.group.length) {
+      this.itGroup = this.itGroup + 1;
+      this.setGropShown();
+    }
   }
 
 }

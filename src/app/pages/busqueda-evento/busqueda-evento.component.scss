@@ -6,23 +6,63 @@
         width: extend-to-zoom;
         zoom: 1.0;
         height: 100%;
+        width:100%
     }
 }
-
-.particleCard {
+.carousel {   
+    
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-left: 170px;
-    padding-right: 170px;
-}
-
-.carousel {
+    align-items: center;
     margin-top: 50px;
     z-index: 99999;
+    width: 100vw;    
     height: 60vh;
-  
+    padding: 0%;
+    margin: 0%;
+    
 
 }
+.data-row{
+    padding: 0%;
+    margin: 0%;
+    margin-top: 80px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.data-list{
+   
+    width: 80vw;
+    display:flex;
+    justify-content: space-around;
+    padding: 0%;
+    margin: 0%;
+}
+.ngContainer{
+   
+   
+    height: 80vh;
+    padding: 0%;
+    margin: 0%;
+}
+.data-container {
+   
+    display:flex; 
+    padding: 0%;
+    margin: 0%;
+   
+}
+.tarjeta{
+    padding: 0%;
+    margin: 0%;
+}
+.navigator{
+    font-size: 2em;
+    color: rgb(78, 120, 184);
+}
+
 
 .bloqueInfo {
     padding-left: 45px;
@@ -54,63 +94,41 @@
     padding-left: 40px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;     
-  background-size: 100%, 100%;       
-  background-image: none;
-}
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: #7485be;
-}
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: #7485be;
-}
-.bloqueBoton{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 195px;
-}
 
-@media (max-width: 1200px) {
-    .particleCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
+
+// @media (max-width: 1200px) {
+//     .particleCard {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         flex-wrap: wrap;
              
       
-    }
-    .tarjeta{
-        margin-bottom: 25px;  
-    }
-    .carousel {
-        margin-top: 50px;
-        z-index: 30000;
-        height: 60vh;
-    }
-  .carousel-indicators{
-    display:none;
-  }
-  .footer{
-    display:none;
-}
+//     }
+//     .tarjeta{
+//         margin-bottom: 25px;  
+//     }
+//     .carousel {
+//         margin-top: 50px;
+//         z-index: 30000;
+//         height: 60vh;
+//     }
+//   .carousel-indicators{
+//     display:none;
+//   }
+//   .footer{
+//     display:none;
+// }
   
-  }
+//   }
   
-    @media (max-width: 600px) {
-        .bloqueInfo{
-            display: none;
+//     @media (max-width: 600px) {
+//         .bloqueInfo{
+//             display: none;
           
-        }
+//         }
       
        
-    }
+//     }

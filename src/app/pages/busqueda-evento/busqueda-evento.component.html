@@ -1,17 +1,36 @@
 <div class="cuerpo">
     <app-header-pac></app-header-pac>
     <div class="bloqueInfo">
-    <div class="titulo">Eventos</div>
-    <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>
-    </div>    
+        <div class="titulo">Eventos</div>
+        <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>
+    </div>
     <app-filtro></app-filtro>
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+
+    <div class="carousel">
+        <div class="navigator"  (click)="previous()">&#60;</div>
+        <div class="data-row">
+            <div class="data-list">                
+                <ng-container class="ngContainer" *ngFor="let evento of groupShown " ; let index=index; let last=last>
+                    <div class="data-container">
+                        <app-tarjeta-eventos class="tarjeta" [tarjetaPadre]="evento"></app-tarjeta-eventos>
+                        
+                    </div>
+                </ng-container>
+                
+            </div>
+        </div>
+        <div class="navigator" (click)="next()">	
+            &#62;</div>
+    </div>
+
+</div>
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
 
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="particleCard" *ngFor="let evento of group" >
+                <div class="particleCard" *ngFor="let evento of groupShown "; let index = index; let last = last >
                     <app-tarjeta-eventos  class="tarjeta" [tarjetaPadre]="evento"></app-tarjeta-eventos>                   
                 </div>
             </div>           
@@ -35,10 +54,10 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
-    </div>
+    </div> -->
 
 
-</div>
+
 <app-footer class="footer"></app-footer>
 
 <!-- <app-tarjeta-eventos></app-tarjeta-eventos> -->
