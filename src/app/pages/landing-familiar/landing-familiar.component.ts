@@ -15,13 +15,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class LandingFamiliarComponent implements OnInit {
 
-  constructor( public userService : UserService) {
+  constructor() {
 
    }
   show:boolean= true;
   ngOnInit(): void {
     
-    console.log(this.userService.user)
+   
   }
 
 }
