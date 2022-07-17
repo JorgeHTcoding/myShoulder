@@ -1,36 +1,28 @@
+<app-header-pac></app-header-pac>
 <div class="cuerpo">
-    <app-header-pac></app-header-pac>
-    <div class="bloqueInfo">
-    <div class="titulo">Eventos</div>
-    <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>
-    </div>    
-    <app-filtro></app-filtro>
     
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="bloqueInfo">
+        <div class="titulo">Eventos</div>
+        <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>
+    </div>
+    <app-filtro></app-filtro>
 
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" *ngFor="let evento of group">
 
-        <div class="carousel-inner">
+        <div class="bloqueCarousel" >
+            <p-carousel [value]="group" [var]="evento1" [firstVisible]="0" [style]="" styleClass="custom-carousel" [numVisible]="3"
+                [numScroll]="1" [circular]="true" [autoplayInterval]="0"  [pageLinks]="1">
+                <ng-template let-eventos pTemplate="item" panelGrid rows="1" style="width:100%" cellpadding="5">
+                    <app-tarjeta-eventos class="tarjeta" [tarjetaPadre]="evento"></app-tarjeta-eventos>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <!-- <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="particleCard">
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
+                <div class="particleCard" *ngFor="let evento of group" >
+                    <app-tarjeta-eventos  class="tarjeta" [tarjetaPadre]="evento"></app-tarjeta-eventos>                   
                 </div>
-            </div>
-            <div class="carousel-item ">
-                <div class="particleCard">
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="particleCard">
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                    <app-tarjeta-eventos  class="tarjeta"></app-tarjeta-eventos>
-                </div>
-            </div>
+            </div>           
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
@@ -54,7 +46,8 @@
     </div>
 
 
-</div>
-<app-footer class="footer"></app-footer>
+</div> -->
+    </div>
+        <app-footer class="footer"></app-footer>
 
-<!-- <app-tarjeta-eventos></app-tarjeta-eventos> -->
+        <!-- <app-tarjeta-eventos></app-tarjeta-eventos> -->

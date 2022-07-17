@@ -1,6 +1,6 @@
 export class Eventos {
 
-    // public id_eventos: number
+    public id_eventos: number
     public anfitrion: number
     public titulo: string
     public localidad: string
@@ -13,8 +13,8 @@ export class Eventos {
 
     // constructor(id_eventos: number, anfitrion: number, titulo: string, localidad: string, direccion: string, descripcion: string, modalidad: string, terapia: string, fecha: string, img: string){
     
-    constructor(anfitrion: number, titulo: string, localidad: string, direccion: string, descripcion: string, modalidad: string, terapia: string, fecha: string, img: string){
-        // this.id_eventos      = id_eventos;
+    constructor(id_eventos: number,anfitrion: number, titulo: string, localidad: string, direccion: string, descripcion: string, modalidad: string, terapia: string, fecha: string, img: string){
+        this.id_eventos      = id_eventos;
         this.anfitrion       = anfitrion;
         this.titulo          = titulo;
         this.localidad       = localidad;

@@ -65,6 +65,7 @@ import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/
 import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/modal-afir-apun-even.component';
 import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
 import { GestionarEventoComponent } from './component/gestionar-evento/gestionar-evento.component';
+import {CarouselModule} from 'primeng/carousel';
 
 
 @NgModule({
@@ -136,7 +137,8 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
