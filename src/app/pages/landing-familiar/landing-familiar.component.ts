@@ -1,4 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/shared/user.service';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-landing-familiar',
@@ -7,9 +15,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingFamiliarComponent implements OnInit {
 
-  constructor() { }
+  constructor( public userService : UserService) {
+
+   }
   show:boolean= true;
   ngOnInit(): void {
+    
+    console.log(this.userService.user)
   }
 
 }

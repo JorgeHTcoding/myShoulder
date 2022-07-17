@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/shared/user.service';
-import { RegistroService } from 'src/app/shared/registro.service';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { User } from 'src/app/models/user'
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-edicion-perfil-pro',
@@ -12,11 +14,27 @@ import { User } from 'src/app/models/user'
 })
 export class EdicionPerfilProComponent implements OnInit {
 
-  constructor(public userService:UserService , private router:Router) { }
+  public user:User;
+
+  constructor(public userService:UserService , private router:Router) { 
+   this.user = this.userService.user
+  }
 
   afirEdPerfil:boolean=false;
   
+  public modificar(){
+
+  
+    this.userService.edit(this.user).subscribe((data:User)=>{
+      // this.user.push(data)
+      console.log(data + "data del put")
+    })
+    
+}
+
   ngOnInit(): void {
+    console.log(this.user);
+    console.log(this.userService.user)
     console.log( "este es la id del usuario en el edicion-perfil-pro: " + this.userService.user.id_user ) 
   }
 

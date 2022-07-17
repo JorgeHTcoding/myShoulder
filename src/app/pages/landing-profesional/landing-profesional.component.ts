@@ -11,11 +11,19 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./landing-profesional.component.scss']
 })
 export class LandingProfesionalComponent implements OnInit {
-
-  constructor(public registroService:RegistroService, public userService:UserService , private router:Router) { }
-
+  user:User
+  constructor(public registroService:RegistroService, public userService:UserService , private router:Router) { 
+    this.user=this.userService.user
+  }
+  
   ngOnInit(): void {
     console.log( "este es la id del usuario en el landing profesional: " + this.userService.user.id_user)
   }
-
+  public nose(){
+    
+    this.userService.user.id_user
+  }
+  
 }
+
+
