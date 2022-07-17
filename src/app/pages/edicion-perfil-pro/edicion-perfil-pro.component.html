@@ -15,7 +15,7 @@
 
         <div class = "contenedor-arriba">
             <div class = "contenedor-titulo">
-                <h2 class = "titulo">Hola Rosa!</h2>
+                <h2 class = "titulo">Hola {{user.name}}!</h2>
             </div>
 
             <div class = "Edicion">
@@ -27,23 +27,23 @@
         <div class = "contenedor-abajo">
             <form class = "miformu1">
                 <div class = contenedor-izquierda>
-                        <img class = "ImagenPrincipal" src="../../../assets/img/female1.png"> 
+                        <img class = "ImagenPrincipal" src="{{user.img}}"> 
 
                         <!-- Nombre input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example1" class="form-control" placeholder="Nombre"/>
+                            <input type="text" id="form1Example1" class="form-control" name="name" [(ngModel)]="user.name" #name="ngModel"/>
                             <label class="form-label" for="form1Example1"></label>
                         </div>
                         
                         <!-- Apellido input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="Apellidos"/>
+                            <input type="text" id="form1Example2" class="form-control" name="sname" [(ngModel)]="user.sname" #sname="ngModel" />
                             <label class="form-label" for="form1Example2"></label>
                         </div>
                     
                         <!-- Correo input -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="form1Example2" class="form-control" placeholder="Correo"/>
+                            <input type="text" id="form1Example2" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel"/>
                             <label class="form-label" for="form1Example2"></label>
                         </div>
                 </div>
@@ -52,18 +52,18 @@
                     <div class = "Input-Arriba">
                             <!-- Direccion input -->
                             <div class="form-outline1 mb-4">
-                                <input type="text" id="form1Example1" class="form-control" placeholder="Especialidad" />
+                                <input type="text" id="form1Example1" class="form-control" name="direccion" [(ngModel)]="user.direccion" #direccion="ngModel" />
                                 <label class="form-label" for="form1Example1"></label>
                             </div>
 
                             <!-- Telefono input -->
                             <div class="form-outline2 mb-4">
-                                <input type="text" id="form1Example2" class="form-control" placeholder="Dirección"/>
+                                <input type="text" id="form1Example2" class="form-control" name="telefono" [(ngModel)]="user.telefono" #telefono="ngModel"/>
                                 <label class="form-label" for="form1Example2"></label>
                             </div>
 
                             <div class="form-outline3 mb-4">
-                                <input type="text" id="form1Example2" class="form-control" placeholder="Teléfono"/>
+                                <input type="text" id="form1Example2" class="form-control" name="horario" [(ngModel)]="user.horario" #horario="ngModel" />
                                 <label class="form-label" for="form1Example2"></label>
                             </div>
                     </div>
@@ -72,7 +72,7 @@
                     <div class = "Input-Medio">
                         
                             <div class="form-outline4 mb-4">
-                                <input type="text" id="form1Example2" class="form-control" placeholder="Horario"/>
+                                <input type="text" id="form1Example2" class="form-control" name="horario" [(ngModel)]="user.horario" #horario="ngModel"/>
                                 <label class="form-label" for="form1Example2"></label>
                             </div>
 
@@ -83,18 +83,18 @@
                                 <!-- </div> -->
                                 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox1"  value="presencial" name="modalidad" [(ngModel)]="user.modalidad" #tipo="ngModel">
                                     <label class="form-check-label2" for="inlineCheckbox1">Presencial</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox2" value="online" name="modalidad" [(ngModel)]="user.modalidad" #tipo="ngModel">
                                     <label class="form-check-label2" for="inlineCheckbox2">Online</label>
                                 </div>
                             </div>
 
                             <div class="form-outline5 mb-4">
-                                <input type="text" id="form1Example2" class="form-control" placeholder="Acreditación"/>
+                                <input type="text" id="form1Example2" class="form-control" name="acreditacion" [(ngModel)]="user.acreditacion" #acreditacion="ngModel"/>
                                 <label class="form-label" for="form1Example2"></label>
                             </div>
                         
@@ -108,11 +108,11 @@
                                 <app-modal-afir-edicion></app-modal-afir-edicion>
                             </div>
 
-                            <textarea name="textarea" style="overflow:hidden; resize:none" placeholder = "Descripción"></textarea>
+                            <textarea name="textarea" style="overflow:hidden; resize:none" name="descripcion" [(ngModel)]="user.descripcion" #descripcion="ngModel"></textarea>
                         </div>
                
                         <div class="boton">
-                            <button class="boton1" (click)="afirEdPerfil=!afirEdPerfil">Guardar</button>
+                            <button class="boton1" (click)="afirEdPerfil=!afirEdPerfil" (click)="modificar()">Guardar</button>
                         </div>
                         
                     </div>

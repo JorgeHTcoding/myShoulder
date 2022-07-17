@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GeventosService } from 'src/app/shared/geventos.service';
 import { EventosService } from 'src/app/shared/eventos.service';
 import { UserService } from 'src/app/shared/user.service';
+import { Gevento } from 'src/app/models/gevento.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Eventos } from 'src/app/models/eventos';
 
 @Component({

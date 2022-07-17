@@ -3,7 +3,7 @@
         <app-header-pro></app-header-pro>
     </div>
     <div class="tituloPagina">
-        <h2 class="tituloh2Pagina">Hola Rosa!</h2>
+        <h2 class="tituloh2Pagina">Hola {{user.name}}!</h2>
     </div>
     <div class="cont">
         <div class="contenedorIzq">
@@ -13,25 +13,18 @@
             <div class="bloqueMensajes">
             <div class="pacientes">
                 <h6 class="tituloPacientes">Pacientes</h6>
-                    <div class="textoPacientes">
-                        <p class="pPaciente"><span class="azulito">Manoli</span> quiere iniciar conversación.</p>
+                    <div class="textoPacientes" *ngFor=" let pac of pacientes">
+                        <p class="pPaciente"><span class="azulito">{{pac.name}}</span> quiere iniciar conversación.</p>
                         <p class="pPaciente">Accede a su <span class="azulito" onclick= "location.href= 'http://localhost:4200/solicitud-pacientes';">carta de presentación</span></p>
-                    </div>
-                    <div class="textoPacientes">
-                        <p class="pPaciente"><span class="azulito">Jorge</span> quiere iniciar conversación.</p>
-                        <p class="pPaciente" >Accede a su <span class="azulito" onclick= "location.href= 'http://localhost:4200/solicitud-pacientes';">carta de presentación</span></p>
                     </div>
             </div>
             <div class="familiares">
                 <h6 class="tituloFamiliares">Familiares</h6>
-                    <div class="textoFamiliares">
-                        <p class="pFamiliares"><span class="naranjito">Chufa</span> quiere iniciar conversación.</p>
+                    <div class="textoFamiliares" *ngFor=" let fam of familiares">
+                        <p class="pFamiliares"><span class="naranjito">{{fam.name}}</span> quiere iniciar conversación.</p>
                         <p class="pFamiliares">Accede a su <span class="naranjito" onclick= "location.href= 'http://localhost:4200/solicitud-pacientes';">carta de presentación</span></p>
                     </div>
-                    <div class="textoPacientes">
-                        <p class="pFamiliares"><span class="naranjito">Claudia</span> quiere iniciar conversación.</p>
-                        <p class="pFamiliares">Accede a su <span class="naranjito" onclick= "location.href= 'http://localhost:4200/solicitud-pacientes';">carta de presentación</span></p>
-                    </div>
+                    
             </div>
         </div>
             <div class="imagen">
@@ -43,10 +36,11 @@
             <div class="mostrarEvento">
                 
                 <div class="eventoInd">
-                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/creacion-evento';"></app-mostrar-evento>
+                    
+                    <app-mostrar-evento [evento]= "evento1" routerLink="http://localhost:4200/creacion-evento"></app-mostrar-evento>
                 </div>
                 <div class="eventoInd">
-                    <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/creacion-evento';"></app-mostrar-evento>
+                    <app-mostrar-evento [evento]= "evento2"routerLink="http://localhost:4200/creacion-evento"></app-mostrar-evento>
                 </div>
                 <!-- <div class="eventoInd">
                     <app-mostrar-evento onclick= "location.href= 'http://localhost:4200/tarjeta-evento';"></app-mostrar-evento>

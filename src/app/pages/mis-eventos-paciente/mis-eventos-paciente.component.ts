@@ -22,11 +22,12 @@ export class MisEventosPacienteComponent implements OnInit {
     let a = this.geventosService.getAll().subscribe((data:Eventos[])=>{
       for(let i=0;i<data.length;i++){
         this.array_eventos[i]=data[i];
-      
+        
       }
       console.log(this.array_eventos)
     })
   }
+
   //  public borrarevento(id_evento:number){
   //   this.geventosService.getAll().subscribe((data:Eventos[])=>{
   //     console.log("Se ha eliminado")
