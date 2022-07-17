@@ -138,7 +138,7 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
     FormsModule,
     HttpClientModule,
     RouterModule,
-   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

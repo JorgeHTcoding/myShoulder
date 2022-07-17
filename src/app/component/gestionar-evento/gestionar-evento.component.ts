@@ -30,25 +30,25 @@ export class GestionarEventoComponent implements OnInit {
       })
     }
 
-    eliminar(id_eventos: number) { 
-      let IDeventos: number = id_eventos;
-      console.log(IDeventos + "dentro del enviar")
-      if (id_eventos != null) {
-        this.geventoService.eliminar(19).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
-        { 
-           this.gevento = data[0]
-            console.log(data)
-        })
+    // eliminar(id_eventos: number) { 
+    //   let IDeventos: number = id_eventos;
+    //   console.log(IDeventos + "dentro del enviar")
+    //   if (id_eventos != null) {
+    //     this.geventoService.eliminar(19).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
+    //     { 
+    //        this.gevento = data[0]
+    //         console.log(data)
+    //     })
   
-      }
-    }
+    //   }
+    // }
 
-    modificar(){
-      this.geventoService.modificar(this.gevento).subscribe((data:Gevento[])=>{
-        // this.user.push(data)
-        console.log(data + "data del put del gevento")
-      })
-    }}
+    // modificar(){
+    //   this.geventoService.modificar(this.gevento).subscribe((data:Gevento[])=>{
+    //     // this.user.push(data)
+    //     console.log(data + "data del put del gevento")
+    //   })
+    // }}
 
   //   modificar(id_eventos:number,img:string,localidad:string,direccion:string,descripcion:string,fecha:string)
   //   {   
@@ -59,4 +59,4 @@ export class GestionarEventoComponent implements OnInit {
   //      this.gevento.push(data)
 
   // })
-
+  }

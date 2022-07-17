@@ -17,6 +17,11 @@ export class PacientesService {
     this.url="http://localhost:3000/pac?id="+id;
     return this.http.get(this.url)
   }
+  getPro(id:number){
+    console.log("Buscamos  profesional")
+    this.url="http://localhost:3000/pro?id="+id;
+    return this.http.get(this.url)
+  }
 
 //Apartir de aqui Ana
 
