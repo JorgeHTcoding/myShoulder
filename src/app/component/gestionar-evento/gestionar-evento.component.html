@@ -10,27 +10,29 @@
     
         <div class="principal">
             <div class="izq">
-                <input type="text" placeholder="Insertar url de imagen" #input1>
+                <input type="text" placeholder="{{gevento.img}}" class="form-control" name="img" [(ngModel)]="gevento.img" #img="ngModel">
 
                 <div class="datos">
                     <label> DATOS DE IMPORTANCIA </label>
-                    <input type="text" placeholder="MODALIDAD:" #input2>
-                    <input type="text" placeholder="LOCALIDAD:" #input3>
-                    <input type="text" placeholder="DIRECCION:" #input4>
-                    <input type="text" placeholder="TERAPIA:"  #input5>
-                    <input type="text" placeholder="FECHA:"    #input6>
+                    <input type="text" placeholder="{{gevento.modalidad}}" class="form-control" name="modalidad" [(ngModel)]="gevento.modalidad" #modalidad="ngModel">
+                    <input type="text" placeholder="{{gevento.localidad}}" class="form-control" name="localidad" [(ngModel)]="gevento.localidad" #localidad="ngModel">
+                    <input type="text" placeholder="{{gevento.direccion}}" class="form-control" name="direccion"  [(ngModel)]="gevento.direccion" #direccion="ngModel">
+                    <input type="text" placeholder="{{gevento.descripcion}}" class="form-control" name="terapia"  [(ngModel)]="gevento.descripcion" #terapia="ngModel">
+                    <input type="text" placeholder="{{gevento.fecha}}" class="form-control"  name="fecha"  [(ngModel)]="gevento.fecha" #fecha="ngModel">
                 </div>
     
             </div>
+
             <div class="drch">
-                <input type="text" placeholder="Escribe un titulo para tu actividad" #input7>
-                <textarea style="overflow:hidden; resize:none" placeholder="Inserta una descripcion del evento AQUI: " #input8></textarea>
+                <input type="text"  [(ngModel)]="gevento.titulo" #titulo="ngModel">
+                <textarea style="overflow:hidden; resize:none" placeholder="{{gevento.descripcion}}" class="form-control" name="descripcion" [(ngModel)]="gevento.descripcion" #descripcion="ngModel"></textarea>
             </div>
+
         </div>
     
         <div class="boton">
-            <button type="button">Modificar</button>
-            <button type="button">Eliminar</button>
+            <button type="button" on-click=modificar()>Modificar</button>
+            <button type="button" on-click=eliminar(gevento.id_eventos) >Eliminar</button>
         </div>
     
     </div>

@@ -19,29 +19,25 @@ export class GeventosService {
     this.url="http://localhost:3000/eventos"
     return this.http.get(this.url)
   }
-  getOne(id_evento:number):any{
-    console.log("Entramos a getEvento")
-    this.url="http://localhost:3000/eventos?id="+id_evento
-    return this.http.get(this.url)
-  }
-  modificar(id_evento:number,evento:Eventos):any{
-    
+
+  modificar(gevento:Gevento):Observable<Object>{
+    // id_evento=id_evento;
     console.log("Entramos a modificar")
-    this.url="http://localhost:3000/gestion-evento?id="+id_evento
-    return this.http.put(this.url,evento)
+    console.log(gevento)
+    this.url="http://localhost:3000/gestion-evento"
+    return this.http.put(this.url,gevento)
   }
   
-  eliminar(id_evento:number):any{
-    
-    console.log("Esntramos a eliminar")
-    this.url="http://localhost:3000/gestion-evento?id="+id_evento
-    return this.http.delete(this.url)
+  eliminar(id_eventos:number):Observable<Object>{
+    console.log("Entramos a eliminar")
+    this.url="http://localhost:3000/gestion-evento"
+    return this.http.delete(this.url + "?id_eventos=" + id_eventos);
   }
 
-  getOne2(id_evento:number):Observable<Object>{ 
+  getOne(id_eventos:number):Observable<Object>{ 
     this.url="http://localhost:3000/gestion-evento"
     console.log("Entramos a getOne")
-    return this.http.get(this.url + "?id_evento=" + id_evento);
+    return this.http.get(this.url + "?id_eventos=" + id_eventos);
   }
 
   
