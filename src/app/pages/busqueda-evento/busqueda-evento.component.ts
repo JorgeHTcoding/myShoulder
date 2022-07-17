@@ -6,7 +6,6 @@ import { User } from 'src/app/models/user';
 import { observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { provideProtractorTestingSupport } from '@angular/platform-browser';
-import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-busqueda-evento',
@@ -17,22 +16,28 @@ export class BusquedaEventoComponent implements OnInit {
   public eventos:Eventos;
   public group:Eventos[]; 
   public eventoHijo: Eventos;
-  responsiveOptions;
 
   constructor(public userService:UserService, public eventosService:EventosService) {
-    this.eventosService.getAll(this.userService.user.id_user).subscribe((data: Eventos[]) => {               
+    this.eventosService.getAll(this.userService.user.id_user).subscribe((data: Eventos[]) => {     
+      let array=[]      
+     
+      
+      for(let i =0;i<data.length;i++){
+          for(let j=0;j<3;j++){
+            
+            console.log("cero tu puta madra cabron: " + data)
+              // array[i][j].push(data)
+              
+          }
+      }
+      
+      console.log(array)
       this.group = data;
       console.log(data)
     })
-    this.responsiveOptions = [{
-      breakpoint: '1024px',
-      numVisible: 3,
-      numScroll: 3
-  }];
-
    }
 
   ngOnInit(): void {
-  
-   }
+  }
+
 }
