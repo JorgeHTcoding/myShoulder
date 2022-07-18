@@ -27,5 +27,6 @@ export class EstadoAnimoComponent implements OnInit {
     console.log("Esta es la ansiedad" +this.ansiedad)
     let a = typeof(this.animo)
     console.log(a)
+    Number(this.animo)
   }
 }
