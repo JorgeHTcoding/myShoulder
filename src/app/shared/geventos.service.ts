@@ -39,6 +39,12 @@ export class GeventosService {
     this.url="http://localhost:3000/eventosUser?id="+id_evento
     return this.http.get(this.url)
   }
+  //Obtiene todos los datos del organizador
+  getEventAnf(id_evento:number):any{
+    console.log("Entramos a getEvento Anfitrion")
+    this.url="http://localhost:3000/eventos?id="+id_evento
+    return this.http.get(this.url)
+  }
   // modificar(id_evento:number,evento:Eventos):any{
     
 

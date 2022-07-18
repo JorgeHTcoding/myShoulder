@@ -18,21 +18,23 @@ export class DetalleEventoComponent implements OnInit {
   id:number;
   evento:Gevento;
   apuntado:Apuntado;
+  
   constructor(public geventosService:GeventosService, public userService:UserService,public apuntadoService:ApuntadoService) {
     this.user=this.userService.user;
     this.id=this.userService.user.id_user
+    console.log(this.geventosService.evento)
    }
-    
-    
-  ngOnInit(): void {
+   ngOnInit(): void {
+    this.evento=this.geventosService.evento
      console.log("Inicializamos la página")
-      this.geventosService.getOne(this.user.id_user).subscribe((data:Gevento)=>{
+      this.geventosService.getEventAnf(this.evento.id_eventos).subscribe((data:Gevento)=>{
       console.log("data es:"+ data)
       this.evento=data[0]
       console.log(this.evento)
     })
     console.log("esta es la info")
     console.log(this.evento.titulo + "hehe")
+    console.log(this.evento.name + "hehe")
   }
   public apuntame(){
     

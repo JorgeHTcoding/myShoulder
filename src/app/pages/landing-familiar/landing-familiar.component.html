@@ -3,14 +3,14 @@
         <app-header-fam></app-header-fam>
     </div>
     <div class="tituloPagina">
-        <h2 class="tituloh2Pagina">Hola Claudia!</h2>
+        <h2 class="tituloh2Pagina">Hola {{user.name}}!</h2>
     </div>
     <div class="cont">
         <div class="contenedorIzq">
             <div class="textos">
                 <h4 class="novedades">Novedades</h4>
-                <p class="textoInfo"> Rosa te ha enviado un mensaje</p>
-                <p class="textoInfo"> Miguel te ha enviado un mensaje</p>
+                <p class="textoInfo"> {{prof[0].name}} te ha enviado un mensaje</p>
+                <p class="textoInfo"> {{prof[0].name}} te ha enviado un mensaje</p>
                 <p class="textoInfo"> Te has apuntado a un <span
                     routerLink= '/tarjeta-evento' class="naranjito">Evento</span>
                 </p>
@@ -27,12 +27,14 @@
             <div class="mostrarEvento">
                 <h4 class="tituloEventos">Próximos eventos</h4>
                 <div class="eventoInd">
-                    <app-mostrar-evento onclick="location.href= 'http://localhost:4200/tarjeta-evento';">
-                    </app-mostrar-evento>
+
+                    
+                    <app-mostrar-evento [evento]= "evento1" (click)="detalle(evento1)"></app-mostrar-evento>
+          
                 </div>
             </div>
             <div class="mostrarProp">
-                <app-mostrar-anfitrion onclick="location.href= 'http://localhost:4200/creacion-evento';">
+                <app-mostrar-anfitrion [evento]= "evento2" routerLink= "/gestion-evento">
                 </app-mostrar-anfitrion>
             </div>
             <div class="separador"></div>
@@ -41,11 +43,8 @@
             <div class="mostrarProfesional">
                 <h4 class="tituloProf">Mis profesionales</h4>
 
-                <div class="eventoProf">
-                    <app-mostrar-prof></app-mostrar-prof>
-                </div>
-                <div class="eventoProf">
-                    <app-mostrar-prof></app-mostrar-prof>
+                <div class="eventoProf" *ngFor="let p of prof">
+                    <app-mostrar-prof [prof]="p" ></app-mostrar-prof>
                 </div>
             </div>
         </div>

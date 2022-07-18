@@ -41,7 +41,8 @@ export class LandingPacienteComponent implements OnInit {
       this.pacienteService.getPro(this.id).subscribe((data:any)=>{
         console.log(data)
         console.log(data[0].name)
-        this.prof=data
+        this.prof=data[0]
+        console.log("name:" +this.prof.name)
       })
   
     console.log(
@@ -59,5 +60,8 @@ export class LandingPacienteComponent implements OnInit {
         console.log(this.evento2)
       })
   }
-
+  detalle(evento1){
+      this.geventosService.evento =evento1;
+       this.router.navigateByUrl('/tarjeta-evento')
+    }
 }
