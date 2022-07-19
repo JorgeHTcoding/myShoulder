@@ -1,43 +1,39 @@
-  <div class="tuchat" *ngIf="show2">
-                    <app-modal-conf-elim-pac></app-modal-conf-elim-pac>
-                </div>
-<div class="tuchat" *ngIf="show">
-    <app-modal-chat></app-modal-chat>
-</div>
-
 <div class="cuerpo" >
     <div class="bloqueTarjeta">
-        <div class="bloqueIzq">
+        <div class="bloqueIzq" >
             <div class="cajaInfo">
-                <div class="info">
-                    Tipo Usuario
+                <div #id_user  class="info" id="id_user" >
+                    
+                 {{elementoPadre.id_user}}
                 </div>
             </div>
             <div class="cajaImg">
-                <img class = "perfilImg" src="../../../assets/img/Ellipse 7.png"> 
+                <img class = "perfilImg" src="{{elementoPadre.img}}"> 
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Nombre
+                    {{elementoPadre.name}}
                 </div>
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Apellidos
+                    {{elementoPadre.sname}}
                 </div>
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Contacto
+                    {{elementoPadre.email}}
             </div>               
             </div>
         </div>
             <div class="bloqueCent">
                 <div class="cajaTexto">
                     <form class="texto">
-                        <textarea class="inputDiagnostico" placeholder="BREVE DIAGNOSTICO POR PARTE DEL PROFESIONAL"></textarea>
+                        <textarea #id_user    class="inputDiagnostico" id="diagnostico"  placeholder="BREVE DIAGNOSTICO POR PARTE DEL PROFESIONAL">
+                            {{elementoPadre.diagnostico}}
+                        </textarea>
                         <div class="bloqueBoton">
-                        <button class="boton1">Guardar</button>
+                        <button class="boton1" (click)="modificar(elementoPadre)" >Guardar</button>
                     </div>
                     </form>
                 </div>
@@ -49,4 +45,3 @@
             </div>
         </div>
     </div>
-   
