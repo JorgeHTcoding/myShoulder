@@ -31,7 +31,7 @@ export class CrearEventoComponent implements OnInit {
 
   anadirEvento(titulo:string, localidad:string, direccion:string, descripcion:string, modalidad:string, terapia:string, fecha:string, url:string) {
 
-    let nuevoEvento = new Eventos(this.user.id_user,titulo,localidad,direccion,descripcion,modalidad,terapia,fecha,url)
+    let nuevoEvento = new Eventos(0, this.user.id_user,titulo,localidad,direccion,descripcion,modalidad,terapia,fecha,url)
 
     console.log("Paso por nuevo Evento: " + nuevoEvento);
 

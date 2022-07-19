@@ -5,8 +5,12 @@ import { Eventos } from 'src/app/models/eventos';
 import { GeventosService } from 'src/app/shared/geventos.service';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/user.service';
+import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { provideProtractorTestingSupport } from '@angular/platform-browser';
+import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { EventosService } from 'src/app/shared/eventos.service';
 
 
 @Component({
@@ -19,37 +23,78 @@ import { CommonModule } from '@angular/common';
 export class MisEventosPacienteComponent implements OnInit {
   public user:User;  
   public eventos:Eventos;
+
   public group:Eventos[]; 
   public eventoHijo: Eventos;
+  public groupShown: any;
+  public itGroup: number;
 
+  public newEvento: Eventos[] = [];
+  
+  constructor(public geventosService:GeventosService, public userService: UserService, public eventosService:EventosService) { 
+    this.itGroup = 0;
+    
+  }
 
-  constructor(public geventosService:GeventosService, public userService: UserService) { 
+    
+  eliminarAsisEvento(id_eventos:number) {
+    console.log("entro por eliminar evento-paciente")
 
-    this.geventosService.getAll(this.userService.user.id_user).subscribe( (data: Eventos[]) => {  
-    let array=[]
-   
-    console.log("Informacion del Data: " + data)
+    console.log(id_eventos);
 
-      for(let i=0; i < data.length; i++) {  
-        console.log("ME QUIERO PEGAR UN TIRO")
-        for(let j=0; j<3; j++) {
+    if(id_eventos != null) {
 
-          console.log("cero tu puta madre cabron: " + data)
-          // array[i][j].push(data)
-          
-        } 
-      }
+      let posicion = this.group.findIndex(evento => id_eventos == evento.id_eventos );
+      this.group.splice(posicion, 1);
+      this.setGropShown();
       
-      console.log(array)
-      this.group = data;
-      console.log(data)  
-    })
-  }
+      // console.log(this.group);
+      // console.log(posicion);
+      
+      // console.log("Entro dentro del IF y esto es ID_Evento: " + id_eventos);
+      // console.log("Entro dentro del IF y esto es ID_User: "   + this.userService.user.id_user);
 
+      // this.eventosService.delete(this.userService.user.id_user, id_eventos).subscribe((data: Eventos[]) => {
+      this.eventosService.delete(this.userService.user.id_user, id_eventos).subscribe((data:any) => {
+      console.log( data );
 
-
-    ngOnInit(): void {
+      })
     }
-  
   }
-  
+
+
+  ngOnInit(): void {
+      console.log("id user: " + this.userService.user.id_user)
+      this.geventosService.getAll(this.userService.user.id_user).subscribe( (data: Eventos[]) => {
+        
+        console.log(data)
+        this.group = data;
+        this.setGropShown();
+    },
+
+    
+    (err: HttpErrorResponse) => {
+      console.log("error on parsing: " + err.message);})
+    
+  }
+
+
+  setGropShown() {
+
+    this.groupShown = this.group.slice(this.itGroup * 3, (this.itGroup + 1) * 3);
+    console.log("group al tirar de funcion: " + this.group)
+  }
+  previous() {
+    if (this.itGroup != 0) {
+      this.itGroup = this.itGroup - 1;
+      this.setGropShown();
+    }
+  }
+  next() {
+    if (((this.itGroup + 1) * 3) < this.group.length) {
+      this.itGroup = this.itGroup + 1;
+      this.setGropShown();
+    }
+  }
+
+}

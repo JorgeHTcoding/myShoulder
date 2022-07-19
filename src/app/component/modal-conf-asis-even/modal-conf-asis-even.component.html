@@ -1,16 +1,20 @@
 <div id="openModal" class="modalDialog">
                       
     <div class="bloqueForm">
-        <span onclick="document.getElementById('openModal').style.display='none'"
+        <span (click)="cerrar()"
         class="closebutton">&times;</span>
      <div class="form">       
                   
          <h2 class="titulo">¡No puedo ir!</h2>
          
          <div class="info">¿Quieres cancelar tu asistencia al evento?</div>
+         <!-- <div class="info">Evento Eliminado</div> -->
+         
          <div class="bloqueBotones">
-            <a  (click)="popEvent()" class="boton1">Si</a>
-            <a   onclick="document.getElementById('openModal').style.display='none'" class="boton2">No</a>
+            <!-- <a  (click)="popEvent()" onclick=eliminarAsisEvento() class="boton1">Si</a> -->
+            
+            <a  (click)="confirmar()" class="boton1">Si</a>
+            <a  (click)="cerrar()" class="boton2">No</a>
          </div>
          
      </div>

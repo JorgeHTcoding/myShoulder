@@ -11,7 +11,8 @@ import { registerLocaleData } from '@angular/common';
 })
 export class EventosService {
 
-  public newEvento: Eventos[] = [];
+  public eventos:Eventos;
+  public newEvento: Eventos[] = []; 
   public url : string = "http://localhost:3000/eventos";
 
   constructor(private http: HttpClient) { }
@@ -25,8 +26,17 @@ export class EventosService {
     return this.http.post(this.url, eventos);
   }
 
-}
 
+  delete(id_user: number, id_eventos: number): Observable<Object> {
+    console.log("ENTRO AL SERVICES DE EVENTOS")
+    console.log("Id del Usuario del Service: " + id_user)
+    console.log("Id del Evento del Service: "  + id_eventos)
+
+    return this.http.delete(this.url + "?id_user=" + id_user + "&id_eventos=" + id_eventos);
+  }
+
+  
+}
 
 
 
