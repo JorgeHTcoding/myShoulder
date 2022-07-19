@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit} from '@angular/core';
+import { UserService } from 'src/app/shared/user.service';
+import { User } from 'src/app/models/user';
+import { Mensaje } from 'src/app/models/mensaje';
+import { ChatService } from 'src/app/shared/chat.service';
+import { Data } from '@angular/router';
 @Component({
   selector: 'app-modal-chat',
   templateUrl: './modal-chat.component.html',
@@ -7,48 +11,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalChatComponent implements OnInit {
 
-usuarioLogeado:any={
- id_user:1 
-}
-nuevoMensaje:string ="";
-chatlog:any=[
-  {
-    emisor:"1",
-    receptor:"2",
-    contenido:"Hola que tal"
-  },
-  {
-    emisor:"2",
-    receptor:"1",
-    contenido:"Bien y tu?"
-  },
-  {
-    emisor:"1",
-    receptor:"2",
-    contenido:"Haciendo un chat de angular a las 7 am, lo normal vaya..."
-  }
-]
-//lo que inyectamos tenemos que hablar con jorge para preguntarle el nombre,
-//tambien debemos revisar todas las variables que necesitamos tener en comun
-  constructor() { }
-//inyeccion
-//private authService:AuthService
+@Input() prof:User;
+nuevoMensaje:string;
+chatlog:any;
+emisor:number;
+receptor:number;
+modalChat:boolean;
+show:boolean = false;
+mensaje:Mensaje;
+chatRecep:string[];
+chat:any; 
+constructor(public userService:UserService , public chatService:ChatService) { }
   ngOnInit(): void {
-    // this.authService.getUserLogged().subscribe(usuario=>{
-    //   this.usuarioLogeado=usuario;
-    // })
+    console.log("profesional es: "+ this.prof.id_user)
+    this.emisor=this.userService.user.id_user;
+     this.receptor =this.prof.id_user;
+      this.chatService.getChatLog(this.emisor,this.receptor).subscribe((data:any)=>{
+      console.log(data)
+      this.chat=data;
+      //  for (let i=0; i< data.length;i++){
+      //   if(data[i].id_emisor=this.emisor){
+      //     this.chatEmi[i]=data[i].contenido
+      //   }else{
+      //     this.chatRecep[i]=data[i].contenido
+      //   }
+      //  }
+      console.log("este es el chat emi" +this.chat)
+      console.log("este es el chat recep" +this.chatRecep)
+     })
   }
-  show:boolean = false;
   enviarMensaje(){
-    console.log(this.nuevoMensaje)
-    
-    let mensaje={
-      emisor:this.usuarioLogeado.id_user,
-      receptor:"2",
-      contenido:this.nuevoMensaje,
 
-    }
-    console.log(mensaje)
-    this.chatlog.push(mensaje)
+     this.mensaje = {id_emisor:this.emisor,id_receptor:this.receptor,contenido:this.nuevoMensaje};
+      this.chat.push(this.mensaje)
+     this.chatService.postChat(this.mensaje).subscribe((data:any)=>{
+      console.log(data)
+
+     })
   }
 }

@@ -39,24 +39,28 @@
     background-color: white;
     @include flexCenter(column);
     align-items: flex-start;
-    justify-content: flex-start;
+    overflow-y:scroll;
     .recepcion{
+        justify-content: flex-start;
         margin: .8em;
-         padding-top:.3em;
+        padding-top:.3em;
         padding-bottom:.3em;
         padding-left:.7em;
         padding-right:.7em;
         border-radius: 1em;
         width: 70%;
-        background-color:#e8c59763 ;        
+        background-color:#e8c59763 ; 
+        left:0;       
         .rec-name{
             color:$primaryColor;
             font-weight: 500;
-
+            
         }
     }
     .send{
+        justify-content: flex-end;
         margin: .8em;
+        margin-left: 10em;
         padding-top:.3em;
         padding-bottom:.3em;
         padding-left:.7em;

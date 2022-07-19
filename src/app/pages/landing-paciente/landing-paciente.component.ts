@@ -10,6 +10,7 @@ import { GeventosService } from 'src/app/shared/geventos.service';
 import { Eventos } from 'src/app/models/eventos';
 import { Paciente } from 'src/app/models/paciente';
 import { PacientesService } from 'src/app/shared/pacientes.service';
+import { ChatService } from 'src/app/shared/chat.service';
 @Component({
   selector: 'app-landing-paciente',
   templateUrl: './landing-paciente.component.html',
@@ -21,7 +22,8 @@ export class LandingPacienteComponent implements OnInit {
   evento2: Gevento;
   id = this.userService.user.id_user;
   prof: any;
-
+  emisor:number;
+  receptor:number;
   modalChat:boolean=false;
   show:boolean= true;
  
@@ -30,7 +32,8 @@ export class LandingPacienteComponent implements OnInit {
     public registroService: RegistroService,
     public userService: UserService,
     private router: Router,
-    public pacienteService:PacientesService
+    public pacienteService:PacientesService,
+    public chatService:ChatService
   ) {
     this.user = this.userService.user;
   }
@@ -64,4 +67,5 @@ export class LandingPacienteComponent implements OnInit {
       this.geventosService.evento =evento1;
        this.router.navigateByUrl('/tarjeta-evento')
     }
-}
+
+  }
