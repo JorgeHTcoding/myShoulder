@@ -1,55 +1,91 @@
 @import "../../styles/colors.scss";
 @import "../../styles/functions.scss";
 
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
 .cuerpo {
     @-ms-viewport {
         width: extend-to-zoom;
         zoom: 1.0;
         height: 100%;
+        width:100%
     }
 }
-
-.particleCard {
+.carousel {   
+    
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-left: 170px;
-    padding-right: 170px;
-}
-
-.carousel {
+    align-items: center;
     margin-top: 50px;
-    z-index: 30000;
+    z-index: 99999;
+    width: 100vw;    
     height: 60vh;
-
+    padding: 0%;
+    margin: 0%;
+    
 
 }
+.data-row{
+    padding: 0%;
+    margin: 0%;
+    margin-top: 80px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.data-list{
+   
+    width: 80vw;
+    display:flex;
+    justify-content: space-around;
+    padding: 0%;
+    margin: 0%;
+}
+.ngContainer{
+   
+   
+    height: 80vh;
+    padding: 0%;
+    margin: 0%;
+}
+.data-container {
+   
+    display:flex; 
+    padding: 0%;
+    margin: 0%;
+   
+}
+.tarjeta{
+    padding: 0%;
+    margin: 0%;
+}
+.navigator{
+    font-size: 2em;
+    color: rgb(78, 120, 184);
+}
+
 
 .bloqueInfo {
-    display: flex;
-    padding-left: 25px;
-    flex-direction: row;
-    padding-top: 25px;
+    padding-left: 45px;
+    padding-top:25px;
 }
 
 .titulo {
     display: flex;
-
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    width: 240px;
+    width: 350px;
     height: 50px;
     @include titulo();
 
 }
 
-.arrows {
-    margin-left: 25px;
-    max-width: 60px;
-    min-width: 60px;
-}
-
 .info {
     font-weight: bold;
+    padding-left: 10px;
     color: $primaryText;
     margin-bottom: 15px;
 }
@@ -57,131 +93,198 @@
 .filtro {
     font-weight: bold;
     color: $primaryText;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-top: 25px;
     padding-left: 40px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    background-size: 100%, 100%;
-    background-image: none;
-}
-
-.carousel-control-next-icon:after {
-    content: '>';
-    font-size: 55px;
-    color: #7485be;
-}
-
-.carousel-control-prev-icon:after {
-    content: '<';
-    font-size: 55px;
-    color: #7485be;
-}
-
-.bloqueBoton {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 140px;
-}
-
-.asistente {
-    z-index: 30000;
-}
-
-.bloqueSwap {
-    padding-top: 10px;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex start;    
-    z-index: 30000;
-    padding-left: 160px;
-}
-
-.asistente {
-
-    margin-top: 10px;
-    width: 8%;
-    border: 2px solid $primaryColor;
-    border-radius: 2px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: white;
-    color: $primaryColor ;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-
-}
-
-.asistente:hover {
-    background-color: $primaryColor ;
-    color: white;
-}
-.instruct{
-    padding-left: 5px;
-    padding-top: 5px;
-    color: $primaryText;
-}
-
-@media (max-width: 1200px) {
-    .particleCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
 
 
-    }
 
-    .tarjeta {
-        margin-bottom: 25px;
-    }
 
-    .carousel {
-        margin-top: 50px;
-        z-index: 30000;
-        height: 60vh;
-    }
 
-    .carousel-indicators {
-        display: none;
-    }
 
-    .footer {
-        display: none;
-    }
+// .cuerpo {
+//     @-ms-viewport {
+//         width: extend-to-zoom;
+//         zoom: 1.0;
+//         height: 100%;
+//     }
+// }
 
-}
+// .particleCard {
+//     display: flex;
+//     justify-content: space-around;
+//     padding-left: 170px;
+//     padding-right: 170px;
+// }
 
-@media (max-width: 700px) {
-    .bloqueBoton {
-        padding-right: 50px ;
+// .carousel {
+//     margin-top: 50px;
+//     z-index: 30000;
+//     height: 60vh;
 
-    }
-}
-    @media (max-width: 400px) {
-        .bloqueBoton {
-            padding-right: 30px ;
+
+// }
+
+// .bloqueInfo {
+//     display: flex;
+//     padding-left: 25px;
+//     flex-direction: row;
+//     padding-top: 25px;
+// }
+
+// .titulo {
+//     display: flex;
+
+//     justify-content: center;
+//     align-items: center;
+//     width: 240px;
+//     height: 50px;
+//     @include titulo();
+
+// }
+
+// .arrows {
+//     margin-left: 25px;
+//     max-width: 60px;
+//     min-width: 60px;
+// }
+
+// .info {
+//     font-weight: bold;
+//     color: $primaryText;
+//     margin-bottom: 15px;
+// }
+
+// .filtro {
+//     font-weight: bold;
+//     color: $primaryText;
+//     margin-bottom: 10px;
+//     padding-top: 25px;
+//     padding-left: 40px;
+// }
+
+// .carousel-control-prev-icon,
+// .carousel-control-next-icon {
+//     height: 100px;
+//     width: 100px;
+//     background-size: 100%, 100%;
+//     background-image: none;
+// }
+
+// .carousel-control-next-icon:after {
+//     content: '>';
+//     font-size: 55px;
+//     color: #7485be;
+// }
+
+// .carousel-control-prev-icon:after {
+//     content: '<';
+//     font-size: 55px;
+//     color: #7485be;
+// }
+
+// .bloqueBoton {
+//     display: flex;
+//     justify-content: flex-end;
+//     padding-right: 140px;
+// }
+
+// .asistente {
+//     z-index: 30000;
+// }
+
+// .bloqueSwap {
+//     padding-top: 10px;
+//     display:flex;
+//     flex-direction: column;
+//     justify-content: flex start;    
+//     z-index: 30000;
+//     padding-left: 160px;
+// }
+
+// .asistente {
+
+//     margin-top: 10px;
+//     width: 8%;
+//     border: 2px solid $primaryColor;
+//     border-radius: 2px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-size: 1.1em;
+//     font-weight: bold;
+//     background-color: white;
+//     color: $primaryColor ;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     transition-duration: 0.4s;
+//     cursor: pointer;
+
+// }
+
+// .asistente:hover {
+//     background-color: $primaryColor ;
+//     color: white;
+// }
+// .instruct{
+//     padding-left: 5px;
+//     padding-top: 5px;
+//     color: $primaryText;
+// }
+
+// @media (max-width: 1200px) {
+//     .particleCard {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         flex-wrap: wrap;
+
+
+//     }
+
+//     .tarjeta {
+//         margin-bottom: 25px;
+//     }
+
+//     .carousel {
+//         margin-top: 50px;
+//         z-index: 30000;
+//         height: 60vh;
+//     }
+
+//     .carousel-indicators {
+//         display: none;
+//     }
+
+//     .footer {
+//         display: none;
+//     }
+
+// }
+
+// @media (max-width: 700px) {
+//     .bloqueBoton {
+//         padding-right: 50px ;
+
+//     }
+// }
+//     @media (max-width: 400px) {
+//         .bloqueBoton {
+//             padding-right: 30px ;
     
-        }
+//         }
 
-}
-
-
-
-@media (max-width: 600px) {
-    .bloqueInfo {
-        display: none;
-
-    }
+// }
 
 
-}
+
+// @media (max-width: 600px) {
+//     .bloqueInfo {
+//         display: none;
+
+//     }
+
+
+// }

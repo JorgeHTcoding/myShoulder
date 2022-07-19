@@ -3,8 +3,43 @@
     <div class="bloqueInfo">
         <div class="titulo">Anfitrión</div>
         <img class="arrows" src="../../../assets/img/arrows.png">
+    </div> 
+
+    <app-filtro></app-filtro>
+  
+    <div class="carousel">
+        <div class="navigator"  (click)="previous()">&#60;</div>
+        <div class="data-row">
+            <div class="data-list">
+                <ng-container class="ngContainer" *ngFor="let evento of groupShown " ; let index=index; let last=last>
+                    <div class="data-container">
+                        <app-tarjeta-eventos-administrar class="tarjeta" [elementoPadre]="evento"></app-tarjeta-eventos-administrar>
+                    </div>
+                </ng-container>
+  
+            </div>
+        </div>
+        <div class="navigator" (click)="next()">
+            &#62;</div>
+    </div>
+  
+  </div>
+  
+  
+  <app-footer class="footer"></app-footer>
+
+
+
+
+
+<!-- <div class="cuerpo">
+    <app-header-fam></app-header-fam>
+    <div class="bloqueInfo">
+        <div class="titulo">Anfitrión</div>
+        <img class="arrows" src="../../../assets/img/arrows.png">
     </div>  
     <app-filtro></app-filtro>
+
        <div class="bloqueSwap">
         <button class="asistente" onclick= "location.href= 'http://localhost:4200/admin-eventos-fam-asis';">Nuevo evento</button>
         <div class="instruct">Haz click en este botón para cambiar entre los eventos a los que asistes y los que impartes.</div>
@@ -58,4 +93,4 @@
     </div>
     
 </div>
-<app-footer class="footer"></app-footer>
+<app-footer class="footer"></app-footer> -->
