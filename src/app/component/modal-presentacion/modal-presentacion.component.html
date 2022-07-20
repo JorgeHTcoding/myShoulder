@@ -11,18 +11,15 @@
                 <span>Carta de presentación:</span>  
             </div>
 
-
+           
+                <span onclick="document.getElementById('modalPresent').style.display='none'"></span>
             <div class = "textarea1">
-                <textarea name="textarea" style="overflow:hidden; resize:none"> Describe brevemente tu situación al profesional para que pueda valorar tu caso...</textarea>
+                <textarea #carta name="textarea" style="overflow:hidden; resize:none" placeholder=" Describe brevemente tu situación al profesional para que pueda valorar tu caso..."></textarea>
             </div>
 
             <div class="boton">
-
-
-
-                <button class="enviar" (click)="modalAfir=!modalAfir" >Enviar</button>
-
+                <button type="submit" class="enviar" (click)="modalAfir=!modalAfir" (click)="enviarCarta(carta)" >Enviar</button>
             </div>
- 
+
         </div>
     </div>

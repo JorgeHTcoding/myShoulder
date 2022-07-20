@@ -68,6 +68,7 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -130,6 +131,7 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
     ModalAfirApunEvenComponent,
     GestionEventoComponent,
     GestionarEventoComponent,
+   
   
   ],
   imports: [

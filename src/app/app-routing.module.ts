@@ -22,6 +22,7 @@ import { TarjetaEventoComponent } from './pages/tarjeta-evento/tarjeta-evento.co
 import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
 
 
+
 const routes: Routes = [
 
   {path:"", component: Landing1Component}, 
@@ -43,7 +44,8 @@ const routes: Routes = [
   {path:"mis-eventos-paciente", component: MisEventosPacienteComponent}, 
   {path:"solicitud-pacientes", component: SolicitudPacientesComponent}, 
   {path:"tarjeta-evento", component: TarjetaEventoComponent}, 
-  {path:"gestion-evento", component: GestionEventoComponent}
+  {path:"gestion-evento", component: GestionEventoComponent},
+
   
 ];
 

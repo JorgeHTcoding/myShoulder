@@ -39,7 +39,7 @@ export class UserService {
       return this.http.get(this.url+"?id="+ id_user)
     }
 
-    
+
               
 }
 
