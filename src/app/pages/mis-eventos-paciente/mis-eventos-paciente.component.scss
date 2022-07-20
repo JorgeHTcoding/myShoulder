@@ -6,47 +6,83 @@
         width: extend-to-zoom;
         zoom: 1.0;
         height: 100%;
+        width:100%
     }
 }
-
-.particleCard {
+.carousel {   
+    
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
-    padding-left: 170px;
-    padding-right: 170px;
-}
-
-.carousel {
+    align-items: center;
     margin-top: 50px;
-    z-index: 30000;
+    z-index: 99999;
+    width: 100vw;    
     height: 60vh;
-  
+    padding: 0%;
+    margin: 0%;
+    
 
 }
+.data-row{
+    padding: 0%;
+    margin: 0%;
+    margin-top: 80px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.data-list{
+   
+    width: 80vw;
+    display:flex;
+    justify-content: space-around;
+    padding: 0%;
+    margin: 0%;
+}
+.ngContainer{
+   
+   
+    height: 80vh;
+    padding: 0%;
+    margin: 0%;
+}
+.data-container {
+   
+    display:flex; 
+    padding: 0%;
+    margin: 0%;
+   
+}
+.tarjeta{
+    padding: 0%;
+    margin: 0%;
+}
+.navigator{
+    font-size: 2em;
+    color: rgb(78, 120, 184);
+}
+
 
 .bloqueInfo {
-  display: flex;
-  padding-left: 25px;
-  flex-direction: column;
-  padding-top: 25px;
+    padding-left: 45px;
+    padding-top:25px;
 }
 
 .titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 50px;
-  @include titulo();
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    @include titulo();
 
 }
 
 .info {
     font-weight: bold;
+    padding-left: 10px;
     color: $primaryText;
-    padding-left: 20px;
     margin-bottom: 15px;
 }
 
@@ -58,96 +94,160 @@
     padding-left: 40px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;     
-  background-size: 100%, 100%;       
-  background-image: none;
-}
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: #7485be;
-}
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: #7485be;
-}
-.bloqueBoton{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 195px;
-}
-.filtrar {
 
-    margin-top: 10px;
-    border: none;       
-    text-align: center;
-    text-decoration: none;
-    display:inline-block ;  
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: white; 
-    color: #E8C597 ; 
-    padding-left:10px;
-    padding-right:10px;    
-    transition-duration: 0.4s;
-    cursor: pointer;
 
-  }
+// @import "../../styles/colors.scss";
+// @import "../../styles/functions.scss";
+
+// .cuerpo {
+//     @-ms-viewport {
+//         width: extend-to-zoom;
+//         zoom: 1.0;
+//         height: 100%;
+//     }
+// }
+
+// .particleCard {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-around;
+//     padding-left: 170px;
+//     padding-right: 170px;
+// }
+
+// .carousel {
+//     margin-top: 50px;
+//     z-index: 30000;
+//     height: 60vh;
+  
+
+// }
+
+// .bloqueInfo {
+//   display: flex;
+//   padding-left: 25px;
+//   flex-direction: column;
+//   padding-top: 25px;
+// }
+
+// .titulo {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 350px;
+//   height: 60px;
+//   @include titulo();
+
+// }
+
+// .info {
+//     font-weight: bold;
+//     color: $primaryText;
+//     padding-left: 20px;
+//     margin-bottom: 15px;
+// }
+
+// .filtro {
+//     font-weight: bold;
+//     color: $primaryText;
+//     margin-bottom: 15px;
+//     padding-top: 25px;
+//     padding-left: 40px;
+// }
+
+// .carousel-control-prev-icon,
+// .carousel-control-next-icon {
+//   height: 100px;
+//   width: 100px;     
+//   background-size: 100%, 100%;       
+//   background-image: none;
+// }
+
+// .carousel-control-next-icon:after
+// {
+//   content: '>';
+//   font-size: 55px;
+//   color: #7485be;
+// }
+
+// .carousel-control-prev-icon:after {
+//   content: '<';
+//   font-size: 55px;
+//   color: #7485be;
+// }
+// .bloqueBoton{
+//     display: flex;
+//     justify-content: flex-start;
+//     padding-left: 195px;
+// }
+// .filtrar {
+
+//     margin-top: 10px;
+//     border: none;       
+//     text-align: center;
+//     text-decoration: none;
+//     display:inline-block ;  
+//     font-size: 1.1em;
+//     font-weight: bold;
+//     background-color: white; 
+//     color: #E8C597 ; 
+//     padding-left:10px;
+//     padding-right:10px;    
+//     transition-duration: 0.4s;
+//     cursor: pointer;
+
+//   }
          
-  .filtrar:hover {
-    background-color: #E8C597;
-    color: white;
-  }
-@media (max-width: 1200px) {
-    .particleCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
+//   .filtrar:hover {
+//     background-color: #E8C597;
+//     color: white;
+//   }
+// @media (max-width: 1200px) {
+//     .particleCard {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         flex-wrap: wrap;
              
       
-    }
-    .tarjeta{
-      display:flex;
-      flex-direction: column;
-      justify-content: space-around;
-        margin-bottom: 25px;  
-    }
-    .carousel {
-        margin-top: 50px;
-        z-index: 30000;
-        height: 60vh;
-    }
-  .carousel-indicators{
-    display:none;
-  }
-  .footer{
-    display:none;
-}
+//     }
+//     .tarjeta{
+//       display:flex;
+//       flex-direction: row;
+//       justify-content: space-around;
+//         margin-bottom: 25px;  
+//     }
+//     .carousel {
+//         margin-top: 50px;
+//         z-index: 30000;
+//         height: 60vh;
+//     }
+//   .carousel-indicators{
+//     display:none;
+//   }
+//   .footer{
+//     display:none;
+// }
   
-  }
+//   }
   
-    @media (max-width: 600px) {
-        .bloqueInfo{
-            display: none;
+//     @media (max-width: 600px) {
+//         .bloqueInfo{
+//             display: none;
           
-        }
+//         }
       
         
-    }
-    .show-eventos{
-      @include flexCenter(row);
-      justify-content: space-between;
-      .tarjeta2{
-        margin-left: 1em;
-      }
+//     }
+//     .show-eventos{
+//       @include flexCenter(row);
+//       justify-content: space-between;
+//       .tarjeta2{
+//         margin-left: 1em;
+//       }
 
       
-    }
+//     }

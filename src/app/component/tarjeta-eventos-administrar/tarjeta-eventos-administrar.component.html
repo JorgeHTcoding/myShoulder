@@ -1,5 +1,37 @@
 <div class="container">
     <div class="bloqueImagen">
+        <!-- <img class="imagen"  src="https://snacknation.com/wp-content/uploads/2020/12/outdoor-team-building-activities.png">    -->
+             <img class="imagen"  src="{{elementoPadre.img_even}}">
+             <div class="tipo">
+            <!-- <div class="banner"> PRESENCIAL</div> -->
+            <div class="banner">{{elementoPadre.modalidad}}</div>
+        </div>
+    </div>
+    <div class="containerProfile">
+        <!-- <div class="info">07/9/2022 - 17:00h</div> -->
+        <div class="info">{{elementoPadre.fecha}}</div>
+        <div class="bloqueContent">
+            <div class="containerProfileText">
+                <!-- <p class="texto">Taller enfocado a la expresión del individuo a través de la pintura.<br><br>
+                    ¡Ven y descubre una manera nueva de expresarte!
+                </p> -->
+
+                <p class="texto">{{elementoPadre.direccion_even}}</p>
+                <hr class="Separador1">
+                <p class="texto">{{elementoPadre.descripcion_even}}</p>
+
+            </div>
+        <button (click) = "enviarDatosEvento(elementoPadre)"  class="boton">Administrar</button>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- <div class="container">
+    <div class="bloqueImagen">
         <img class="imagen"  src="https://snacknation.com/wp-content/uploads/2020/12/outdoor-team-building-activities.png">   
              <div class="tipo">
             <div class="banner"> PRESENCIAL</div>
@@ -20,5 +52,5 @@
         </div>
 
     </div>
-</div>
+</div> -->
 

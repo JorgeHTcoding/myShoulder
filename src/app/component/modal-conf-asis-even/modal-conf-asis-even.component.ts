@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Eventos } from 'src/app/models/eventos';
+import { GeventosService } from 'src/app/shared/geventos.service';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-modal-conf-asis-even',
@@ -7,15 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalConfAsisEvenComponent implements OnInit {
 
+  @Output() eventoCerrar    = new EventEmitter<Boolean>();
+  @Output() eventoConfirmar = new EventEmitter<Boolean>();
+
+
   constructor() { }
-  eventos:any=[1,2,3]
+
+
+  cerrar() {
+    this.eventoCerrar.emit();
+
+  }
+
+
+  confirmar() {
+    this.eventoConfirmar.emit();
+ 
+  }
+
+
   
   ngOnInit(): void {
   }
-  popEvent(){
-    this.eventos.pop(1)
-    console.log("saintentao")
-    console.log(this.eventos)
-}
+
+
 
 }

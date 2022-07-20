@@ -14,18 +14,31 @@
 
                 <div class="datos">
                     <label> DATOS DE IMPORTANCIA </label>
+<<<<<<< HEAD
                     <input type="text" placeholder="{{gevento.modalidad}}" class="form-control" name="modalidad" [(ngModel)]="gevento.modalidad" #modalidad="ngModel">
                     <input type="text" placeholder="{{gevento.localidad}}" class="form-control" name="localidad" [(ngModel)]="gevento.localidad" #localidad="ngModel">
                     <input type="text" placeholder="{{gevento.direccion_even}}" class="form-control" name="direccion"  [(ngModel)]="gevento.direccion_even" #direccion="ngModel">
                     <input type="text" placeholder="{{gevento.descripcion_even}}" class="form-control" name="terapia"  [(ngModel)]="gevento.descripcion_even" #terapia="ngModel">
                     <input type="text" placeholder="{{gevento.fecha}}" class="form-control"  name="fecha"  [(ngModel)]="gevento.fecha" #fecha="ngModel">
+=======
+                    <input type="text" placeholder={{evento.modalidad}}      #input2>
+                    <input type="text" placeholder={{evento.localidad}}      #input3>
+                    <input type="text" placeholder={{evento.direccion_even}} #input4>
+                    <input type="text" placeholder={{evento.terapia}}        #input5>
+                    <input type="text" placeholder={{evento.fecha}}          #input6>
+>>>>>>> misEventos
                 </div>
     
             </div>
 
             <div class="drch">
+<<<<<<< HEAD
                 <input type="text"  [(ngModel)]="gevento.titulo" #titulo="ngModel">
                 <textarea style="overflow:hidden; resize:none" placeholder="{{gevento.descripcion_even}}" class="form-control" name="descripcion" [(ngModel)]="gevento.descripcion_even" #descripcion="ngModel"></textarea>
+=======
+                <input type="text" placeholder={{evento.titulo}} #input7>
+                <textarea style="overflow:hidden; resize:none" placeholder={{evento.descripcion_even}} #input8></textarea>
+>>>>>>> misEventos
             </div>
 
         </div>

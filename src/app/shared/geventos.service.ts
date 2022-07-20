@@ -14,11 +14,13 @@ export class GeventosService {
   
   constructor(private http: HttpClient) { }
 
-  getAll():any{
+  getAll(id_user:number):Observable<Object>{
     console.log("Entramos a getEvento")
-    this.url="http://localhost:3000/eventos"
-    return this.http.get(this.url)
+    console.log(id_user);
+    this.url="http://localhost:3000/eventosUser?id="+id_user
+    return this.http.get(this.url);
   }
+
  //get user event
  getAllAnfitrion(id:number):any{
   console.log("Entramos a getEvento")

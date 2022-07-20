@@ -1,66 +1,29 @@
 <div class="cuerpo">
-    <app-header-pac></app-header-pac>
-    <div class="bloqueInfo">
-    <div class="titulo">Eventos:</div>
-    <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>
-    </div>
-   
-    <app-filtro></app-filtro>
-   
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <app-header-pac></app-header-pac>
+  <div class="bloqueInfo">
+      <div class="titulo">Mis Eventos:</div>
+      <div class="info">Eventos a los que te encuentras apuntado organizados por nuestros profesionales.</div>
+  </div>
+  <app-filtro></app-filtro>
 
+  <div class="carousel">
+      <div class="navigator"  (click)="previous()">&#60;</div>
+      <div class="data-row">
+          <div class="data-list">
+              <ng-container class="ngContainer" *ngFor="let evento of groupShown " ; let index=index; let last=last>
+                  <div class="data-container">
+                      <app-tarjeta-eventos-cancelar class="tarjeta" [elementoPadre]="evento" (eventoMisEventos) = "eliminarAsisEvento($event)"></app-tarjeta-eventos-cancelar>
+                  </div>
+              </ng-container>
 
-        <div class="carousel-inner">
-          
-            <div class="carousel-item active">
-                <div class="particleCard">
-                    <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
-                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item ">
-           <div class="particleCard">
-                    <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
-                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-               <div class="particleCard">
-                    <div class="show-eventos">
-                      <div class="tarjeta2" *ngFor="for let tarjeta of eventos">
-                        <app-tarjeta-eventos-cancelar ></app-tarjeta-eventos-cancelar>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active primary"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-    </div>
-
+          </div>
+      </div>
+      <div class="navigator" (click)="next()">
+          &#62;</div>
+  </div>
 
 </div>
+
+
 <app-footer class="footer"></app-footer>
+

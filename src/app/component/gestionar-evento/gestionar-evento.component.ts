@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Gevento } from 'src/app/models/gevento.model';
-import { GeventosService } from 'src/app/shared/geventos.service';
 import { observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Input } from '@angular/core';
+import { GeventosService } from 'src/app/shared/geventos.service';
+import { Gevento } from 'src/app/models/gevento.model';
 
 @Component({
   selector: 'app-gestionar-evento',
@@ -14,6 +15,9 @@ export class GestionarEventoComponent implements OnInit {
   public gevento:Gevento;
 
   constructor(public geventoService: GeventosService){}
+
+  @Input() evento:Gevento 
+
 
   modalNoIr:boolean=false;
   modalIr:boolean=false;
