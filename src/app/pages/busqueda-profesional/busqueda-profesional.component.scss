@@ -6,8 +6,7 @@
    
     margin-top: 40px;
     width: 100vw;
-    height: 80vh;
-    
+    height: 80vh;  
     display:flex;
     flex-direction: row;
     z-index: 30000;
@@ -38,16 +37,14 @@
 
 .contenedor-titulo-der {
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
-   
-       
+    margin-left:70px;
+    display: flex;          
     width: 23vw;
 }
 
 .titulo-der {
     // border: 2px solid orange;
-    padding-left: 32px;
+  
     width: 60%;
     font-family: 'Montserrat';
     font-style: normal;
@@ -125,7 +122,7 @@
 
 
 .filtro{
-    border: 2px solid red;
+   
     display: flex;
     flex-direction: row;
 }
@@ -163,50 +160,70 @@
 
 .ImagenProf {
     
-    width: 75%;
+    width: 450px;
     height:100%;
 }
 
 
-.cartaPaciente{
-    // border: 2px solid green;
-    width: 60vw;
-    // margin-left: -10%;
-    // margin-right: -10%;
+.carousel {   
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 99999;
+    width: 50vw;    
+    height: 60vh;
+    padding: 0%;
+    margin: 0%;
+    
 
+}
+.data-row{
+   
+    padding: 0%;
+    margin: 0%;
+    margin-top: 80px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.data-list{
+   
+   
+    width: 100%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+    margin: 0%;
 }
-
-.particleCard {
-  @include flexCenter(column);
-    padding-left: 10px;
-    padding-right: 10px;
+.ngContainer{
+   
+   
+    height: 80vh;
+    padding: 0%;
+    margin: 0%;
 }
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 60px;
-  width: 100px;     
-  background-size: 100%, 100%;       
-  background-image: none;
+.data-container {
+   
+    display:flex; 
+    padding: 0%;
+    margin: 0%;
+   
 }
-
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 40px;
-  color: #7485be;
-  margin-left: -6vw;
+.tarjeta{
+    padding: 0%;
+    margin: 0%;
 }
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 40px;
-  color: #7485be;
+.navigator{
+    padding-top: 45px;
+    font-size: 2em;
+    color: rgb(78, 120, 184);
+}
+.contenedor-derecho{
+    padding-right: 100px;
 }
 
 

@@ -1,24 +1,24 @@
 <div class="header">
-<app-header-pac></app-header-pac>
+    <app-header-pac></app-header-pac>
 </div>
-<div class = "contenedor-general">
+<div class="contenedor-general">
 
-    <div class = "contenedor-izquierdo">
+    <div class="contenedor-izquierdo">
 
-        <div class = "contenedor-titulo-izq">
-            <h1 class = "titulo-izq">Hola Claudia!</h1>
+        <div class="contenedor-titulo-izq">
+            <h1 class="titulo-izq">Hola Claudia!</h1>
         </div>
 
-        <div class = "contenedor-bussqueda">
+        <div class="contenedor-bussqueda">
 
-            <div class = "contenedor-titulo-izq">
-                <h5 class = "titulo-filtro">Filtros:</h5>
+            <div class="contenedor-titulo-izq">
+                <h5 class="titulo-filtro">Filtros:</h5>
             </div>
 
-            <form class = "miformu1">
+            <form class="miformu1">
                 <div class="row mb-0">
                     <label for="inputLocalidad" class="col-sm-2 col-form-label">Localidad</label>
-                    
+
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputLocalidad">
                     </div>
@@ -39,7 +39,7 @@
                         <input type="text" class="form-control" id="inputTerapia">
                     </div>
                 </div>
-     
+
                 <div class="row mb-0">
                     <label for="inputFecha" class="col-sm-2 col-form-label">Fecha</label>
 
@@ -52,75 +52,51 @@
                     <button class="filtrar">Filtrar</button>
                 </div>
 
-              </form>
+            </form>
         </div>
-    
 
-        <div class = "contenedor-img-footer">
-            <img class = "ImagenProf" src="../../../assets/img/profesional.png"> 
+
+        <div class="contenedor-img-footer">
+            <img class="ImagenProf" src="../../../assets/img/profesional.png">
         </div>
 
 
     </div>
 
 
-    <div class = "contenedor-derecho">
+    <div class="contenedor-derecho">
 
-            <div class = "contenedor-titulo-der">
-                <h1 class = "titulo-der">Profesionales</h1>
-            </div>
+        <div class="contenedor-titulo-der">
+            <h1 class="titulo-der">Profesionales</h1>
+        </div>
 
-            <div class = "bloque-car">
+        <div class="bloque-car">
 
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel">
+                <div class="navigator" (click)="previous()">&#60;</div>
+                <div class="data-row">
+                    <div class="data-list">
+                        <ng-container class="ngContainer" *ngFor="let profesional of groupShown " ; let index=index; let
+                            last=last>
+                            <div class="data-container">
+                                <app-tarjeta-profesional class="tarjeta" [tarjetaPadrePro]="profesional">
+                                </app-tarjeta-profesional>
 
-
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <div class="particleCard">
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                
                             </div>
-                        </div>
+                        </ng-container>
 
-                        <div class="carousel-item ">
-                            <div class="particleCard">
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="particleCard">
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                <app-tarjeta-profesional class="cartaPaciente"></app-tarjeta-profesional>
-                                
-                            </div>
-                        </div>
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>               
-                  
-
                 </div>
-
+                <div class="navigator" (click)="next()">
+                    &#62;</div>
             </div>
+
+
+        </div>
 
     </div>
 
 </div>
 <div class="footer">
-<app-footer></app-footer>
+    <app-footer></app-footer>
 </div>

@@ -2,22 +2,22 @@
 <div class = "ficha-1" >
 
     <div *ngIf="contacta">
-        <app-modal-presentacion></app-modal-presentacion>
+        <app-modal-presentacion [tarjetaIdPro]="tarjetaPadrePro.id_user"></app-modal-presentacion>
     </div>
     <div class = "contenedor-izquierda-ficha">
 
         <div class = "contenedor-titulo-ficha1">
-            <div class = "titulo-prof-ficha1">Marisa</div>
+            <div class = "titulo-prof-ficha1">{{tarjetaPadrePro.name}}</div>
         </div> 
 
-        <img class = "ImagenPrincipal" src="../../../assets/img/chica.png"> 
+        <img class = "ImagenPrincipal" src="{{tarjetaPadrePro.img}}"> 
     </div>
     
     <div class = "contenedor-derecha-ficha">
         <div class = "Input-Arriba">
         
             <div class="form-outline1 mb-4">
-                <p id="form1Example1" class="form-control1">Consultoría Marisa : c/La Cornisa nº 4</p> 
+                <p id="form1Example1" class="form-control1">{{tarjetaPadrePro.direccion}}</p> 
 
             </div>
         </div>
@@ -26,7 +26,7 @@
 
             <div class = "Abajo-Izq">
                 <div class = "textarea1">
-                    <p class ="textarea">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quaerat amet consectetur neque iusto vitae harum corporis suscipit asperiores eum rerum soluta architecto. Cupiditate quod quaerat eveniet enim, blanditiis sint?</p>
+                    <p class ="textarea">{{tarjetaPadrePro.descripcion}}</p>
                 </div>
             </div>
 

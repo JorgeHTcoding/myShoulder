@@ -6,6 +6,9 @@ import { Gevento } from 'src/app/models/gevento.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Eventos } from 'src/app/models/eventos';
+import { Apuntado } from 'src/app/models/apuntado';
+import { ApuntadoService } from 'src/app/shared/apuntado.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tarjeta-eventos',
@@ -14,14 +17,25 @@ import { Eventos } from 'src/app/models/eventos';
 })
 export class TarjetaEventosComponent implements OnInit {
   public eventos:Eventos[]; 
-  public array:Eventos[];  
-   @Input() tarjetaPadre:Eventos;
+  public array:Eventos[]; 
+  public evento1: Gevento;   
+  @Input() tarjetaPadre:Eventos;
+  public apuntados:Apuntado;
+  public eventoActivo: Gevento;
+  
 
-  constructor(public eventosService: EventosService, public userService:UserService) {
+  constructor(public eventosService: EventosService, public userService:UserService, public apuntadoService:ApuntadoService, public geventosService:GeventosService, public router:Router) {
  
    }
 
   ngOnInit(): void {
     console.log("id_user : " + this.userService.user.id_user)         
-  } 
-}
+  }  
+
+  enviarEvento(tarjetaPadre){
+    
+      this.geventosService.evento =tarjetaPadre;
+       this.router.navigateByUrl("/tarjeta-evento")
+    }
+  }
+
