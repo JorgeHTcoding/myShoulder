@@ -14,17 +14,17 @@
 
                 <div class="datos">
                     <label> DATOS DE IMPORTANCIA </label>
-                    <input type="text" placeholder="MODALIDAD:" #input2>
-                    <input type="text" placeholder="LOCALIDAD:" #input3>
-                    <input type="text" placeholder="DIRECCION:" #input4>
-                    <input type="text" placeholder="TERAPIA:"  #input5>
-                    <input type="text" placeholder="FECHA:"    #input6>
+                    <input type="text" placeholder={{evento.modalidad}}      #input2>
+                    <input type="text" placeholder={{evento.localidad}}      #input3>
+                    <input type="text" placeholder={{evento.direccion_even}} #input4>
+                    <input type="text" placeholder={{evento.terapia}}        #input5>
+                    <input type="text" placeholder={{evento.fecha}}          #input6>
                 </div>
     
             </div>
             <div class="drch">
-                <input type="text" placeholder="Escribe un titulo para tu actividad" #input7>
-                <textarea style="overflow:hidden; resize:none" placeholder="Inserta una descripcion del evento AQUI: " #input8></textarea>
+                <input type="text" placeholder={{evento.titulo}} #input7>
+                <textarea style="overflow:hidden; resize:none" placeholder={{evento.descripcion_even}} #input8></textarea>
             </div>
         </div>
     

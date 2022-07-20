@@ -20,6 +20,11 @@ export class GeventosService {
     this.url="http://localhost:3000/eventosUser?id="+id_user
     return this.http.get(this.url);
   }
+  getAllAnfitrion(id:number):any{
+    console.log("Entramos a getEvento")
+    this.url="http://localhost:3000/anfitrion?id="+id
+    return this.http.get(this.url)
+  }
   getOne(id_evento:number):any{
     console.log("Entramos a getEvento")
     this.url="http://localhost:3000/eventos?id="+id_evento

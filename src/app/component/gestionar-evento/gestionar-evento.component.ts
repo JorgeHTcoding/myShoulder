@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { GeventosService } from 'src/app/shared/geventos.service';
+import { Gevento } from 'src/app/models/gevento.model';
 
 @Component({
   selector: 'app-gestionar-evento',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gestionar-evento.component.scss']
 })
 export class GestionarEventoComponent implements OnInit {
+
+  @Input() evento:Gevento 
+
 
   constructor() { }
   modalNoIr:boolean=false;

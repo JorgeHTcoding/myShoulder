@@ -3,14 +3,13 @@ import { Observable } from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { provideProtractorTestingSupport } from '@angular/platform-browser';
 import { HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/user.service';
 import { Eventos } from 'src/app/models/eventos';
 import { EventosService } from 'src/app/shared/eventos.service';
 import { GeventosService } from 'src/app/shared/geventos.service';
+import { Gevento } from 'src/app/models/gevento.model';
 
 @Component({
   selector: 'app-admin-eventos-fam-anfi',
@@ -21,7 +20,7 @@ import { GeventosService } from 'src/app/shared/geventos.service';
 export class AdminEventosFamAnfiComponent implements OnInit {
   public eventos:Eventos;
   
-  public group:Eventos[]; 
+  public group:Gevento[]; 
   public eventoHijo: Eventos;
   public groupShown: any;
   public itGroup: number;
@@ -35,16 +34,16 @@ export class AdminEventosFamAnfiComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // console.log("id user: " + this.userService.user.id_user)
-    //   this.eventosService.getAll(this.userService.user.id_user).subscribe( (data: Eventos[]) => {
+    console.log("id user: " + this.userService.user.id_user)
+      this.geventosService.getAllAnfitrion(this.userService.user.id_user).subscribe( (data: Gevento[]) => {
         
-    //     console.log(data)
-    //     this.group = data;
-    //     this.setGropShown();
-    // },
+        console.log(data)
+        this.group = data;
+        this.setGropShown();
+    },
 
-    // (err: HttpErrorResponse) => {
-    //   console.log("error on parsing: " + err.message);})
+    (err: HttpErrorResponse) => {
+      console.log("error on parsing: " + err.message);})
     
   }  
 
