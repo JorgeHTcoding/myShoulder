@@ -22,6 +22,7 @@ export class LandingFamiliarComponent implements OnInit {
   evento2: Gevento;
   id = this.userService.user.id_user;
   prof: any;
+  modalChat:boolean=false;
   constructor(public geventosService: GeventosService,
     public registroService: RegistroService,
     public userService: UserService,
@@ -29,7 +30,7 @@ export class LandingFamiliarComponent implements OnInit {
     public pacienteService:PacientesService) {
 this.user = this.userService.user;
    }
-  show:boolean= true;
+  show:boolean= false;
   ngOnInit(): void {
     console.log(this.user)
   console.log(

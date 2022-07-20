@@ -1,7 +1,7 @@
 
-<div class="chat" *ngIf="usuarioLogeado" id="chatmodal">
+<div class="chat"  id="chatmodal">
     <span onclick="document.getElementById('chatmodal').style.display='none'"
-    class="closebutton">&times;</span>
+    (click)="!modalChat" class="closebutton">&times;</span>
         <div class="nombre-chat">
             Claudia
         </div>
@@ -9,7 +9,7 @@
             
                 
                 <div class="content">
-                    <p *ngFor="let mensaje of chatlog" [ngClass] ="(usuarioLogeado.id_user==mensaje.emisor)?'send':'recepcion'">
+                    <p *ngFor="let mensaje of chat" [ngClass] ="(emisor==mensaje.id_emisor)?'send':'recepcion'">
                         {{mensaje.contenido}}
                     </p>
                 </div>
