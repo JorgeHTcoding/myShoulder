@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+.bloqueNovedades{
+    padding-top: 3em;
+    color:$primaryText;
+}
+.bloqueInfo{
+    display:flex;
+    
+}
+.valor{
+    padding-top: .3em;
+    font-weight:light;
+    color:$primaryColor
+}
+.info{
+    padding-top: .3em;
+}

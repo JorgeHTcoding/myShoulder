@@ -95,6 +95,57 @@
 }
 
 
+.filtroForm{
+    display:flex;
+    justify-content:space-evenly;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+  
+ 
+  
+}
+.inputTitle{  
+    padding-top: 5px;
+    min-width:100px;
+}
+.particulaFiltro{
+    display:flex;    
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.input{
+    border:none;
+    text-decoration: none;
+    background-color: #ececec ;
+    max-width: 150px;
+    min-width: 150px;
+    padding-left: 5px;
+}
+.filtrar {
+
+    
+    border: 1px solid #cccccc; 
+    border-radius: 2px;      
+    text-align: center;
+    text-decoration: none;
+    display:inline-block ;  
+    font-size: 1.1em;  
+    background-color: white; 
+    color: #636363 ; 
+    padding-left:10px;
+    padding-right:10px;    
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+  }
+         
+  .filtrar:hover {
+    background-color: #cccccc;
+    color: white;
+  }
+
 
 
 
