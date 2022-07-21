@@ -3,6 +3,7 @@ import { Gevento } from 'src/app/models/gevento.model';
 import { GeventosService } from 'src/app/shared/geventos.service';
 import { observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-gestionar-evento',
@@ -12,8 +13,9 @@ import { Router } from '@angular/router';
 export class GestionarEventoComponent implements OnInit {
 
   public gevento:Gevento;
+  geventosService: any;   ///////////////// ¿?¿?¿?¿?¿?¿?¿?¿?¿
 
-  constructor(public geventoService: GeventosService){}
+  constructor(public geventoService: GeventosService, public router:Router, public userService:UserService){}
 
   modalNoIr:boolean=false;
   modalIr:boolean=false;
@@ -34,21 +36,35 @@ export class GestionarEventoComponent implements OnInit {
       let IDeventos: number = id_eventos;
       console.log(IDeventos + "dentro del enviar")
       if (id_eventos != null) {
-        this.geventoService.eliminar(19).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
+        this.geventosService.eliminar(this.geventosService.evento.id_eventos).subscribe((data:Gevento[]) => 
         { 
            this.gevento = data[0]
             console.log(data)
         })
-  
+
+        if(this.userService.user.tipo == "familiar"){
+          this.router.navigateByUrl('/admin-eventos-fam-anfi')
+        }
+        if(this.userService.user.tipo == "profesional"){
+          this.router.navigateByUrl('/administrar-eventos-pro')
+        }
+
       }
     }
 
     modificar(){
-      this.geventoService.modificar(this.gevento).subscribe((data:Gevento[])=>{
+      this.geventosService.modificar(this.gevento).subscribe((data:Gevento[])=>{
         // this.user.push(data)
         console.log(data + "data del put del gevento")
       })
-    }}
+      if(this.userService.user.tipo == "familiar"){
+        this.router.navigateByUrl('/admin-eventos-fam-anfi')
+      }
+      if(this.userService.user.tipo == "profesional"){
+        this.router.navigateByUrl('/administrar-eventos-pro')
+      }
+    }
+  }
 
   //   modificar(id_eventos:number,img:string,localidad:string,direccion:string,descripcion:string,fecha:string)
   //   {   

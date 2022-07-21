@@ -21,7 +21,6 @@ export class GeventosService {
   }
 
   modificar(gevento:Gevento):Observable<Object>{
-    // id_evento=id_evento;
     console.log("Entramos a modificar")
     console.log(gevento)
     this.url="http://localhost:3000/gestion-evento"

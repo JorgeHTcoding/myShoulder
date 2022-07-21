@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-modal-conf-res-neg',
   templateUrl: './modal-conf-res-neg.component.html',
@@ -11,5 +12,7 @@ export class ModalConfResNegComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
 }
