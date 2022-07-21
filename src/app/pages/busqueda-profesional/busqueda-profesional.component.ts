@@ -64,7 +64,7 @@ export class BusquedaProfesionalComponent implements OnInit {
     console.log("entramos al onSubmit")
     console.log("esta es la localidad: " + form.value.localidad)
        
-    this.filtroService.getFiltro(form.value).subscribe((data:any) => {  
+    this.filtroService.getFiltroProf(form.value).subscribe((data:any) => {  
       console.log(data)      
       this.group = data;
       this.groupShown=[];
