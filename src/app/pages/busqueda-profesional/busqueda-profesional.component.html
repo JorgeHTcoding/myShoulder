@@ -15,44 +15,29 @@
                 <h5 class="titulo-filtro">Filtros:</h5>
             </div>
 
-            <form class="miformu1">
-                <div class="row mb-0">
-                    <label for="inputLocalidad" class="col-sm-2 col-form-label">Localidad</label>
-
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputLocalidad">
+            <div class="bloqueFiltro">
+                <div class="filtro">
+                    <form #filtroForm="ngForm" (ngSubmit)="onSubmit3(filtroForm)" novalidate class="filtroForm">
+                    
+                <div class="form-group">
+                    <div class="particulaFiltro">
+                        <div class="inputTitle">Modalidad</div>
+                        <input type="text" name="modalidad" class="input" ngModel #modalidad="ngModel">
                     </div>
                 </div>
-
-                <div class="row mb-0">
-                    <label for="inputModalidad" class="col-sm-2 col-form-label">Modalidad</label>
-
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputModalidad">
+                <div class="form-group">
+                    <div class="particulaFiltro">
+                        <div class="inputTitle">Terapia</div>
+                        <input type="text" name="terapia" class="input" ngModel #terapia="ngModel">
                     </div>
                 </div>
-
-                <div class="row mb-0">
-                    <label for="inputTerapia" class="col-sm-2 col-form-label">Terapia</label>
-
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputTerapia">
-                    </div>
+                
+                    <div class="bloqueBoton">
+                        <button type="submit" class="filtrar">Filtrar</button>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="row mb-0">
-                    <label for="inputFecha" class="col-sm-2 col-form-label">Fecha</label>
-
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputFecha">
-                    </div>
-                </div>
-
-                <div class="boton">
-                    <button class="filtrar">Filtrar</button>
-                </div>
-
-            </form>
+            </div>
         </div>
 
 

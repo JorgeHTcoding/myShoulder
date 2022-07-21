@@ -28,4 +28,9 @@ export class ChatService {
     return this.http.post(this.url,estado)
 
   }
+  getEstado(id:number){
+    console.log("Buscamos  profesional")
+    this.url="http://localhost:3000/animo?id="+ id;
+    return this.http.get(this.url)
+  }
 }

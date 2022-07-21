@@ -65,6 +65,7 @@ import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/
 import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/modal-afir-apun-even.component';
 import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
 import { GestionarEventoComponent } from './component/gestionar-evento/gestionar-evento.component';
+import { GraficoComponent } from './component/grafico/grafico.component';
 
 
 
@@ -131,6 +132,7 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
     ModalAfirApunEvenComponent,
     GestionEventoComponent,
     GestionarEventoComponent,
+    GraficoComponent,
    
   
   ],

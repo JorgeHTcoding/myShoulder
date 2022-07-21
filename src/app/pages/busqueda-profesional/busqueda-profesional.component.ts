@@ -7,6 +7,9 @@ import { observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { provideProtractorTestingSupport } from '@angular/platform-browser';
 import { HttpErrorResponse } from '@angular/common/http';
+import { FiltroService } from 'src/app/shared/filtro.service';
+import { Filtro } from 'src/app/models/filtro';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-busqueda-profesional',
@@ -19,7 +22,7 @@ export class BusquedaProfesionalComponent implements OnInit {
   public groupShown: any;
   public itGroup: number;
 
-  constructor(public userService:UserService, public profesionalesService:ProfesionalesService) { 
+  constructor(public userService:UserService, public profesionalesService:ProfesionalesService, public filtroService:FiltroService) { 
     this.itGroup = 0;
   }
   
@@ -56,6 +59,20 @@ export class BusquedaProfesionalComponent implements OnInit {
       this.setGropShown();
     }
   }
-
+  onSubmit3(form:NgForm){
+    
+    console.log("entramos al onSubmit")
+    console.log("esta es la localidad: " + form.value.localidad)
+       
+    this.filtroService.getFiltro(form.value).subscribe((data:any) => {  
+      console.log(data)      
+      this.group = data;
+      this.groupShown=[];
+      this.groupShown.push(this.group);
+      this.itGroup = 0;
+      this.setGropShown();
+      console.log(this.groupShown)      
+    })
+  }
 }
 

@@ -11,6 +11,8 @@ import { provideProtractorTestingSupport } from '@angular/platform-browser';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { EventosService } from 'src/app/shared/eventos.service';
+import { FiltroService } from 'src/app/shared/filtro.service';
+import { Filtro } from 'src/app/models/filtro';
 
 
 @Component({
@@ -23,15 +25,14 @@ import { EventosService } from 'src/app/shared/eventos.service';
 export class MisEventosPacienteComponent implements OnInit {
   public user:User;  
   public eventos:Eventos;
-
   public group:Eventos[]; 
   public eventoHijo: Eventos;
   public groupShown: any;
   public itGroup: number;
-
   public newEvento: Eventos[] = [];
-  
-  constructor(public geventosService:GeventosService, public userService: UserService, public eventosService:EventosService) { 
+  public filtro:Filtro;
+
+  constructor(public filtroService:FiltroService,public geventosService:GeventosService, public userService: UserService, public eventosService:EventosService) { 
     this.itGroup = 0;
     
   }
@@ -95,6 +96,22 @@ export class MisEventosPacienteComponent implements OnInit {
       this.itGroup = this.itGroup + 1;
       this.setGropShown();
     }
+  }
+  onSubmit5(form:NgForm){
+    
+    console.log("entramos al onSubmit")
+    console.log("esta es la localidad: " + form.value.localidad)
+       
+    this.filtroService.getFiltroUser(form.value).subscribe((data:any) => {  
+      console.log(data)      
+      this.group = data;
+      this.groupShown=[];
+      this.groupShown.push(this.group);
+      this.itGroup = 0;
+      this.setGropShown();
+      console.log(this.groupShown)
+    
+    })
   }
 
 }
