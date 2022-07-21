@@ -65,6 +65,7 @@ import { ModalConCreEvenProComponent } from './component/modal-con-cre-even-pro/
 import { ModalAfirApunEvenComponent } from './component/modal-afir-apun-even/modal-afir-apun-even.component';
 import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.component';
 import { GestionarEventoComponent } from './component/gestionar-evento/gestionar-evento.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -140,6 +141,7 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
     FormsModule,
     HttpClientModule,
     RouterModule,
+    NgChartsModule
     
   ],
   providers: [],
