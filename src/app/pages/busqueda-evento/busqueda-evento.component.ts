@@ -25,8 +25,10 @@ export class BusquedaEventoComponent implements OnInit {
   public groupShown: any;
   public itGroup: number;
   public filtro:Filtro;
+  public tipo;
   constructor(public filtroService:FiltroService, public userService: UserService, public eventosService: EventosService, public geventoService:GeventosService) {
     this.itGroup = 0;
+    this.tipo = this.userService.user.tipo
   }
   ngOnInit(): void {
     console.log("id user: " + this.userService.user.id_user)

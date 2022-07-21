@@ -49,10 +49,9 @@
 
                 <div class="eventoProf" *ngFor="let p of prof">
                     <app-mostrar-prof [prof]="p"  (click)="modalChat=!modalChat"></app-mostrar-prof>
-                    
-                </div>
-                <div class="funcionalidad" *ngIf="modalChat"> 
-                    <app-modal-chat [prof]="p" ></app-modal-chat>
+                        <div class="funcionalidad" *ngIf="modalChat"> 
+                         <app-modal-chat [prof]="p" ></app-modal-chat>
+                    </div>
                 </div>
             </div>
         </div>

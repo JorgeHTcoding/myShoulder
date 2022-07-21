@@ -23,7 +23,8 @@ chatRecep:string[];
 chat:any; 
 constructor(public userService:UserService , public chatService:ChatService) { }
   ngOnInit(): void {
-    console.log("profesional es: "+ this.prof.id_user)
+    console.log("prof")
+    console.log(this.prof)
     this.emisor=this.userService.user.id_user;
      this.receptor =this.prof.id_user;
       this.chatService.getChatLog(this.emisor,this.receptor).subscribe((data:any)=>{
