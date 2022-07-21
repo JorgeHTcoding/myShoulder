@@ -90,7 +90,7 @@
 
 
 .titulo-filtro {
-    font-weight: 700;
+   padding-bottom: 15px;
     color: $primaryText;
 }
 
@@ -125,11 +125,16 @@
    
     display: flex;
     flex-direction: row;
+   
 }
 
-
+.bloqueBoton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 .filtrar {
-
+  
     border: 1px solid #cccccc; 
     border-radius: 2px;      
     text-align: center;
@@ -145,6 +150,9 @@
     cursor: pointer;
 
 
+}
+.particulaFiltro{
+    margin-bottom: 10px;
 }
 .input{
     border:none;
