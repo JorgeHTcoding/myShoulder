@@ -17,6 +17,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./busqueda-profesional.component.scss']
 })
 export class BusquedaProfesionalComponent implements OnInit {
+  public user:User;
   public group: User[];
   public profesionalHijo: User;
   public groupShown: any;
@@ -24,6 +25,7 @@ export class BusquedaProfesionalComponent implements OnInit {
 
   constructor(public userService:UserService, public profesionalesService:ProfesionalesService, public filtroService:FiltroService) { 
     this.itGroup = 0;
+    this.user = this.userService.user;
   }
   
   contacta:boolean=false;
