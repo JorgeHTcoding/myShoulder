@@ -1,8 +1,6 @@
 @import "../../styles/colors.scss";
 @import "../../styles/functions.scss";
 
-@import "../../styles/colors.scss";
-@import "../../styles/functions.scss";
 
 
 .cuerpo {
@@ -69,18 +67,27 @@
 
 
 .bloqueInfo {
-    padding-left: 45px;
-    padding-top:25px;
+    display: flex;
+    padding-left: 25px;
+    flex-direction: row;
+    padding-top: 25px;
 }
 
 .titulo {
+    // border: 2px solid green;
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 350px;
+    width: 250px;
     height: 50px;
     @include titulo();
 
+}
+
+.arrows {
+    margin-left: 25px;
+    max-width: 60px;
+    min-width: 60px;
 }
 
 .info {
