@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Input } from '@angular/core';
 import { GeventosService } from 'src/app/shared/geventos.service';
 import { Gevento } from 'src/app/models/gevento.model';
+import { UserService } from 'src/app/shared/user.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-gestionar-evento',
@@ -14,7 +16,7 @@ export class GestionarEventoComponent implements OnInit {
 
   public gevento:Gevento;
 
-  constructor(public geventoService: GeventosService){}
+  constructor(public geventosService: GeventosService, public userService:UserService, public router:Router){}
 
   @Input() evento:Gevento 
 
@@ -26,33 +28,53 @@ export class GestionarEventoComponent implements OnInit {
 
     // mostrarOne(id_evento:number){
       this.gevento 
+
+      console.log("PASO POR NGONINIT")
+      console.log(this.geventosService.evento.id_eventos)
       
-      this.geventoService.getOne(19).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
+      this.geventosService.getOneAdminEven(this.geventosService.evento.id_eventos).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
       {
         this.gevento = data[0]
         console.log("this.gevento es :" + this.gevento)
       })
     }
 
-    // eliminar(id_eventos: number) { 
-    //   let IDeventos: number = id_eventos;
-    //   console.log(IDeventos + "dentro del enviar")
-    //   if (id_eventos != null) {
-    //     this.geventoService.eliminar(19).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
-    //     { 
-    //        this.gevento = data[0]
-    //         console.log(data)
-    //     })
-  
-    //   }
-    // }
+    eliminar(id_eventos: number) { 
+      let IDeventos: number = id_eventos;
+      console.log(IDeventos + "dentro del enviar")
+      if (id_eventos != null) {
+        this.geventosService.eliminar(this.geventosService.evento.id_eventos).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
+        { 
+           this.gevento = data[0]
+            console.log(data)
+        })
 
-    // modificar(){
-    //   this.geventoService.modificar(this.gevento).subscribe((data:Gevento[])=>{
-    //     // this.user.push(data)
-    //     console.log(data + "data del put del gevento")
-    //   })
-    // }}
+        if(this.userService.user.tipo == "familiar"){
+          this.router.navigateByUrl('/admin-eventos-fam-anfi')
+        }
+        if(this.userService.user.tipo == "profesional"){
+          this.router.navigateByUrl('/administrar-eventos-pro')
+        }
+
+
+      }
+    }
+
+    modificar(){
+      this.geventosService.modificar(this.gevento).subscribe((data:Gevento[])=>{
+        // this.user.push(data)
+        console.log(data + "data del put del gevento")
+      })
+
+      if(this.userService.user.tipo == "familiar"){
+        this.router.navigateByUrl('/admin-eventos-fam-anfi')
+      }
+      if(this.userService.user.tipo == "profesional"){
+        this.router.navigateByUrl('/administrar-eventos-pro')
+      }
+
+    }
+  }
 
   //   modificar(id_eventos:number,img:string,localidad:string,direccion:string,descripcion:string,fecha:string)
   //   {   
@@ -62,5 +84,5 @@ export class GestionarEventoComponent implements OnInit {
   //     this.geventoService.modificar(nuevoGevento).subscribe((data:Gevento[]) =>{
   //      this.gevento.push(data)
 
-  // })
-  }
+  //    })
+  // }

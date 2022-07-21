@@ -140,6 +140,7 @@ margin-top: 45px;
 .prof{
     height: 25%;
     width: 100%;
+    margin-right: 2%;
     margin-top: 2%;
     display: flex;
     flex-direction: row;
@@ -150,7 +151,7 @@ margin-top: 45px;
 .prof p{
         text-align: center;
         padding: 1%;
-        width: 100%; 
+        width: 98%; 
         height: 65%;
        
         background: white;
@@ -164,6 +165,7 @@ margin-top: 45px;
     margin-left: -20px;
 }
 .prof img{
+    border-radius: 50%;
     height: 100%;
     width: 100%;
     // position:absolute;

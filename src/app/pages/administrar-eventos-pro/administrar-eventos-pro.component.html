@@ -3,8 +3,43 @@
     <div class="bloqueInfo">
         <div class="titulo">Eventos</div>
         <div class="info">Panel de administración de los eventos que has creado.</div>
-        </div>    
-           
+    </div>  
+
+    <app-filtro></app-filtro>
+  
+    <div class="carousel">
+        <div class="navigator"  (click)="previous()">&#60;</div>
+        <div class="data-row">
+            <div class="data-list">
+                <ng-container class="ngContainer" *ngFor="let evento of groupShown " ; let index=index; let last=last>
+                    <div class="data-container">
+                        <app-tarjeta-eventos-administrar class="tarjeta" [elementoPadre]="evento"></app-tarjeta-eventos-administrar>
+                    </div>
+                </ng-container>
+  
+            </div>
+        </div>
+        <div class="navigator" (click)="next()">
+            &#62;</div>
+    </div>
+  
+  </div>
+  
+  
+  <app-footer class="footer"></app-footer>
+
+
+
+
+
+<!-- <div class="cuerpo">
+    <app-header-pro></app-header-pro>
+    <div class="bloqueInfo">
+        <div class="titulo">Eventos</div>
+        <div class="info">Panel de administración de los eventos que has creado.</div>
+    </div>    
+        <app-filtro></app-filtro>       
+    
    
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
 
@@ -55,5 +90,5 @@
 
 
 </div>
-<app-footer class="footer"></app-footer>
+<app-footer class="footer"></app-footer> -->
 

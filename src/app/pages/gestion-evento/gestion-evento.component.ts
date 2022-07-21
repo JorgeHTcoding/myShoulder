@@ -10,11 +10,15 @@ import { UserService } from 'src/app/shared/user.service';
 })
 export class GestionEventoComponent implements OnInit {
 
-  public evento: Gevento[];
-  
+  public evento:Gevento;
+
   constructor(public geventosService: GeventosService, public userService: UserService) { }
 
   ngOnInit(): void {
+
+    this.evento = this.geventosService.evento
+
+
   }
 
 }
