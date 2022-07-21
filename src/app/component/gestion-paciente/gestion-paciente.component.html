@@ -1,14 +1,13 @@
-<div class="cuerpo" >
+<div class="cuerpo">
     <div class="bloqueTarjeta">
-        <div class="bloqueIzq" >
+        <div class="bloqueIzq">
             <div class="cajaInfo">
-                <div #id_user  class="info" id="id_user" >
-                    
-                 {{elementoPadre.id_user}}
+                <div #input1 class="info" id="id_user">
+                     {{elementoPadre.id_user}}
                 </div>
             </div>
             <div class="cajaImg">
-                <img class = "perfilImg" src="{{elementoPadre.img}}"> 
+                <img class="perfilImg" src="{{elementoPadre.img}}">
             </div>
             <div class="cajaInfo">
                 <div class="info">
@@ -23,25 +22,24 @@
             <div class="cajaInfo">
                 <div class="info">
                     {{elementoPadre.email}}
-            </div>               
-            </div>
-        </div>
-            <div class="bloqueCent">
-                <div class="cajaTexto">
-                    <form class="texto">
-                        <textarea #id_user    class="inputDiagnostico" id="diagnostico"  placeholder="BREVE DIAGNOSTICO POR PARTE DEL PROFESIONAL">
-                            {{elementoPadre.diagnostico}}
-                        </textarea>
-                        <div class="bloqueBoton">
-                        <button class="boton1" (click)="modificar(elementoPadre)" >Guardar</button>
-                    </div>
-                    </form>
                 </div>
             </div>
-            <div class="bloqueDer">
-                <button class="boton2" (click)="show=!show">Chat</button>
-                <button class="boton2" (click)="show2=!show2">Baja</button>
-               
+        </div>
+        <div class="bloqueCent">
+            <div class="cajaTexto">
+
+                <textarea #input class="inputDiagnostico" id="diagnostico"placeholder="BREVE DIAGNOSTICO POR PARTE DEL PROFESIONAL">{{elementoPadre.diagnostico}}</textarea>
+                <div class="bloqueBoton">
+                    <button class="boton1" type="submit" (click)="modificar(elementoPadre , input)">Guardar</button>
+
+                </div>
+
             </div>
         </div>
+        <div class="bloqueDer">
+            <button class="boton2"  (click)="show=!show"  >Chat</button>
+            <button class="boton2"  type="submit"(click)="delete(elementoPadre)" (click)="show2=!show2">Baja</button>
+
+        </div>
     </div>
+</div>

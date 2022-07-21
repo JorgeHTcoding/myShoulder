@@ -13,7 +13,7 @@
             <div class="data-list">
                 <ng-container class="ngContainer" *ngFor="let paciente of groupShown " ; let index=index; let last=last>
                     <div class="data-container">
-                        <app-gestion-paciente class="cartaPaciente" [elementoPadre]="paciente"></app-gestion-paciente>
+                        <app-gestion-paciente class="cartaPaciente"  [elementoPadre]="paciente" (refrescoPacientes)="detele()" ></app-gestion-paciente>
                     </div>
                 </ng-container>
 

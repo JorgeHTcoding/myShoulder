@@ -5,8 +5,10 @@ import { Paciente } from 'src/app/models/paciente';
 import { User } from 'src/app/models/user';
 import { PacientesService } from 'src/app/shared/pacientes.service';
 import { UserService } from 'src/app/shared/user.service';
-import { Router } from 'express';
+
+import { Router } from '@angular/router';
 import { ProfesionalPacientes } from 'src/app/models/profesional-pacientes';
+import * as e from 'express';
 
 @Component({
   selector: 'app-gestion-paciente',
@@ -14,38 +16,63 @@ import { ProfesionalPacientes } from 'src/app/models/profesional-pacientes';
   styleUrls: ['./gestion-paciente.component.scss']
 })
 export class GestionPacienteComponent implements OnInit {
+
   @Input() elementoPadre:Paciente;
+  @Output() refrescoPacientes = new EventEmitter<Number>();
 
   public paciente:Paciente;
   public id: User;
   public profesional:User;
+  public pacientes: ProfesionalPacientes[]
 
-
-  constructor(public userService:UserService , public pacientesService:PacientesService) { 
+  constructor(public userService:UserService , public pacientesService:PacientesService , private router:Router ) { 
     this.id = this.userService.user
     this.profesional = this.userService.user
   }
   show:boolean=false;
   show2:boolean=false;
 
-  modificar( elementoPadre:Paciente  ){
+  modificar( elementoPadre:Paciente , input:HTMLInputElement ){
     console.log('Vamos a entrar en la funcion modificar del gestion-paciente')
     console.log(this.elementoPadre.id_profesional);
-    console.log(this.elementoPadre.diagnostico);
+    console.log(input.value + "INPUT . VALUE")
     console.log(this.elementoPadre.id_user)
 
-    // let diagnostico:any = this.elementoPadre.diagnostico.value;
-    // let diagnostico2:any = this.paciente.diagnostico.value;
-    // console.log(diagnostico + "diagnotico 1 ")
-    // console.log(diagnostico2 + "diagnotico 2 ")
-    
-    let cuerpo = new ProfesionalPacientes (elementoPadre.id_user,elementoPadre.id_profesional,"",0,"",elementoPadre.diagnostico)
+    let cuerpo = new ProfesionalPacientes (elementoPadre.id_user,elementoPadre.id_profesional,"",0,"",input.value)
     
     console.log(cuerpo)
     this.pacientesService.edit(cuerpo).subscribe((data:any)=>{
+     
       console.log(data)
     })
   }
+
+  // delete(){
+  //   console.log(this.elementoPadre.id_user)
+  //   this.refrescoPacientes.emit(this.elementoPadre.id_user)
+  // }
+  delete(elementoPadre:Paciente){
+    console.log(this.elementoPadre.id_user)
+    // this.refrescoPacientes.emit(this.elementoPadre.id_user)
+    // console.log("entro al componente")
+   
+
+    let cuerpo = new ProfesionalPacientes (this.elementoPadre.id_user,this.elementoPadre.id_profesional,"",3,"","");
+    this.pacientesService.delete(cuerpo).subscribe((data:any)=>{
+      console.log(data)
+      console.log(cuerpo)
+
+
+      this.router.navigateByUrl('/landing-profesional')
+      // this.router.navigateByUrl("administracion-pacientes")
+    }
+    )
+  
+  }
+
+
+ 
+
 
   ngOnInit(): void {
   }
@@ -54,6 +81,11 @@ export class GestionPacienteComponent implements OnInit {
 
   // }
 
+    
 
-}
+
+  }
+  
+
+
 
