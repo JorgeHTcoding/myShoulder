@@ -1,6 +1,4 @@
 export class Paciente {
-   
-    
     public id_user:number;
     public tipo:string;
     public nick:string;
@@ -47,7 +45,5 @@ export class Paciente {
             this.aceptado=aceptado;
             this.contenido_rechazado=contenido_rechazado;
             this.diagnostico=diagnostico;
-    }    
+    }
 }
-
-

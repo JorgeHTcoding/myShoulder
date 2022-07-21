@@ -4,16 +4,16 @@
     <div class="formulario">
         <span onclick="document.getElementById('rechazoPaciente').style.display='none'"
         class="closebutton">&times;</span>
-    <form action="" id="miFormulario" class="miFormulario">
-        <label for="textoRespuesta" class="label">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit1(userForm)" action="" id="miFormulario" class="miFormulario">
+        <label for="textoRespuesta" class="label" >
             Formulario respuesta negativa profesional
         </label>
-        <textarea name="textoRespuesta" id="textoRespuesta" class="textoRespuesta" placeholder="Explicación..."></textarea>
-        <label for="referencia" class="referencia">Referencia</label><br>
-        <input type="text" id="referencia" placeholder="Referenciar a un profesional adecuado">
-        </form>
+        <textarea #rechazo name="textoRespuesta" id="textoRespuesta" class="textoRespuesta" placeholder="Explicación..." ></textarea>
+        <!-- <label for="referencia" class="referencia">Referencia</label><br> -->
+        <!-- <input type="text" id="referencia" placeholder="Referenciar a un profesional adecuado"> -->
+    </form>
         <div class="boton">
-            <button type="button">Enviar</button>
+            <button type="submit" (click)="cambiarEstadoNeg(rechazo)" >Enviar</button>
         </div>
     </div>
 </div>

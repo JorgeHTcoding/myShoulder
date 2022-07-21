@@ -43,7 +43,7 @@ export class GestionarEventoComponent implements OnInit {
       let IDeventos: number = id_eventos;
       console.log(IDeventos + "dentro del enviar")
       if (id_eventos != null) {
-        this.geventosService.eliminar(this.geventosService.evento.id_eventos).subscribe((data:Gevento[]) => ///// Cambiar!!! hardcodeado
+        this.geventosService.eliminar(this.geventosService.evento.id_eventos).subscribe((data:Gevento[]) => 
         { 
            this.gevento = data[0]
             console.log(data)
@@ -56,7 +56,6 @@ export class GestionarEventoComponent implements OnInit {
           this.router.navigateByUrl('/administrar-eventos-pro')
         }
 
-
       }
     }
 
@@ -65,14 +64,12 @@ export class GestionarEventoComponent implements OnInit {
         // this.user.push(data)
         console.log(data + "data del put del gevento")
       })
-
       if(this.userService.user.tipo == "familiar"){
         this.router.navigateByUrl('/admin-eventos-fam-anfi')
       }
       if(this.userService.user.tipo == "profesional"){
         this.router.navigateByUrl('/administrar-eventos-pro')
       }
-
     }
   }
 

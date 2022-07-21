@@ -1,49 +1,47 @@
 <div class="cuerpo">
     <div *ngIf="aceptar" >
-        <app-modal-chat></app-modal-chat>
+        <app-modal-chat [id_receptor] = "id_paciente"></app-modal-chat>
     </div>
     <div *ngIf="rechazar" class="rechazar">
-        <app-modal-respuesta></app-modal-respuesta>
+        <app-modal-respuesta [id_paciente] = "id_paciente"></app-modal-respuesta>
     </div>
     <div class="bloqueTarjeta">
         <div class="bloqueIzq">
             <div class="cajaInfo">
 
                 <div class="info">
-                    Tipo Usuario
+                    {{paciente.tipo}}
                 </div>
             </div>
             <div class="cajaImg">
-                <img class = "perfilImg" src="../../../assets/img/Ellipse 7.png"> 
+                <img class = "perfilImg" src="{{paciente.img}}"> 
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Nombre
+                    {{paciente.name}}
                 </div>
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Apellidos
+                    {{paciente.sname}}
                 </div>
             </div>
             <div class="cajaInfo">
                 <div class="info">
-                    Contacto
+                    {{paciente.email}}
             </div>               
             </div>
         </div>
             <div class="bloqueCent">
                 <div class="cajaTexto">
                     <div class="texto">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Cum fugiat laudantium nihil totam architecto unde, sit, sapiente tempora odio necessitatibus aspernatur adipisci harum earum quo,
-                        excepturi repellendus itaque dolores dignissimos?
+                        {{paciente.descripcion}}
                     </div>
                 </div>
             </div>
             <div class="bloqueDer">
-                <button class="boton" (click)="aceptar=!aceptar">Aceptar</button>
+                <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="aceptar=!aceptar">Aceptar</button>
                 <button class="boton" (click)="rechazar=!rechazar">Rechazar</button>
             </div>
+            </div>
         </div>
-    </div>
