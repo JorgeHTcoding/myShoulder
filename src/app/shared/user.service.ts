@@ -39,7 +39,12 @@ export class UserService {
       return this.http.get(this.url+"?id="+ id_user)
     }
 
-
+    mostrarSoloAceptadas(id_profesional:number){
+      console.log("Buscamos  solo pacietes aceptados ")
+     
+      this.url="http://localhost:3000/mostrar?id="+id_profesional;
+      return this.http.get(this.url)
+    } 
               
 }
 

@@ -1,5 +1,4 @@
 export class ProfesionalPacientes {
-    
     public id_profesional_pacientes:number;
     public id_user:number;
     public id_profesional:number;
@@ -18,5 +17,4 @@ export class ProfesionalPacientes {
         this.contenido_rechazo=contenido_rechazo;
         this.diagnostico=diagnostico;
     }
-
 }
