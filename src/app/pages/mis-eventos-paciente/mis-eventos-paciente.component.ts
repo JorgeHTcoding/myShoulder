@@ -14,7 +14,6 @@ import { EventosService } from 'src/app/shared/eventos.service';
 import { FiltroService } from 'src/app/shared/filtro.service';
 import { Filtro } from 'src/app/models/filtro';
 
-
 @Component({
   selector: 'app-mis-eventos-paciente',
   templateUrl: './mis-eventos-paciente.component.html',

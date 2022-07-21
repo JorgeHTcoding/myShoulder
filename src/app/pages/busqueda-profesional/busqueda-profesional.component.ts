@@ -21,9 +21,10 @@ export class BusquedaProfesionalComponent implements OnInit {
   public profesionalHijo: User;
   public groupShown: any;
   public itGroup: number;
-
+  public tipo;
   constructor(public userService:UserService, public profesionalesService:ProfesionalesService, public filtroService:FiltroService) { 
     this.itGroup = 0;
+    this.tipo=this.userService.user.tipo;
   }
   
   contacta:boolean=false;
