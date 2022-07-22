@@ -1,5 +1,5 @@
 <div class="cuerpo">
-    <div *ngIf="aceptar" >
+    <div *ngIf="modal" >
         <app-modal-pac-aceptado></app-modal-pac-aceptado>
     </div>
     <div *ngIf="rechazar" class="rechazar">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="bloqueDer">
-                <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="aceptar=!aceptar">Aceptar</button>
+                <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="modal=!modal">Aceptar</button>
                 <button class="boton" (click)="rechazar=!rechazar" >Rechazar</button>
             </div>
             </div>

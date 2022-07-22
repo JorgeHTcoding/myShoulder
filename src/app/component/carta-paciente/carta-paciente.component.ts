@@ -25,7 +25,7 @@ export class CartaPacienteComponent implements OnInit {
 
   
    }
-  aceptar:boolean=false;
+  modal:boolean=false;
   rechazar:boolean=false;
 
 
