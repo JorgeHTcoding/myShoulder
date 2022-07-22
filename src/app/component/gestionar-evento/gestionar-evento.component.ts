@@ -20,12 +20,12 @@ export class GestionarEventoComponent implements OnInit {
 
   @Input() evento:Gevento 
 
-
+public tipo;
   modalNoIr:boolean=false;
   modalIr:boolean=false;
 
   ngOnInit(): void {
-
+this.tipo = this.userService.user.tipo
     // mostrarOne(id_evento:number){
       this.gevento 
 
