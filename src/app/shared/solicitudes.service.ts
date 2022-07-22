@@ -37,7 +37,7 @@ export class SolicitudesService {
   aceptarPac(persona:ProfesionalPacientes){
     console.log("entramos a aceptarPac del servicio")
 
-    this.url="http://localhost:3000/veruser2";
+    this.url="https://myshoulder.herokuapp.com/veruser2";
     console.log(this.url)
     return this.http.put(this.url,persona)
 

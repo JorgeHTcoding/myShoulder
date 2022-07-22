@@ -25,7 +25,7 @@
                     </div> 
                     <div class="botonPrincipal">
                         <!-- (click)="apuntame(id_user,evento.id_eventos)" -->
-                        <button class="boton1" (click)="modalIr=!modalIr" (click)="apuntame()" type="button" >¡Apuntame!</button>
+                        <button class="boton1" (click)="modalIr=!modalIr" (click)="apuntame()" type="button" >¡Apuntarme!</button>
                         <!-- <button (click)="modalNoIr=!modalNoIr" class="boton1"(click)="desapuntame()">No puedo ir</button> -->
                     </div>
                     
@@ -41,10 +41,10 @@
             <div class="drch">
                 <div class="prof" >
                     <div >
-                        <p>Este taller lo imparte {{evento.name}} {{evento.sname}}, una de nuestras psicologos especializados en terapias {{evento.terapia}}</p>
+                        <p>Este evento tendrá lugar en {{evento.direccion_even}}</p>
                     </div>
                     <figure>
-                        <img src="{{evento.img}}">
+                        <img src="https://i.ibb.co/gtZQ0gz/mapita.png">
                     </figure>
                 </div>
                 <div class="descripcion">
