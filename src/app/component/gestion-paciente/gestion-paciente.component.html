@@ -1,7 +1,7 @@
 <div class="cuerpo">
-    <div *ngIf="aceptar" >
+    <!-- <div *ngIf="modalChat" >
         <app-modal-chat [id_receptor] = "id_paciente"></app-modal-chat>
-    </div>
+    </div> -->
     <div class="bloqueTarjeta">
         <div class="bloqueIzq">
             <div class="cajaInfo">
@@ -40,7 +40,10 @@
             </div>
         </div>
         <div class="bloqueDer">
-            <button class="boton2"  (click)="aceptar=!aceptar"  >Chat</button>
+            <button class="boton2"  (click)="modalChat=!modalChat"  >Chat</button>
+             <div *ngIf="modalChat">
+                <app-modal-chat  [prof]="prof" class="modalChat"></app-modal-chat>
+        </div>
             <button class="boton2"  type="submit"(click)="delete(elementoPadre)" (click)="show2=!show2">Baja</button>
 
         </div>

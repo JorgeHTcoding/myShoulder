@@ -20,13 +20,15 @@ modalChat:boolean;
 show:boolean = false;
 mensaje:Mensaje;
 chatRecep:string[];
-chat:any; 
+chat:any;
+receptor_name:string; 
 constructor(public userService:UserService , public chatService:ChatService) { }
   ngOnInit(): void {
     console.log("prof")
     console.log(this.prof)
     this.emisor=this.userService.user.id_user;
      this.receptor =this.prof.id_user;
+     this.receptor_name=this.prof.name;
       this.chatService.getChatLog(this.emisor,this.receptor).subscribe((data:any)=>{
       console.log(data)
       this.chat=data;
