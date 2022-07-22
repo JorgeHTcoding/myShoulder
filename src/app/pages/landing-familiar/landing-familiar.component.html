@@ -48,11 +48,11 @@
                 <h4 class="tituloProf">Mis profesionales</h4>
 
                 <div class="eventoProf" *ngFor="let p of prof">
-                    <app-mostrar-prof [prof]="p"  (click)="modalChat=!modalChat"></app-mostrar-prof>                      
+                    <app-mostrar-prof [prof]="p"  (click)="modalChat=!modalChat"></app-mostrar-prof>
+                        <div class="funcionalidad" *ngIf="modalChat"> 
+                         <app-modal-chat [prof]="p" ></app-modal-chat>
+                    </div>
                 </div>
-                <div class="funcionalidad" *ngIf="modalChat"> 
-                    <app-modal-chat [prof]="p" ></app-modal-chat>
-               </div>
             </div>
         </div>
     </div>
