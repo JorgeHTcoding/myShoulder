@@ -41,10 +41,57 @@
             </div>
             <div class="bloqueDer">
                 <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="aceptar=!aceptar">Aceptar</button>
+                <button class="boton" (click)="rechazar=!rechazar" >Rechazar</button>
+            </div>
+            </div>
+        </div>
+<!-- <div class="cuerpo">
+    <div *ngIf="aceptar" >
+        <app-modal-pac-aceptado></app-modal-pac-aceptado>
+    </div>
+    <div *ngIf="rechazar" class="rechazar">
+        <app-modal-respuesta [id_paciente] = "id_paciente"></app-modal-respuesta>
+    </div>
+    <div class="bloqueTarjeta">
+        <div class="bloqueIzq">
+            <div class="cajaInfo">
+
+                <div class="info">
+                    {{paciente.tipo}}
+                </div>
+            </div>
+            <div class="cajaImg">
+                <img class = "perfilImg" src="{{paciente.img}}"> 
+            </div>
+            <div class="cajaInfo">
+                <div class="info">
+                    {{paciente.name}}
+                </div>
+            </div>
+            <div class="cajaInfo">
+                <div class="info">
+                    {{paciente.sname}}
+                </div>
+            </div>
+            <div class="cajaInfo">
+                <div class="info">
+                    {{paciente.email}}
+            </div>               
+            </div>
+        </div>
+            <div class="bloqueCent">
+                <div class="cajaTexto">
+                    <div class="texto">
+                        {{paciente.contenido_presentacion}}
+                    </div>
+                </div>
+            </div>
+            <div class="bloqueDer">
+                <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="aceptar=!aceptar">Aceptar</button>
                 <button class="boton" (click)="rechazar=!rechazar">Rechazar</button>
                     <div *ngIf="aceptar" >
                 <app-modal-chat [prof] = "paciente"></app-modal-chat>
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
