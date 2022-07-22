@@ -1,7 +1,14 @@
 <div class="cuerpo">
-  <app-header-pac></app-header-pac>
+    <!-- <div [elementoPadre]="user" *ngIf="tipo == 'paciente'">
+        <app-header-pac></app-header-pac>
+    </div>
+    <div [elementoPadre]="user" *ngIf="tipo == 'familiar'">
+        <app-header-fam></app-header-fam>
+    </div> -->
+    <app-header-pac></app-header-pac>
+
   <div class="bloqueInfo">
-      <div class="titulo">Mis Eventos:</div>
+      <div class="titulo">Mis Eventos</div>
       <div class="info">Eventos a los que te encuentras apuntado organizados por nuestros profesionales.</div>
   </div>
   <div class="filtro">

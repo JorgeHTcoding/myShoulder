@@ -24,7 +24,7 @@ export class ModalRespuestaComponent implements OnInit {
   
 
 
-  constructor(public solicitudesService: SolicitudesService, public userService:UserService ) {
+  constructor(public solicitudesService: SolicitudesService, public userService:UserService, public router:Router) {
 
     this.profesional = this.userService.user  // aqui tengo el id del profesional
   }
@@ -43,6 +43,9 @@ export class ModalRespuestaComponent implements OnInit {
     this.solicitudesService.cambiarEstadoNeg(mensaje).subscribe((data:any) =>{
     console.log(data + " data estadoNeg")
    }) 
+
+    this.router.navigateByUrl('/administracion-pacientes')
+
   }
 
 

@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Paciente } from 'src/app/models/paciente';
 import { ProfesionalPacientes } from 'src/app/models/profesional-pacientes';
 import { SolicitudesService } from 'src/app/shared/solicitudes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carta-paciente',
@@ -20,7 +21,7 @@ export class CartaPacienteComponent implements OnInit {
   id_paciente:number;
   // solicitudesService: any;
 
-  constructor(public solicitudesService: SolicitudesService) {
+  constructor(public solicitudesService: SolicitudesService, public router:Router) {
 
   
    }
@@ -43,6 +44,9 @@ export class CartaPacienteComponent implements OnInit {
     this.solicitudesService.aceptarPac(persona).subscribe((data:any) =>{
       console.log(data +" data estadoAceptado")
      })
+
+    //  this.router.navigateByUrl('/administracion-pacientes')
   }
+
 
 }
