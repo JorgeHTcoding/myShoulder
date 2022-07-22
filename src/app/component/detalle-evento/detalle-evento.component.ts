@@ -18,7 +18,7 @@ export class DetalleEventoComponent implements OnInit {
   id:number;
   evento:Gevento;
   apuntado:Apuntado;
-  
+  public tipo;
   constructor(public geventosService:GeventosService, public userService:UserService,public apuntadoService:ApuntadoService) {
     this.user=this.userService.user;
     this.id=this.userService.user.id_user
@@ -31,6 +31,7 @@ export class DetalleEventoComponent implements OnInit {
       console.log("data es:"+ data)
       this.evento=data[0]
       console.log(this.evento)
+      this.tipo = this.userService.user.tipo
     })
     console.log("esta es la info")
     console.log(this.evento.titulo + "hehe")

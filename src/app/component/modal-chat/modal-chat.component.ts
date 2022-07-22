@@ -4,6 +4,7 @@ import { User } from 'src/app/models/user';
 import { Mensaje } from 'src/app/models/mensaje';
 import { ChatService } from 'src/app/shared/chat.service';
 import { Data } from '@angular/router';
+import { Paciente } from 'src/app/models/paciente';
 @Component({
   selector: 'app-modal-chat',
   templateUrl: './modal-chat.component.html',
@@ -11,7 +12,7 @@ import { Data } from '@angular/router';
 })
 export class ModalChatComponent implements OnInit {
 
-@Input() prof:User;
+@Input() prof:Paciente | User | any;
 nuevoMensaje:string;
 chatlog:any;
 emisor:number;
@@ -22,10 +23,14 @@ mensaje:Mensaje;
 chatRecep:string[];
 chat:any;
 receptor_name:string; 
-constructor(public userService:UserService , public chatService:ChatService) { }
-  ngOnInit(): void {
-    console.log("prof")
-    console.log(this.prof)
+constructor(public userService:UserService , public chatService:ChatService) { 
+
+  
+}
+ngOnInit(): void {
+    // console.log("prof")
+    // console.log(this.prof)
+    console.log(this.prof.id_user)
     this.emisor=this.userService.user.id_user;
      this.receptor =this.prof.id_user;
      this.receptor_name=this.prof.name;
