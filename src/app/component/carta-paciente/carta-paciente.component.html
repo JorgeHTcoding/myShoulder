@@ -1,6 +1,6 @@
 <div class="cuerpo">
     <div *ngIf="aceptar" >
-        <app-modal-chat [id_receptor] = "id_paciente"></app-modal-chat>
+        <app-modal-pac-aceptado></app-modal-pac-aceptado>
     </div>
     <div *ngIf="rechazar" class="rechazar">
         <app-modal-respuesta [id_paciente] = "id_paciente"></app-modal-respuesta>
@@ -35,13 +35,13 @@
             <div class="bloqueCent">
                 <div class="cajaTexto">
                     <div class="texto">
-                        {{paciente.descripcion}}
+                        {{paciente.contenido_presentacion}}
                     </div>
                 </div>
             </div>
             <div class="bloqueDer">
                 <button class="boton" (click)="estadoAceptado(paciente.id_user)" (click)="aceptar=!aceptar">Aceptar</button>
-                <button class="boton" (click)="rechazar=!rechazar">Rechazar</button>
+                <button class="boton" (click)="rechazar=!rechazar" >Rechazar</button>
             </div>
             </div>
         </div>
