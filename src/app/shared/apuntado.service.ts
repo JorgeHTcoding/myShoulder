@@ -17,7 +17,7 @@ export class ApuntadoService {
   apuntar(apuntado:Apuntado):Observable<Object>{
 
     console.log("Entrmos a apuntarEventos")
-    this.url="http://localhost:3000/apuntar"
+    this.url="https://myshoulder.herokuapp.com/apuntar"
     console.log("eEnviamos apuntasion")
     console.log(this.url)
     console.log(apuntado)
@@ -26,7 +26,7 @@ export class ApuntadoService {
   desapuntar(apuntado:Apuntado):Observable<Object>{
     let ap=apuntado
     console.log("Entrmos a apuntarEventos")
-    this.url="http://localhost:3000/apuntar?id="+apuntado.id_user+"&id_eventos="+apuntado.id_eventos
+    this.url="https://myshoulder.herokuapp.com/apuntar?id="+apuntado.id_user+"&id_eventos="+apuntado.id_eventos
     console.log("eEnviamos desapuntasion")
     console.log(this.url)
     console.log(apuntado)

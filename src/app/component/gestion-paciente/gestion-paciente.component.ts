@@ -5,7 +5,7 @@ import { Paciente } from 'src/app/models/paciente';
 import { User } from 'src/app/models/user';
 import { PacientesService } from 'src/app/shared/pacientes.service';
 import { UserService } from 'src/app/shared/user.service';
-
+import { SolicitudesService } from 'src/app/shared/solicitudes.service'
 import { Router } from '@angular/router';
 import { ProfesionalPacientes } from 'src/app/models/profesional-pacientes';
 import * as e from 'express';
@@ -18,18 +18,18 @@ import * as e from 'express';
 export class GestionPacienteComponent implements OnInit {
 
   @Input() elementoPadre:Paciente;
+  
   @Output() refrescoPacientes = new EventEmitter<Number>();
-
-  public paciente:Paciente;
   public id: User;
   public profesional:User;
   public pacientes: ProfesionalPacientes[]
 
-  constructor(public userService:UserService , public pacientesService:PacientesService , private router:Router ) { 
+  constructor(public userService:UserService , public pacientesService:PacientesService , private router:Router, public solicitudesService:SolicitudesService ) { 
     this.id = this.userService.user
     this.profesional = this.userService.user
   }
-  show:boolean=false;
+
+  aceptar:boolean=false;
   show2:boolean=false;
 
   modificar( elementoPadre:Paciente , input:HTMLInputElement ){
@@ -75,8 +75,9 @@ export class GestionPacienteComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
   }
-
+  
   // estadoAceptado(id_user:number){
 
   // }

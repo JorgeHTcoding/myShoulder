@@ -18,7 +18,7 @@ export class CartaPreService {
 
 
   postPresentacion(cartaPresentacion:CartaPre):Observable<Object>{    
-    this.url ="http://localhost:3000/cartaPre?id=" + this.userService.user.id_user ;   
+    this.url ="https://myshoulder.herokuapp.com/cartaPre?id=" + this.userService.user.id_user ;   
     return this.http.post(this.url,cartaPresentacion)
   }
 }

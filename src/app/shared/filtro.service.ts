@@ -19,21 +19,21 @@ public filtrado:any;
     
     console.log("Lanzamos el Filtro");
     console.log("este es el contenido del filtro en el service: "+ filtro)
-    this.url="http://localhost:3000/filtro";
+    this.url="https://myshoulder.herokuapp.com/filtro";
     return this.http.post(this.url,filtro)
   }
   getFiltroUser(filtro:Form): Observable<Object>{
     let id= this.userService.user.id_user
     console.log("Lanzamos el Filtro");
     console.log("este es el contenido del filtro en el service: "+ filtro)
-    this.url="http://localhost:3000/filtro?id="+ id;
+    this.url="https://myshoulder.herokuapp.com/filtro?id="+ id;
     return this.http.post(this.url,filtro)
   }
   getFiltroProf(filtro:Form): Observable<Object>{
     
     console.log("Lanzamos el Filtro");
     console.log("este es el contenido del filtro en el service: "+ filtro)
-    this.url="http://localhost:3000/psicoFiltro";
+    this.url="https://myshoulder.herokuapp.com/psicoFiltro";
     return this.http.post(this.url,filtro)
   }
 }

@@ -17,12 +17,12 @@ export class PacientesService {
 
   getAllPac(id:number){
     console.log("Buscamos todos los pacientes del profesional")
-    this.url="http://localhost:3000/pac?id="+id;
+    this.url="https://myshoulder.herokuapp.com/pac?id="+id;
     return this.http.get(this.url)
   }
   getPro(id:number){
     console.log("Buscamos  profesional")
-    this.url="http://localhost:3000/pro?id="+id;
+    this.url="https://myshoulder.herokuapp.com/pro?id="+id;
     return this.http.get(this.url)
   }
 
@@ -32,12 +32,12 @@ edit(cuerpo:any){
   console.log("Vamos a modificar el edit");
   
   console.log(cuerpo)
-  this.url = "http://localhost:3000/pac";
+  this.url = "https://myshoulder.herokuapp.compac";
   return this.http.put(this.url,cuerpo)
 }
 
 delete(cuerpo:any){
-  this.url = "http://localhost:3000/delete"
+  this.url = "https://myshoulder.herokuapp.com/delete"
   console.log(this.url)
   console.log("aqui4")
   console.log(cuerpo + " ESTA ES LA ID DEL PROFESIONAL EN CONTROLLER")
