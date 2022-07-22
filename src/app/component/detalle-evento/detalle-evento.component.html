@@ -1,6 +1,7 @@
-<app-header-pac></app-header-pac>
+
 
 <div class="total">
+ 
   
     <div class="titulo">
         <h2>Informacion del evento</h2>
@@ -25,7 +26,10 @@
                     </div> 
                     <div class="botonPrincipal">
                         <!-- (click)="apuntame(id_user,evento.id_eventos)" -->
-                        <button class="boton1" (click)="modalIr=!modalIr" (click)="apuntame()" type="button" >¡Apuntarme!</button>
+                        <div class="ap" *ngIF="tipo=='profesional'">
+                            
+                            <button class="boton1" (click)="modalIr=!modalIr" (click)="apuntame()" type="button" >¡Apuntame!</button>
+                        </div>
                         <!-- <button (click)="modalNoIr=!modalNoIr" class="boton1"(click)="desapuntame()">No puedo ir</button> -->
                     </div>
                     
