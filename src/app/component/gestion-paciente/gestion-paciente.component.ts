@@ -17,7 +17,7 @@ import * as e from 'express';
 })
 export class GestionPacienteComponent implements OnInit {
 
-  @Input() elementoPadre:Paciente;
+  @Input() elementoPadre:any;
  
   @Output() refrescoPacientes = new EventEmitter<Number>();
   public id: User;
