@@ -78,17 +78,17 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 250px;
+    width: 350px;
     height: 50px;
     @include titulo();
 
 }
 
-.arrows {
-    margin-left: 25px;
-    max-width: 60px;
-    min-width: 60px;
-}
+// .arrows {
+//     margin-left: 25px;
+//     max-width: 60px;
+//     min-width: 60px;
+// }
 
 .info {
     font-weight: bold;
