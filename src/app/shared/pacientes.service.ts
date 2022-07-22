@@ -47,7 +47,7 @@ delete(cuerpo:any){
 mostrarSoloAceptadas(id:number){
   console.log("Buscamos  solo pacientes aceptados ")
  
-  this.url="http://localhost:3000/mostrar?id="+id;
+  this.url="https://myshoulder.herokuapp.com/mostrar?id="+id;
   return this.http.get(this.url)
 } 
 }
