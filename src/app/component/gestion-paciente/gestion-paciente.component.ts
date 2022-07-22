@@ -29,9 +29,9 @@ export class GestionPacienteComponent implements OnInit {
     this.id = this.userService.user
     this.profesional = this.userService.user
   }
-  show:boolean=false;
+  modalChat:boolean=false;
   show2:boolean=false;
-
+  prof:User;
   modificar( elementoPadre:Paciente , input:HTMLInputElement ){
     console.log('Vamos a entrar en la funcion modificar del gestion-paciente')
     console.log(this.elementoPadre.id_profesional);
@@ -75,6 +75,8 @@ export class GestionPacienteComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.prof=this.elementoPadre
+    console.log(this.prof)
   }
 
   // estadoAceptado(id_user:number){

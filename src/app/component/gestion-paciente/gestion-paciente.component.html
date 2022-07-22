@@ -37,7 +37,10 @@
             </div>
         </div>
         <div class="bloqueDer">
-            <button class="boton2"  (click)="show=!show"  >Chat</button>
+            <button class="boton2"  (click)="modalChat=!modalChat"  >Chat</button>
+             <div *ngIf="modalChat">
+                <app-modal-chat  [prof]="prof" class="modalChat"></app-modal-chat>
+        </div>
             <button class="boton2"  type="submit"(click)="delete(elementoPadre)" (click)="show2=!show2">Baja</button>
 
         </div>
