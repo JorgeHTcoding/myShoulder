@@ -78,7 +78,7 @@ export class GestionPacienteComponent implements OnInit {
   
   
   ngOnInit(): void {
-  
+  this.prof=this.elementoPadre
   }
   
   // estadoAceptado(id_user:number){
