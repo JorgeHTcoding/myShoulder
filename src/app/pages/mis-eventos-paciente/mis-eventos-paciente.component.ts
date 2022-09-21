@@ -14,7 +14,6 @@ import { EventosService } from 'src/app/shared/eventos.service';
 import { FiltroService } from 'src/app/shared/filtro.service';
 import { Filtro } from 'src/app/models/filtro';
 
-
 @Component({
   selector: 'app-mis-eventos-paciente',
   templateUrl: './mis-eventos-paciente.component.html',
@@ -31,7 +30,7 @@ export class MisEventosPacienteComponent implements OnInit {
   public itGroup: number;
   public newEvento: Eventos[] = [];
   public filtro:Filtro;
-
+ public tipo;
   constructor(public filtroService:FiltroService,public geventosService:GeventosService, public userService: UserService, public eventosService:EventosService) { 
     this.itGroup = 0;
     
@@ -65,7 +64,8 @@ export class MisEventosPacienteComponent implements OnInit {
 
 
   ngOnInit(): void {
-      console.log("id user: " + this.userService.user.id_user)
+    this.tipo = this.userService.user.tipo  
+    console.log("id user: " + this.userService.user.id_user)
       this.geventosService.getAll(this.userService.user.id_user).subscribe( (data: Eventos[]) => {
         
         console.log(data)

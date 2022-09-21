@@ -1,5 +1,13 @@
 <div class="cuerpo">
+    <div class="headepac" *ngIf="tipo=='paciente'" >
     <app-header-pac></app-header-pac>
+</div>
+<div class="headerfam" *ngIf="tipo=='familiar'">
+    <app-header-fam></app-header-fam>
+</div>
+<div class="headerpro" *ngIf="tipo=='profesional'">
+    <app-header-pro></app-header-pro>
+</div>
     <div class="bloqueInfo">
         <div class="titulo">Eventos</div>
         <div class="info">Apúntate a alguno de los eventos organizados por nuestros profesionales.</div>

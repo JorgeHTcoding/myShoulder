@@ -15,12 +15,14 @@ import { FormsModule } from '@angular/forms';
 export class EdicionPerfilComponent implements OnInit {
   public user:User;
   public users:User[];
+  public tipo;
   // public id_user:number = 6;
 
   constructor( public userService:UserService , private router:Router) { 
 
    this.user = this.userService.user
-
+    this.tipo=this.user.tipo
+    console.log(this.tipo)
   }
 
   afirEdPerfil:boolean=false;

@@ -17,6 +17,30 @@
     height: 95px;
     width: 750px;
 }
+.bloquex{
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+.close {
+   
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;    
+    z-index: 41000;
+    padding-right: 13px;
+    font-size: 1.5em;
+    color: #E8C597;       
+    text-decoration: none;   
+    transition-duration: 0.4s;
+    cursor: pointer;
+     
+}
+.close:hover {
+    
+    color: white;
+    
+  }
 .Titulo {
     // padding-top: 3%;
     margin-left: 7%;

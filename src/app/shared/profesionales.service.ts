@@ -18,7 +18,7 @@ export class ProfesionalesService {
 
   getAllProf(id_user:number):Observable<Object>{
     console.log("id_user en prof service: " + id_user)
-    this.url ="http://localhost:3000/psico" ;   
+    this.url ="https://myshoulder.herokuapp.com/psico" ;   
     return this.http.get(this.url)
   }
 }

@@ -19,7 +19,7 @@ export class SolicitudesService {
   getAllPac(id:number){
     console.log("entramos a getAllPac del servicio")
     console.log(id)
-    this.url="http://localhost:3000/veruser?id= "+ id;
+    this.url="https://myshoulder.herokuapp.com/veruser?id= "+ id;
     console.log(this.url + "url")
     console.log("salgo")
     return this.http.get(this.url)
@@ -29,7 +29,7 @@ export class SolicitudesService {
   cambiarEstadoNeg(mensaje:ProfesionalPacientes){ //es el obj que traigo del controlador con todos los datos y paso a la api en el body
     console.log("entramos a cambiarEstadoNeg del servicio")
     console.log(mensaje)
-    this.url="http://localhost:3000/cambioestadoneg";
+    this.url="https://myshoulder.herokuapp.com/cambioestadoneg";
     return this.http.put(this.url,mensaje)
 
   }
@@ -37,7 +37,7 @@ export class SolicitudesService {
   aceptarPac(persona:ProfesionalPacientes){
     console.log("entramos a aceptarPac del servicio")
 
-    this.url="http://localhost:3000/veruser2";
+    this.url="https://myshoulder.herokuapp.com/veruser2";
     console.log(this.url)
     return this.http.put(this.url,persona)
 

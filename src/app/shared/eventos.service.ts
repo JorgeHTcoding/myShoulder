@@ -14,7 +14,7 @@ export class EventosService {
   public newEvento: Eventos[] = [];
 
   public eventos:Eventos;
-  public url : string = "http://localhost:3000/eventos";
+  public url : string = "https://myshoulder.herokuapp.com/eventos";
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class EventosService {
 
   getAll(id_user:number): Observable<Object>{
 
-    this.url ="http://localhost:3000/eventos"; 
+    this.url ="https://myshoulder.herokuapp.com/eventos"; 
     console.log("esta es la id_user en el evento_service: " + id_user)
     return this.http.get(this.url+"?id_user="+ id_user);
   }

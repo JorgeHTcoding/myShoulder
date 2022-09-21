@@ -23,7 +23,7 @@ export class UserService {
   //MODIFICAR PERFIL PACIENTE.
 
      edit(id_user:User):Observable<Object>{
-      this.url = "http://localhost:3000/user";
+      this.url = "https://myshoulder.herokuapp.com/user";
       console.log("Hemos entrado");
       console.log(id_user);
       return this.http.put(this.url,id_user)
@@ -33,7 +33,7 @@ export class UserService {
      
     getOne(id_user:number):Observable<Object>{
       console.log(id_user + " Esta es la ID de usuario")  
-      this.url ="http://localhost:3000/user" ; 
+      this.url ="https://myshoulder.herokuapp.com/user" ; 
       console.log(id_user);    
       console.log(id_user + " AQUI ID USUARIO SERVICE")
       return this.http.get(this.url+"?id="+ id_user)
@@ -42,7 +42,7 @@ export class UserService {
     mostrarSoloAceptadas(id_profesional:number){
       console.log("Buscamos  solo pacietes aceptados ")
      
-      this.url="http://localhost:3000/mostrar?id="+id_profesional;
+      this.url="https://myshoulder.herokuapp.com/mostrar?id="+id_profesional;
       return this.http.get(this.url)
     } 
               
