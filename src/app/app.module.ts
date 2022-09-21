@@ -142,6 +142,7 @@ import { GraficoComponent } from './component/grafico/grafico.component';
     FormsModule,
     HttpClientModule,
     RouterModule,
+   
     
   ],
   providers: [],

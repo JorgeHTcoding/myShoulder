@@ -130,28 +130,35 @@
 
 .filtrar {
 
-    margin-top: 10px;
-    border: 2px solid $primaryColor;
-    border-radius: 2px;
+    border: 1px solid #cccccc; 
+    border-radius: 2px;      
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: white;
-    color: $primaryColor ;
-    padding-left: 10px;
-    padding-right: 10px;
+    display:inline-block ;  
+    font-size: 1.1em;  
+    background-color: white; 
+    color: #636363 ; 
+    padding-left:10px;
+    padding-right:10px;    
     transition-duration: 0.4s;
+    margin-top:15px;
     cursor: pointer;
 
+
+}
+.input{
+    border:none;
+    text-decoration: none;
+    background-color: #ececec ;
+    max-width: 150px;
+    min-width: 150px;
+    padding-left: 5px;
 }
 
 .filtrar:hover {
-    background-color: $primaryColor ;
+    background-color: #cccccc;
     color: white;
-}
-
+  }
 
 .contenedor-img-footer {
     padding-top: 6.5%;

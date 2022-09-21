@@ -33,7 +33,7 @@ public filtrado:any;
     
     console.log("Lanzamos el Filtro");
     console.log("este es el contenido del filtro en el service: "+ filtro)
-    this.url="http://localhost:3000//psicoFiltro";
+    this.url="http://localhost:3000/psicoFiltro";
     return this.http.post(this.url,filtro)
   }
 }
