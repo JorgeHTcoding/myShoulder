@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-pro.component.scss']
 })
 export class HeaderProComponent implements OnInit {
+  
+  constructor() { 
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
+
 
 }

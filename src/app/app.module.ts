@@ -67,8 +67,7 @@ import { GestionEventoComponent } from './pages/gestion-evento/gestion-evento.co
 import { GestionarEventoComponent } from './component/gestionar-evento/gestionar-evento.component';
 import { GraficoComponent } from './component/grafico/grafico.component';
 import { ModalPacAceptadoComponent } from './component/modal-pac-aceptado/modal-pac-aceptado.component';
-
-
+import { ModalNoEventsComponent } from './component/modal-no-events/modal-no-events.component';
 
 
 @NgModule({
@@ -135,8 +134,8 @@ import { ModalPacAceptadoComponent } from './component/modal-pac-aceptado/modal-
     GestionarEventoComponent,
     GraficoComponent,
     ModalPacAceptadoComponent,
-   
-  
+    ModalNoEventsComponent,
+
   ],
   imports: [
     BrowserModule,
