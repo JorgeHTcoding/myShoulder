@@ -33,7 +33,7 @@ public filtro:Filtro;
   getFiltroProf(filtro:Form): Observable<Object>{    
     console.log("Lanzamos el Filtro");
     console.log("este es el contenido del filtro en el service: ")
-    console.log(filtro)
+    console.log(filtro)     
     this.url="https://myshoulder.herokuapp.com/psicoFiltro";
     return this.http.post(this.url,filtro)
   }
