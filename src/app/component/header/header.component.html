@@ -4,14 +4,13 @@
     <img src="../../../assets/img/logo.svg" />
     </div>
     <div class="bloque-enlace">
-    <ul id="nav">
-        <li><a routerLink="/" class="activa">Home</a></li>
-        
-          
-        <li><a routerLink="/quienes-somos" class="no-activa">Conocenos</a></li>
-          
-        <li><a href="#openModal"class="no-activa">Login</a></li>
-        
-    </ul>
-</div>
+        <ul id="nav">
+            <li routerLink="/" routerLinkActive="activa" [routerLinkActiveOptions]="{exact : true}"><a>Home</a></li>
+            
+            <li routerLink="/quienes-somos" routerLinkActive="activa"><a>Conocenos</a></li>
+            
+            <li routerLinkActive="activa"><a href="#openModal" class="no-activa">Login</a></li>
+            
+        </ul>
+    </div>
 </div>

@@ -3,24 +3,19 @@
     <img src="../../../assets/img/logo.svg" />
     </div>
     <div class="bloque-enlace">
-    <ul id="nav">
-        <li><a href="#" class="activa">Home</a></li>
-        <li><a routerLink="/busqueda-profesional" class="no-activa">Profesionales</a></li>
-            <!-- <ul>
-                <li><a href="#">Solicitudes</a></li>
-                <li><a href="#">Chats</a></li>
-                    </ul> -->
-        <li><a routerLink="/busqueda-evento" class="no-activa">Eventos</a>
-            <ul>
-                <li><a routerLink="/mis-eventos-paciente">Mis Eventos</a></li>
-                <!-- <li><a href="#">Chats</a></li> -->
-                    </ul>
-        <li><a routerLink="/landing-paciente" class="no-activa">Perfil</a>
-            <ul>
-                <li><a routerLink="/edicion-perfil">Modificar</a></li>
-                <li><a href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        </div>
+        <ul id="nav">
+            <li routerLinkActive="activa" routerLink="/landing-paciente"><a>Home</a></li>
+            <li routerLinkActive="activa" routerLink="/busqueda-profesional"><a>Profesionales</a></li>
+            <li routerLinkActive="activa" routerLink="/busqueda-evento"><a>Eventos</a>
+                <ul>
+                    <li routerLink="/mis-eventos-paciente"><a>Mis Eventos</a></li>
+                </ul>
+            <li routerLinkActive="activa" [routerLinkActiveOptions]="{exact : true}"><a>Perfil</a>
+                <ul>
+                    <li><a routerLink="/edicion-perfil">Modificar</a></li>
+                    <li><a routerLink="/">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
