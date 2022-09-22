@@ -23,10 +23,12 @@ export class BusquedaProfesionalComponent implements OnInit {
   public groupShown: any;
   public itGroup: number;
   public tipo;
+  public filtro;
   constructor(public userService:UserService, public profesionalesService:ProfesionalesService, public filtroService:FiltroService) { 
     this.itGroup = 0;
     this.tipo=this.userService.user.tipo;
     this.user = this.userService.user;
+    this.filtro = this.filtroService.getFiltroProf
   }
   
   contacta:boolean=false;
@@ -62,16 +64,22 @@ export class BusquedaProfesionalComponent implements OnInit {
       this.setGropShown();
     }
   }
-  onSubmit3(form:NgForm){
+  onSubmit5(form:NgForm){
     
     console.log("entramos al onSubmit")
-    console.log("esta es la localidad: " + form.value.localidad)
+    console.log("esta es la modalidad: " + form.value.modalidad)
+    console.log("este es el tipo de terapia: " + form.value.acreditacion)
        
     this.filtroService.getFiltroProf(form.value).subscribe((data:any) => {  
+      console.log("Value: ")
+      console.log(form.value)      
+      console.log("Data: ")
       console.log(data)      
       this.group = data;
       this.groupShown=[];
       this.groupShown.push(this.group);
+      console.log("This group: ")
+      console.log(this.group)
       this.itGroup = 0;
       this.setGropShown();
       console.log(this.groupShown)      

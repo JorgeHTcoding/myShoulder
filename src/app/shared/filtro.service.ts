@@ -12,6 +12,7 @@ import { UserService } from './user.service';
 export class FiltroService {
 private url:string;
 public filtrado:any;
+public filtro:Filtro;
 
   constructor(private userService:UserService, private http: HttpClient) { }
 
@@ -29,10 +30,10 @@ public filtrado:any;
     this.url="https://myshoulder.herokuapp.com/filtro?id="+ id;
     return this.http.post(this.url,filtro)
   }
-  getFiltroProf(filtro:Form): Observable<Object>{
-    
+  getFiltroProf(filtro:Form): Observable<Object>{    
     console.log("Lanzamos el Filtro");
-    console.log("este es el contenido del filtro en el service: "+ filtro)
+    console.log("este es el contenido del filtro en el service: ")
+    console.log(filtro)
     this.url="https://myshoulder.herokuapp.com/psicoFiltro";
     return this.http.post(this.url,filtro)
   }
