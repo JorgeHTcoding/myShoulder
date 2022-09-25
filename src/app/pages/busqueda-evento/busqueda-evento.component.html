@@ -46,6 +46,9 @@
                         <app-tarjeta-eventos class="tarjeta" [tarjetaPadre]="evento"></app-tarjeta-eventos>
                         
                     </div>
+                    <div *ngIf="evento.length < 0">
+                        <app-modal-no-events></app-modal-no-events>
+                    </div>
                 </ng-container>
                 
             </div>

@@ -1,25 +1,27 @@
-
-<div class="header">
-    <div class="img">
-    <img src="../../../assets/img/logo.svg" />
-    </div>
-    <div class="bloque-enlace">
-    <ul id="nav">
-        <li><a routerLink="/" class="activa">Home</a></li>
-        <li><a  class="no-activa">Pacientes</a>
-            <ul>
-                <li><a routerLink="/solicitud-pacientes">Solicitudes</a></li>
-                <li><a routerLink="/administracion-pacientes">Administrar pacientes</a></li>
+      <div class="header">
+        <div class="img">
+        <img src="../../../assets/img/logo.svg" />
+        </div>
+        <div class="bloque-enlace">
+            <ul id="nav" >
+                <li routerLinkActive="activa" routerLink="/landing-profesional"><a>Home</a></li>
+                <li routerLinkActive="activa"><a>Pacientes</a>
+                    <ul>
+                        <li><a routerLink="/solicitud-pacientes" >Solicitudes</a></li>
+                        <li><a routerLink="/administracion-pacientes">Administrar pacientes</a></li>
                     </ul>
-        <li><a  routerLink="/busqueda-evento" class="no-activa">Eventos</a>
-            <ul>               
-                <li><a routerLink="/administrar-eventos-pro" class="no-activa">Administrar Eventos</a>
-                    <li><a routerLink="/creacion-evento" class="no-activa">Crear evento</a>
+                </li>
+                <li routerLinkActive="activa"><a>Eventos</a>
+                    <ul>
+                        <li><a routerLink="/busqueda-evento">Buscar Eventos</a></li>
+                        <li><a routerLink="/administrar-eventos-pro" >Administrar Eventos</a></li>
+                        <li><a routerLink="/creacion-evento" >Crear evento</a></li>
                     </ul>
-        <li><a routerLink="/landing-profesional" class="no-activa">Perfil</a>
-            <ul>               
-                <li><a routerLink="/edicion-perfil-pro">Modificar</a></li>
-                <li><a routerLink="/">Logout</a></li>
+                </li>
+                <li routerLinkActive="activa" [routerLinkActiveOptions]="{exact : true}"><a>Perfil</a>
+                    <ul>               
+                        <li><a routerLink="/edicion-perfil-pro" >Modificar</a></li>
+                        <li><a routerLink="/">Logout</a></li>
                     </ul>
                 </li>
             </ul>
