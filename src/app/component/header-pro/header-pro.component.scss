@@ -49,12 +49,7 @@ line-height:35px; /* this is the hieght of the menu items */
 #nav li li a:hover {color:$secondaryColor} /* smaller font size for sub menu items */
 #nav li:hover {color:$secondaryColor}
     a:after {
-            content: '';
-            @include flexCenter(column);
-            background: $degMor;
-            height: 1px;
-            width: 0;
-            margin-top: 2px;
+            content: '';         
             color: $primaryText;
             transition: 0.3s;
             align-items: center;

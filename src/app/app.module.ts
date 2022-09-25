@@ -68,6 +68,11 @@ import { GestionarEventoComponent } from './component/gestionar-evento/gestionar
 import { GraficoComponent } from './component/grafico/grafico.component';
 import { ModalPacAceptadoComponent } from './component/modal-pac-aceptado/modal-pac-aceptado.component';
 import { ModalNoEventsComponent } from './component/modal-no-events/modal-no-events.component';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b40577680a47ceaf967a56bd7386dc0500527c13
 
 
 @NgModule({
@@ -135,7 +140,12 @@ import { ModalNoEventsComponent } from './component/modal-no-events/modal-no-eve
     GraficoComponent,
     ModalPacAceptadoComponent,
     ModalNoEventsComponent,
+<<<<<<< HEAD
 
+=======
+   
+  
+>>>>>>> b40577680a47ceaf967a56bd7386dc0500527c13
   ],
   imports: [
     BrowserModule,
